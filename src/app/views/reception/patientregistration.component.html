@@ -1,0 +1,705 @@
+<div class="animated fadeIn" style="background-color: lightblue">
+  <div class="row">
+    <div class="col-lg-12">
+      <!-- Nav tabs -->
+      <tabset>
+        <tab heading="system admin">
+
+          <div class="container col-12 bg-primary py-3">
+            <div class="row justify-content-center">
+              <h1>Patient Registration</h1>
+            </div>
+          </div>
+          <!--  modal -->
+          <div class="animated fadeIn" style="background-color: lightgrey">
+            <div class="row">
+              <div class="col-lg-12">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" style="background-color: lightgrey">Add new patient</button>
+              </div>
+            </div>
+          </div>
+          <div class="table-responsive-lg">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Full Name</th>
+                  <th>NRIC</th>
+                  <th>Passport Number</th>
+                  <th>MRID</th>
+                  <th>Active</th>
+                  <th>Gender</th>
+                  <th>Age</th>
+                  <th>View Barode</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ANDY PATIENT</td>
+                  <td>9776654545</td>
+                  <td></td>
+                  <td>54545644</td>
+                  <td>Yes</td>
+                  <td>Male</td>
+                  <td>60</td>
+                  <td>View</td>
+
+                </tr>
+                <tr>
+                  <td>ANDY PATIENT</td>
+                  <td>9776654545</td>
+                  <td></td>
+                  <td>54545644</td>
+                  <td>Yes</td>
+                  <td>Male</td>
+                  <td>60</td>
+                  <td>View</td>
+
+                </tr>
+                <tr>
+                  <td>ANDY PATIENT</td>
+                  <td>9776654545</td>
+                  <td></td>
+                  <td>54545644</td>
+                  <td>Yes</td>
+                  <td>Male</td>
+                  <td>60</td>
+                  <td>View</td>
+
+                </tr>
+                <tr>
+                  <td>ANDY PATIENT</td>
+                  <td>9776654545</td>
+                  <td></td>
+                  <td>54545644</td>
+                  <td>Yes</td>
+                  <td>Male</td>
+                  <td>60</td>
+                  <td>View</td>
+
+                </tr>
+                <tr>
+                  <td>ANDY PATIENT</td>
+                  <td>9776654545</td>
+                  <td></td>
+                  <td>54545644</td>
+                  <td>Yes</td>
+                  <td>Male</td>
+                  <td>60</td>
+                  <td>View</td>
+
+                </tr>
+                <tr>
+                  <td>ANDY PATIENT</td>
+                  <td>9776654545</td>
+                  <td></td>
+                  <td>54545644</td>
+                  <td>Yes</td>
+                  <td>Male</td>
+                  <td>60</td>
+                  <td>View</td>
+
+                </tr>
+                <tr>
+                  <td>ANDY PATIENT</td>
+                  <td>9776654545</td>
+                  <td></td>
+                  <td>54545644</td>
+                  <td>Yes</td>
+                  <td>Male</td>
+                  <td>60</td>
+                  <td>View</td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+          </div>
+          <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="margin: 100px;">
+            <div class="modal-dialog modal-lg" style="">
+              <div class="modal-content">
+                <div class="animated fadeIn" style="background-color: lightblue">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <!-- Nav tabs -->
+                      <div class="card-header">Add New Patient</div>
+                      <tabset>
+                        <tab heading="Home">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="card">
+                                <div class="container">
+                                  <div [hidden]="submitted">
+                                    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+                                      <i class="">
+                                        Name
+                                      </i>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Salutation</label>
+                                        <div class="col-sm-3">
+                                          <select id="select7" name="select3" class="form-control form-control">
+                                            <option value="0">Please select</option>
+                                            <option value="1">Right</option>
+                                            <option value="2">Left</option>
+                                            <option value="3">Both</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Fullname</label>
+                                        <div class="col-sm-3">
+                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Other</label>
+                                        <div class="col-sm-3">
+                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Active</label>
+                                        <div class="col-sm-3">
+                                          <select id="select7" name="select3" class="form-control form-control">
+                                            <option value="0">Please select</option>
+                                            <option value="1">Right</option>
+                                            <option value="2">Left</option>
+                                            <option value="3">Both</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="uploader" ondragover="return false;" [class.loaded]="loaded" [style.outlineColor]="dragging ? activeColor : baseColor" (dragenter)="handleDragEnter()" (dragleave)="handleDragLeave()" (drop)="handleDrop($event)" style="left: 242px; top: -200px">
+                                          <img [src]="imageSrc" (load)="handleImageLoad()" [class.loaded]="imageLoaded" />
+                                        </label>
+                                        <div class="col-sm-2">
+                                          <input type="file" name="file" accept="image/*" (change)="handleInputChange($event)" style="left: -600px;">
+                                        </div>
+                                      </div>
+                                      <div class="b" style="margin-top: -150px">
+                                        <label class="">ID</label>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">NIRC/Passport No</label>
+                                          <div class="col-sm-3">
+                                            <select id="select7" name="select3" class="form-control form-control">
+                                              <option value="0">select</option>
+                                              <option value="1">Right</option>
+                                              <option value="2">Left</option>
+                                              <option value="3">Both</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">NIRC</label>
+                                          <div class="col-sm-3">
+                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="f" style="margin-left: 400px; margin-right: -400px; margin-top: -100px;">
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">NIRC</label>
+                                          <div class="col-sm-3">
+                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">In/Out patient</label>
+                                          <div class="col-sm-3">
+                                            <select id="select7" name="select3" class="form-control form-control">
+                                              <option value="0">select</option>
+                                              <option value="1">Right</option>
+                                              <option value="2">Left</option>
+                                              <option value="3">Both</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <br />
+                                      <div class="b" style="margin-top: 0px">
+                                        <label class="">Personal</label>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">Birth Date</label>
+                                          <div class="col-sm-3">
+                                            <input type="text"
+                                                   class="form-control"
+                                                   [minDate]="minDate"
+                                                   [maxDate]="maxDate"
+                                                   #dp="bsDatepicker"
+                                                   bsDatepicker [(bsValue)]="myDateValue">
+                                          </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">Birth Place</label>
+                                          <div class="col-sm-3">
+                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">Gender</label>
+                                          <div class="col-sm-3">
+                                            <select id="select7" name="select3" class="form-control form-control">
+                                              <option value="0">select</option>
+                                              <option value="1">Right</option>
+                                              <option value="2">Left</option>
+                                              <option value="3">Both</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">Marital Status</label>
+                                          <div class="col-sm-3">
+                                            <select id="select7" name="select3" class="form-control form-control">
+                                              <option value="0">select</option>
+                                              <option value="1">Right</option>
+                                              <option value="2">Left</option>
+                                              <option value="3">Both</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="f" style="margin-left: 400px; margin-right: -400px; margin-top: -200px;">
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">Religion</label>
+                                          <div class="col-sm-3">
+                                            <select id="select7" name="select3" class="form-control form-control">
+                                              <option value="0">select</option>
+                                              <option value="1">Right</option>
+                                              <option value="2">Left</option>
+                                              <option value="3">Both</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">Age</label>
+                                          <div class="col-sm-3">
+                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">Allergy</label>
+                                          <div class="col-sm-3">
+                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">Language</label>
+                                          <div class="col-sm-3">
+                                            <select id="select7" name="select3" class="form-control form-control">
+                                              <option value="0">select</option>
+                                              <option value="1">Right</option>
+                                              <option value="2">Left</option>
+                                              <option value="3">Both</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-primary">Submit</button>
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </tab>
+                        <tab heading="Home/Mailing">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="card">
+                                <div class="container">
+                                  <div [hidden]="submitted">
+                                    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+                                      <i class="">
+                                        Home Address
+                                      </i>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Address Line1</label>
+                                        <div class="col-sm-3">
+                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Address Line1</label>
+                                        <div class="col-sm-3">
+                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">City</label>
+                                        <div class="col-sm-3">
+                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Postal</label>
+                                        <div class="col-sm-3">
+                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Phone</label>
+                                        <div class="col-sm-3">
+                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Fax</label>
+                                        <div class="col-sm-3">
+                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="b" style="margin-left: 400px; margin-right: -400px; margin-top: -100px;">
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">Status</label>
+                                          <div class="col-sm-3">
+                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">Country</label>
+                                          <div class="col-sm-3">
+                                            <select id="select7" name="select3" class="form-control form-control">
+                                              <option value="0">select</option>
+                                              <option value="1">Right</option>
+                                              <option value="2">Left</option>
+                                              <option value="3">Both</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">Text1</label>
+                                          <div class="col-sm-3">
+                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">Email</label>
+                                          <div class="col-sm-3">
+                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="f">
+                                        <i class="">
+                                          Mailing Address <br /> Copy Home Address
+                                        </i>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">Address Line1</label>
+                                          <div class="col-sm-3">
+                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">City</label>
+                                          <div class="col-sm-3">
+                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">Postal</label>
+                                          <div class="col-sm-3">
+                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">Phone</label>
+                                          <div class="col-sm-3">
+                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">Fax</label>
+                                          <div class="col-sm-3">
+                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                          </div>
+                                        </div>
+                                        <div class="b" style="margin-left: 400px; margin-right: -400px; margin-top: -100px;">
+                                          <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label" for="text-input">Status</label>
+                                            <div class="col-sm-3">
+                                              <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                            </div>
+                                          </div>
+                                          <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label" for="text-input">Country</label>
+                                            <div class="col-sm-3">
+                                              <select id="select7" name="select3" class="form-control form-control">
+                                                <option value="0">select</option>
+                                                <option value="1">Right</option>
+                                                <option value="2">Left</option>
+                                                <option value="3">Both</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                          <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label" for="text-input">Text1</label>
+                                            <div class="col-sm-3">
+                                              <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                            </div>
+                                          </div>
+                                          <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label" for="text-input">Email</label>
+                                            <div class="col-sm-3">
+                                              <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-primary">Submit</button>
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </tab>
+                        <tab heading="Emergency">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="card">
+                                <div class="container">
+                                  <div [hidden]="submitted">
+                                    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+                                      <i class="">
+                                        Emergeny
+                                      </i>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Relationship</label>
+                                        <div class="col-sm-3">
+                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Last Name</label>
+                                        <div class="col-sm-3">
+                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">First Name</label>
+                                        <div class="col-sm-3">
+                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Address Line1</label>
+                                        <div class="col-sm-3">
+                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Address Line2</label>
+                                        <div class="col-sm-3">
+                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">City</label>
+                                        <div class="col-sm-3">
+                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Postal</label>
+                                        <div class="col-sm-3">
+                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Phone</label>
+                                        <div class="col-sm-3">
+                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Fax</label>
+                                        <div class="col-sm-3">
+                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="b" style="margin-left: 400px; margin-right: -400px; margin-top: -100px;">
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">Status</label>
+                                          <div class="col-sm-3">
+                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Fundus">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">Country</label>
+                                          <div class="col-sm-3">
+                                            <select id="select7" name="select3" class="form-control form-control">
+                                              <option value="0">select</option>
+                                              <option value="1">Right</option>
+                                              <option value="2">Left</option>
+                                              <option value="3">Both</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">Text1</label>
+                                          <div class="col-sm-3">
+                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 col-form-label" for="text-input">Email</label>
+                                          <div class="col-sm-3">
+                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-primary">Submit</button>
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </tab>
+                        <tab heading="attending">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="card">
+                                <div class="container">
+                                  <div [hidden]="submitted">
+                                    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+                                      <h6>Insurance</h6>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Primery Physician</label>
+                                        <div class="col-sm-3">
+                                          <select id="select7" name="select3" class="form-control form-control">
+                                            <option value="0">select</option>
+                                            <option value="1">Right</option>
+                                            <option value="2">Left</option>
+                                            <option value="3">Both</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Reffering Physician1</label>
+                                        <div class="col-sm-3">
+                                          <select id="select7" name="select3" class="form-control form-control">
+                                            <option value="0">select</option>
+                                            <option value="1">Right</option>
+                                            <option value="2">Left</option>
+                                            <option value="3">Both</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Reffering Physician2</label>
+                                        <div class="col-sm-3">
+                                          <select id="select7" name="select3" class="form-control form-control">
+                                            <option value="0">select</option>
+                                            <option value="1">Right</option>
+                                            <option value="2">Left</option>
+                                            <option value="3">Both</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-primary">Submit</button>
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </tab>
+                        <tab heading="Insurance">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="card">
+                                <div class="container">
+                                  <div [hidden]="submitted">
+                                    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+                                      <i class="">
+                                        Attending
+                                      </i>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Insurance Company Name</label>
+                                        <div class="col-sm-3">
+                                          <select id="select7" name="select3" class="form-control form-control">
+                                            <option value="0">select</option>
+                                            <option value="1">Right</option>
+                                            <option value="2">Left</option>
+                                            <option value="3">Both</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Insurance Policy No</label>
+                                        <div class="col-sm-3">
+                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="text-input">Others</label>
+                                        <div class="col-sm-3">
+                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                        </div>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-primary">Submit</button>
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </tab>
+                      </tabset>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </tab>
+        <tab heading="Adminstration">
+
+        </tab>
+        <tab heading="ChempTheropy">
+
+        </tab>
+        <tab heading="Radio Theropy">
+
+        </tab>
+        <tab heading="Lab">
+
+        </tab>
+        <tab heading="Pharmacy">
+
+        </tab>
+        <tab heading="Finance">
+
+        </tab>
+        <tab heading="Store">
+
+        </tab>
+        <tab heading="Reports">
+
+        </tab>
+      </tabset>
+    </div><!--/.col-->
+  </div><!--/.row-->
+</div>

@@ -1,0 +1,110 @@
+<app-header [navbarBrandRouterLink]="['/dashboard']"
+            [fixed]="true"
+            [navbarBrandFull]="{src: 'assets/img/brand/logo.jpeg', width: 89, height: 25, alt: 'Medsys Logo'}"
+            [navbarBrandMinimized]="{src: 'assets/img/brand/logoo.jpg', width: 30, height: 30, alt: 'Medsys Logo'}"
+            [sidebarToggler]="'lg'"
+            [asideMenuToggler]="'lg'">
+  <ul class="nav navbar-nav d-md-down-none">
+    <li class="nav-item px-3">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" href="#"></a>
+    </li>
+    <li class="nav-item px-3">
+      <a class="nav-link" href="#"></a>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav ml-auto">
+    <li class="nav-item d-md-down-none">
+      <a class="nav-link" href="#"><i class=""></i><span class="badge badge-pill badge-danger"></span></a>
+    </li>
+    <li class="nav-item d-md-down-none">
+      <a class="nav-link" href="#"><i class=""></i></a>
+    </li>
+    <li class="nav-item d-md-down-none">
+      <a class="nav-link" href="#"><i class=""></i></a>
+    </li>
+
+  </ul>
+
+</app-header>
+
+
+
+
+<div class="app-body">
+  <app-sidebar [fixed]="true" [display]="'lg'">
+    <app-sidebar-nav [navItems]="navItems" [perfectScrollbar] [disabled]="sidebarMinimized"></app-sidebar-nav>
+    <app-sidebar-minimizer></app-sidebar-minimizer>
+
+  </app-sidebar>
+  <!-- Main content -->
+  <main class="main">
+
+    <cui-breadcrumb>
+      <!-- Breadcrumb Menu-->
+      <div class="nav navbar-nav ml-auto">
+        <ul class="breadcrumb-menu d-md-down-none ">
+          <li class="btn-group" role="group" aria-label="Button group with nested dropdown ml-auto">
+
+            <a class="" [routerLink]="['/dashboard']"></a>
+          </li>
+        </ul>
+      </div>
+
+    </cui-breadcrumb>
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div><!-- /.container-fluid -->
+  </main>
+  <app-aside [fixed]="true" [display]="false">
+    <tabset>
+      <tab>
+        <ng-template tabHeading><i class="icon-list"></i></ng-template>
+        <div class="list-group list-group-accent">
+          <div class="list-group-item list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">Today</div>
+          <div class="list-group-item list-group-item-accent-warning list-group-item-divider">
+            <div class="avatar float-right">
+              <img class="img-avatar" src="assets/img/avatars/7.jpg" alt="">
+            </div>
+            <div>
+              Meeting with
+              <strong>Shahwali</strong>
+            </div>
+            <small class="text-muted mr-3">
+              <i class="icon-calendar"></i>  1 - 3pm
+            </small>
+            <small class="text-muted">
+              <i class="icon-location-pin"></i>  Dasht-e-barchi,Kabul
+            </small>
+          </div>
+          <div class="list-group-item list-group-item-accent-info">
+            <div class="avatar float-right">
+              <img class="img-avatar" src="assets/img/avatars/4.jpg" alt="admin@bootstrapmaster.com">
+            </div>
+            <div>
+              Meeting with
+              <strong>Rohan</strong>
+            </div>
+            <small class="text-muted mr-3">
+              <i class="icon-calendar"></i>  4 - 5pm
+            </small>
+            <small class="text-muted">
+              <i class="icon-social-skype"></i>  On-line
+            </small>
+          </div>
+
+        </div>
+
+      </tab>
+    </tabset>
+  </app-aside>
+</div>
+<app-footer>
+  <span>
+    <a href=""></a> &copy; MEDSYS
+    ABOUT US
+  </span>
+  <span class="ml-auto">2019<a href="">Medssy</a></span>
+</app-footer>

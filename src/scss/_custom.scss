@@ -1,0 +1,36 @@
+// Here you can add other styles
+
+//$body-bg: $gray-900;
+//$body-color: $gray-600;
+
+
+.main {
+  font-size: 12px;
+  background-color: white;
+}
+
+// Master menu country
+thead {
+  background-color: #4175ef;
+  color: white;
+  width: 100%;
+}
+
+.btn:hover {
+
+  text-decoration: none;
+
+}
+
+.users {
+  table-layout: fixed;
+  width: 80%;
+  white-space: nowrap;
+}
+/* Column widths are based on these cells */
+
+
+.row-name {
+  width: 10%;
+}
+

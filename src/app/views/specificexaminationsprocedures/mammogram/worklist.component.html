@@ -1,0 +1,47 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i>
+        </div>
+        <div class="search-hero">
+          <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a patient by id or name ">
+        </div>
+        <div class="card-body">
+          <table class="table table-bordered table-striped table-sm">
+            <thead>
+              <tr>
+                <th>Status</th>
+                <th>Patient ID</th>
+                <th>Patient Name</th>
+                <th>Sex</th>
+                <th>Age</th>
+                <th>Study Date</th>
+                <th>Modality</th>
+                <th>Study Description</th>
+                <th>Accession #</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+  <tr *ngFor="let work of works | filter:searchText;">
+    <td>{{work.status}}</td>
+    <td>{{work.id}}</td>
+    <td>{{work.name}}</td>
+    <td>{{work.sex}}</td>
+    <td>{{work.age}}</td>
+    <td>{{work.date}}</td>
+    <td>{{work.modality}}</td>
+    <td>{{work.study}}</td>
+    <td>{{work.accession}}</td>
+  </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!--/.col-->
+  </div>
+  <!--/.row-->
+</div>

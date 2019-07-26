@@ -1,0 +1,97 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify">
+            General X-Ray
+          </i>
+        </div>
+        <div class="search-hero">
+          <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a patient by id or name ">
+        </div>
+        <div class="card-body">
+          <table class="table table-bordered table-striped table-sm">
+            <thead>
+              <tr>
+                <th>Status</th>
+                <th>Patient ID</th>
+                <th>Patient Name</th>
+                <th>Sex</th>
+                <th>Age</th>
+                <th>Study Date</th>
+                <th>Modality</th>
+                <th>Study Description</th>
+                <th>Accession #</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let worklist of worklists| filter:searchText" [class.selected]="worklist === selectedWorklist" (click)="onSelect(worklist)">
+                <td>{{worklist.status}}</td>
+                <td>{{worklist.id}}</td>
+                <td>{{worklist.name}}</td>
+                <td>{{worklist.sex}}</td>
+                <td>{{worklist.age}}</td>
+                <td>{{worklist.date}}</td>
+                <td>{{worklist.modality}}</td>
+                <td>{{worklist.study}}</td>
+                <td>{{worklist.accession}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <div *ngIf="selectedWorklist" style="border: 1px; background-color: lightblue; text-align: justify">
+            <table class="table table-bordered table-striped table-sm">
+              <thead>
+                <tr>
+                  <th>Status</th>
+                  <th>Patient ID</th>
+                  <th>Patient Name</th>
+                  <th>Sex</th>
+                  <th>Age</th>
+                  <th>Study Date</th>
+                  <th>Modality</th>
+                  <th>Study Description</th>
+                </tr>
+              </thead>
+              <tr *ngIf="selectedWorklist">
+                <td><span>status: </span>{{selectedWorklist.status}}</td>
+                <td><span>id: </span>{{selectedWorklist.id}}</td>
+                <td><span>name: </span>{{selectedWorklist.name}}</td>
+                <td><span>sex: </span>{{selectedWorklist.sex}}</td>
+                <td><span>age: </span>{{selectedWorklist.age}}</td>
+                <td><span>date: </span>{{selectedWorklist.date}}</td>
+                <td><span>modality: </span>{{selectedWorklist.study}}</td>
+                <td><span>Study Description: </span>{{selectedWorklist.modality}}</td>
+              </tr>
+            </table>
+            <br />
+            <br>
+            <div><span>Status: </span>{{selectedWorklist.status}}</div>
+            <div><span>Id: </span>{{selectedWorklist.id}}</div>
+            <div><span>Name: </span>{{selectedWorklist.name}}</div>
+            <div><span>Sex: </span>{{selectedWorklist.sex}}</div>
+            <div><span>Age: </span>{{selectedWorklist.age}}</div>
+            <div><span>Date: </span>{{selectedWorklist.date}}</div>
+            <div><span>Modality: </span>{{selectedWorklist.modality}}</div>
+            <div><span>Study Description: </span>{{selectedWorklist.study}}</div>
+            <div><span>Accession: </span>{{selectedWorklist.accession}}</div>
+          </div>
+          <!--
+          <button (click)="downloadPdf()">Download PDF</button>
+          -->
+          <br />
+          <br />
+          <br />
+          <div>
+            <button type="button" class="btn btn-primary btn-lg" (click)="imageSource = '/assets/img/brand/xray.jpg'" style="width: 10%">x-ray</button>
+            <button type="button" class="btn btn-primary btn-lg" (click)="imageSource = '/assets/img/brand/xray1.jpeg'" style="width: 10%">x-ray</button>
+            <button type="button" class="btn btn-primary btn-lg" (click)="imageSource = '/assets/img/brand/xray2.jpg'" style="width: 10%">x-ray</button>
+            <button type="button" class="btn btn-primary btn-lg" *ngIf="imageSource" (click)="imageSource=false">Cancel</button>
+            <img [src]="imageSource " *ngIf="imageSource" style="width: 100%" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
