@@ -7,6 +7,8 @@ import { DefaultLayoutComponent } from './containers';
 
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+import { RegComponent } from './views/reg/reg.component';
+
 export
   const routes: Routes = [{
     path: '',
@@ -24,7 +26,16 @@ export
     data: {
       title: 'Register Page'
     }
-  }, {
+    },
+    {
+      path: 'reg',
+      component: RegComponent,
+      data: {
+        title: 'Register Page'
+      }
+    },
+
+    {
     path: '',
     component: DefaultLayoutComponent,
     data: {
@@ -42,7 +53,9 @@ export
     }, {
       path: 'reception',
       loadChildren: './views/reception/base.module#BaseModule'
-    }, {
+      },
+
+      {
       path: 'clinicadmin',
       loadChildren: './views/clinicadmin/base.module#BaseModule'
     }, {
@@ -81,7 +94,10 @@ export
     }, {
       path: 'pharmacy',
       loadChildren: './views/pharmacy/base.module#BaseModule'
-    }, {
+      },
+
+
+      {
       path: 'pharmacystockinventory',
       loadChildren: './views/pharmacystockinventory/base.module#BaseModule'
     }, {

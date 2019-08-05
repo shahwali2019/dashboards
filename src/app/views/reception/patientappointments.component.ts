@@ -25,22 +25,36 @@ export class PatientappointmentsComponent implements OnInit {
   constructor() { }
 
 
-  title = 'app';
+  title = 'New Appointment';
 
   public pname: string;
   public md: string;
-  public date: number;
-  public rows: Array < { pname: string, md: string, date: number }> = [];
+  public date: string;
+  public time: number;
+  public activity: string;
+  public duration: number;
+  public location: string;
+  public staff: string;
+  public status: string;
+  public comment: string;
 
-  buttonClicked() {
-    this.rows.push({ pname: this.pname, md: this.md, date: this.date  });
+  public rows: Array<{ pname: string, date: string, md: string, time: number, activity: string, duration: number, location: string, staff: string, status: string, comment: string }> = [];
+
+  buttonAdd() {
+    this.rows.push({ pname: this.pname, date: this.date, md: this.md, time: this.time, activity: this.activity, duration: this.duration, location: this.location, staff: this.staff, status: this.status, comment: this.comment });
 
     //if you want to clear input
     this.pname = null;
     this.md = null;
     this.date = null;
+    this.time = null;
+    this.activity = null;
+    this.duration = null;
+    this.location = null;
+    this.staff = null;
+    this.status = null;
+    this.comment = null;
   }
-
 
   ngOnInit() {
     this.myDateValue = new Date();

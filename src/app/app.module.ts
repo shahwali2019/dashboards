@@ -7,7 +7,10 @@ import { AppComponent } from './app.component';
 import { DefaultLayoutComponent } from './containers';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegComponent } from './views/reg/reg.component';
+import { SimpleModalModule } from 'ngx-simple-modal';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // RECOMMENDED
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
@@ -37,7 +40,8 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     AppComponent,
     ...APP_CONTAINERS,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    RegComponent
   ],
   imports: [
     BrowserModule,
@@ -52,8 +56,9 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     TabsModule.forRoot(),
     ChartsModule,
     EditableTableModule,
-    BrowserAnimationsModule,
     BsDatepickerModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule
   ],
 
   providers: [{

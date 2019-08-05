@@ -19,154 +19,180 @@
               </div>
             </div>
         </tab>
-        <tab  heading="Patinet Appointment View">
-          <div class="animated fadeIn">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="card">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Create Appointment</button>
-                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">New Appointment</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          <div class="f" style="margin-left: 50px; margin-right: -150px; margin-top: 0px;">
+        <tab heading="Patinet Appointment View">
 
-                            <form>
-                              <div class="form-group row">
-                                <label for="recipient-name" class="col-md-2 col-form-label">Patient Name:</label>
-                                <div class="col-md-6">
-                                  <input type="text" class="form-control" id="recipient-name">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="recipient-name" class="col-md-2 col-form-label">Date:</label>
-                                <div class="col-md-6">
-                                  <input type="text" class="form-control" id="recipient-name">
-                                </div>
-                              </div>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal">create</button>
 
-                              <div class="form-group row">
-                                <label for="recipient-name" class="col-md-2 col-form-label">MD:</label>
-                                <div class="col-md-6">
-                                  <select id="select7" name="select3" class="form-control form-control">
-                                    <option value="0">select MD</option>
-                                    <option value="1">Right</option>
-                                    <option value="2">Left</option>
-                                    <option value="3">Both</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="recipient-name" class="col-md-2 col-form-label">Department:</label>
-                                <div class="col-md-6">
-                                  <input type="text" class="form-control" id="recipient-name">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="recipient-name" class="col-md-2 col-form-label">Staff:</label>
-                                <div class="col-md-6">
-                                  <input type="text" class="form-control" id="recipient-name">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="recipient-name" class="col-md-2 col-form-label">City:</label>
-                                <div class="col-md-6">
-                                  <select id="select7" name="select3" class="form-control form-control">
-                                    <option value="0">Staff</option>
-                                    <option value="1">Right</option>
-                                    <option value="2">Left</option>
-                                    <option value="3">Both</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="recipient-name" class="col-md-2 col-form-label">Comment:</label>
-                                <div class="col-md-6">
-                                  <input type="text" class="form-control" id="recipient-name">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="recipient-name" class="col-md-2 col-form-label">Time:</label>
-                                <div class="col-md-6">
-                                  <input type="text" class="form-control" id="recipient-name">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="recipient-name" class="col-md-2 col-form-label">Activity:</label>
-                                <div class="col-md-6">
-                                  <input type="text" class="form-control" id="recipient-name">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="recipient-name" class="col-md-2 col-form-label">Location:</label>
-                                <div class="col-md-6">
-                                  <select id="select7" name="select3" class="form-control form-control">
-                                    <option value="0">Staff</option>
-                                    <option value="1">Right</option>
-                                    <option value="2">Left</option>
-                                    <option value="3">Both</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </form>
-                            </div>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary">Pay Fee</button>
-                            <button type="button" class="btn btn-primary">Submit</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <div class="table-responsive-lg">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Patient Name</th>
+                  <th>MD</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Activity</th>
+                  <th>Duration</th>
+                  <th>Location</th>
+                  <th>Staff</th>
+                  <th>Status</th>
+                  <th>Comment</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td>you</td>
+                  <td>25</td>
+                  <th>Patient Name</th>
+                  <td>01</td>
+                  <td>you</td>
+                  <td>25</td>
+                  <th>Patient Name</th>
+                  <td>25</td>
+                  <th>Patient Name</th>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>me</td>
+                  <td>28</td>
+                  <th>Patient Name</th>
+                  <td>01</td>
+                  <td>you</td>
+                  <td>25</td>
+                  <th>Patient Name</th>
+                  <td>25</td>
+                  <th>Patient Name</th>
+                </tr>
+                <tr *ngFor="let row of rows">
+                  <td>{{row.pname}}</td>
+                  <td>{{row.md}}</td>
+                  <td>{{row.date}}</td>
+                  <td>{{row.time}}</td>
+                  <td>{{row.activity}}</td>
+                  <td>{{row.duration}}</td>
+                  <td>{{row.location}}</td>
+                  <td>{{row.staff}}</td>
+                  <td>{{row.status}}</td>
+                  <td>{{row.comment}}</td>
 
-                          </div>
-                        </div>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr />
+          <!-- Modal -->
+          <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">add new</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2>add</h2>
+                  <div class="f" style="margin-left: 50px; margin-right: -150px; margin-top: 0px;">
+
+                    <div class="form-group row">
+                      <label for="recipient-name" class="col-md-2 col-form-label">Patient Name:</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" [(ngModel)]="pname" placeholder="pname" />
+
+                      </div>
+                    </div>Comment
+                    <div class="form-group row">
+                      <label for="recipient-name" class="col-md-2 col-form-label">MD:</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" [(ngModel)]="md" placeholder="md" />
+                      </div>
                     </div>
-                  </div>
-                  <div class="search">
-                    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="searching for a patient by id or name ">
-                  </div>
+                    <label class="">Personal</label>
+                    <div class="form-group row">
+                      <label class="col-md-2 col-form-label" for="text-input">Birth Date</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" [(ngModel)]="date" placeholder="date"
+                               [minDate]="minDate"
+                               [maxDate]="maxDate"
+                               #dp="bsDatepicker"
+                               bsDatepicker [(bsValue)]="myDateValue" />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="recipient-name" class="col-md-2 col-form-label">MD:</label>
+                      <div class="col-md-6">
+                        <select [(ngModel)]="age" name="age" class="form-control">
+                          <option value="0">select MD</option>
+                          <option value="Right">Right</option>
+                          <option value="Left">Left</option>
+                          <option value="Both">Both</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="recipient-name" class="col-md-2 col-form-label">Time:</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" [(ngModel)]="time" placeholder="time" />
 
-                  <div class="table-responsive-lg">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>Patient Name</th>
-                          <th>MD</th>
-                          <th>Date</th>
-                          <th>Time</th>
-                          <th>Activity</th>
-                          <th>Duration</th>
-                          <th>Location</th>
-                          <th>Staff</th>
-                          <th>Status</th>
-                          <th>Comment</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr *ngFor="let worklist of worklists| filter:searchText" [class.selected]="worklist === selectedWorklist" (click)="onSelect(worklist)">
-                          <td>{{worklist.pname}}</td>
-                          <td>{{worklist.md}}</td>
-                          <td>{{worklist.date}}</td>
-                          <td>{{worklist.time}}</td>
-                          <td>{{worklist.activity}}</td>
-                          <td>{{worklist.duration}}</td>
-                          <td>{{worklist.location}}</td>
-                          <td>{{worklist.staff}}</td>
-                          <td>{{worklist.status}}</td>
-                          <td>{{worklist.comment}}</td>
-                        </tr>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="recipient-name" class="col-md-2 col-form-label">Activity:</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" [(ngModel)]="activity" placeholder="activity" />
 
-                      </tbody>
-                    </table>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="recipient-name" class="col-md-2 col-form-label">Duration:</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" [(ngModel)]="duration" placeholder="duration" />
+
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="recipient-name" class="col-md-2 col-form-label">Location:</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" [(ngModel)]="location" placeholder="location" />
+
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="recipient-name" class="col-md-2 col-form-label">staff:</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" [(ngModel)]="staff" placeholder="staff" />
+
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="recipient-name" class="col-md-2 col-form-label">Status:</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" [(ngModel)]="status" placeholder="status" />
+
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="recipient-name" class="col-md-2 col-form-label">Comment:</label>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" [(ngModel)]="comment" placeholder="comment" />
+
+                      </div>
+                    </div>
+
                   </div>
                 </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="buttonAdd()">Submit</button>
+
                 </div>
               </div>
             </div>
+          </div>
+
+
+
         </tab>
       </tabset>
     </div><!--/.col-->

@@ -20,7 +20,7 @@ export
     icon: 'fa fa-tachometer fa-50x',
   }, {
     name: 'System Admin',
-    url: '/menus',
+    url: '/icons',
     icon: 'fa fa-bars',
     children: [{
       name: 'Hospital',
@@ -151,7 +151,8 @@ export
       name: 'Patient Appointments',
       url: '/reception/patientappointments',
       icon: 'icon-star'
-    }, {
+      },
+      {
       name: 'Generate Queue No',
       url: '/reception/generatequeuno',
       icon: 'icon-star'
@@ -173,7 +174,11 @@ export
         icon: 'icon-star'
       }]
     }]
-  }, {
+    },
+
+
+
+    {
     name: "Physician's Workspace",
     url: 'physiciansworkspace',
     icon: 'icon-star',
@@ -194,7 +199,7 @@ export
       url: '/physiciansworkpace/physician',
       icon: 'icon-star'
     }]
-  }, {}, {}, {
+  }, {
     name: "Nurse's Workspace",
     url: '/nurseworkspace',
     icon: 'icon-star',
@@ -458,7 +463,13 @@ export
       name: 'Login',
       url: '/login',
       icon: 'icon-star'
-    }, {
+    },
+      {
+        name: 'Reg',
+        url: '/reg',
+        icon: 'icon-star'
+      },
+      {
       name: 'Register',
       url: '/register',
       icon: 'icon-star'

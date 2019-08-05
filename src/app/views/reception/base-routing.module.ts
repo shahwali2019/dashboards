@@ -31,7 +31,10 @@ const routes: Routes = [{
     data: {
       title: 'Generate queuno'
     }
-  }, {
+    },
+
+
+    {
     path: 'billinginvoicing',
     component: BillinginvoicingComponent,
     data: {

@@ -14,109 +14,95 @@
           <div class="animated fadeIn" style="background-color: lightgrey">
             <div class="row">
               <div class="col-lg-12">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" style="background-color: lightgrey">Add new patient</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal" style="background-color: lightgrey">Add new patient</button>
               </div>
             </div>
           </div>
-          <div class="table-responsive-lg">
-            <table class="table">
+          <hr />
+          <div class="table-responsive table-sm ">
+            <table class="table table-bordered">
               <thead>
                 <tr>
+                  <th>Salutation</th>
                   <th>Full Name</th>
-                  <th>NRIC</th>
-                  <th>Passport Number</th>
-                  <th>MRID</th>
+                  <th>Other</th>
                   <th>Active</th>
+                  <th>File</th>
+                  <th>NIRC/Passport No</th>
+                  <th>NIRC</th>
+                  <th>In/Outpatient</th>
+                  <th>Birth Date</th>
+                  <th>Birth Place</th>
                   <th>Gender</th>
+                  <th>Marital Status</th>
+                  <th>Religion</th>
                   <th>Age</th>
-                  <th>View Barode</th>
+                  <th>Allergy</th>
+                  <th>Language</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>ANDY PATIENT</td>
-                  <td>9776654545</td>
-                  <td></td>
-                  <td>54545644</td>
-                  <td>Yes</td>
-                  <td>Male</td>
-                  <td>60</td>
-                  <td>View</td>
+                  <td>a</td>
+                  <td>King</td>
+                  <td>abc</td>
+                  <td>yes</td>
+                  <td>image</td>
+                  <th>0065435</th>
+                  <td>01</td>
+                  <td>yes</td>
+                  <td>09/08/2019</td>
+                  <th>abcd</th>
+                  <td>male</td>
+                  <th>single</th>
+                  <td>a</td>
+                  <td>23</td>
+                  <td>allergy</td>
+                  <td>abcd</td>
 
                 </tr>
                 <tr>
-                  <td>ANDY PATIENT</td>
-                  <td>9776654545</td>
-                  <td></td>
-                  <td>54545644</td>
-                  <td>Yes</td>
-                  <td>Male</td>
-                  <td>60</td>
-                  <td>View</td>
+                  <td>a</td>
+                  <td>King</td>
+                  <td>abc</td>
+                  <td>yes</td>
+                  <td>image</td>
+                  <th>0065435</th>
+                  <td>01</td>
+                  <td>yes</td>
+                  <td>09/08/2019</td>
+                  <th>abcd</th>
+                  <td>male</td>
+                  <th>single</th>
+                  <td>a</td>
+                  <td>23</td>
+                  <td>allergy</td>
+                  <td>abcd</td>
 
                 </tr>
-                <tr>
-                  <td>ANDY PATIENT</td>
-                  <td>9776654545</td>
-                  <td></td>
-                  <td>54545644</td>
-                  <td>Yes</td>
-                  <td>Male</td>
-                  <td>60</td>
-                  <td>View</td>
-
+                <tr *ngFor="let row of rows">
+                  <td>{{row.salutation}}</td>
+                  <td>{{row.fullname}}</td>
+                  <td>{{row.other}}</td>
+                  <td>{{row.active}}</td>
+                  <td>{{row.file}}</td>
+                  <td>{{row.passport}}</td>
+                  <td>{{row.nirc}}</td>
+                  <td>{{row.outpatient}}</td>
+                  <td>{{row.birthdate }}</td>
+                  <td>{{row.birthplace }}</td>
+                  <td>{{row.gender}}</td>
+                  <td>{{row.maritalstatus }}</td>
+                  <td>{{row.religion }}</td>
+                  <td>{{row.age }}</td>
+                  <td>{{row.allergy }}</td>
+                  <td>{{row.language }}</td>
                 </tr>
-                <tr>
-                  <td>ANDY PATIENT</td>
-                  <td>9776654545</td>
-                  <td></td>
-                  <td>54545644</td>
-                  <td>Yes</td>
-                  <td>Male</td>
-                  <td>60</td>
-                  <td>View</td>
-
-                </tr>
-                <tr>
-                  <td>ANDY PATIENT</td>
-                  <td>9776654545</td>
-                  <td></td>
-                  <td>54545644</td>
-                  <td>Yes</td>
-                  <td>Male</td>
-                  <td>60</td>
-                  <td>View</td>
-
-                </tr>
-                <tr>
-                  <td>ANDY PATIENT</td>
-                  <td>9776654545</td>
-                  <td></td>
-                  <td>54545644</td>
-                  <td>Yes</td>
-                  <td>Male</td>
-                  <td>60</td>
-                  <td>View</td>
-
-                </tr>
-                <tr>
-                  <td>ANDY PATIENT</td>
-                  <td>9776654545</td>
-                  <td></td>
-                  <td>54545644</td>
-                  <td>Yes</td>
-                  <td>Male</td>
-                  <td>60</td>
-                  <td>View</td>
-
-                </tr>
-
               </tbody>
-
             </table>
           </div>
-          <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="margin: 100px;">
-            <div class="modal-dialog modal-lg" style="">
+          <div class="modal fade bd-example-modal-lg" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin: 100px;">
+            <div class="modal-dialog modal-lg" role="document">
               <div class="modal-content">
                 <div class="animated fadeIn" style="background-color: lightblue">
                   <div class="row">
@@ -125,92 +111,88 @@
                       <div class="card-header">Add New Patient</div>
                       <tabset>
                         <tab heading="Home">
+                          <hr />
+                          <!-- Modal -->
                           <div class="row">
                             <div class="col-md-12">
                               <div class="card">
                                 <div class="container">
                                   <div [hidden]="submitted">
-                                    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+                                    <div class="modal-body">
                                       <i class="">
                                         Name
                                       </i>
                                       <div class="form-group row">
                                         <label class="col-sm-2 col-form-label" for="text-input">Salutation</label>
                                         <div class="col-sm-3">
-                                          <select id="select7" name="select3" class="form-control form-control">
+                                          <select [(ngModel)]="salutation" name="salutation" class="form-control">
                                             <option value="0">Please select</option>
-                                            <option value="1">Right</option>
-                                            <option value="2">Left</option>
-                                            <option value="3">Both</option>
+                                            <option value="a">a</option>
+                                            <option value="b">b</option>
                                           </select>
                                         </div>
                                       </div>
                                       <div class="form-group row">
                                         <label class="col-sm-2 col-form-label" for="text-input">Fullname</label>
                                         <div class="col-sm-3">
-                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                          <input type="text" class="form-control" [(ngModel)]="fullname" placeholder="fullname" />
                                         </div>
                                       </div>
                                       <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Other</label>
+                                        <label class="col-sm-2 col-form-label" for="text-input">Other </label>
                                         <div class="col-sm-3">
-                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                          <input type="text" class="form-control" [(ngModel)]="other" placeholder="other" />
                                         </div>
                                       </div>
                                       <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Active</label>
+                                        <label class="col-sm-2 col-form-label" for="text-input">Active </label>
                                         <div class="col-sm-3">
-                                          <select id="select7" name="select3" class="form-control form-control">
+                                          <select [(ngModel)]="active" name="active" class="form-control">
                                             <option value="0">Please select</option>
-                                            <option value="1">Right</option>
-                                            <option value="2">Left</option>
-                                            <option value="3">Both</option>
+                                            <option value="no">No</option>
+                                            <option value="yes">Yes</option>
                                           </select>
                                         </div>
                                       </div>
                                       <div class="form-group row">
                                         <label class="uploader" ondragover="return false;" [class.loaded]="loaded" [style.outlineColor]="dragging ? activeColor : baseColor" (dragenter)="handleDragEnter()" (dragleave)="handleDragLeave()" (drop)="handleDrop($event)" style="left: 242px; top: -200px">
-                                          <img [src]="imageSrc" (load)="handleImageLoad()" [class.loaded]="imageLoaded" />
                                         </label>
                                         <div class="col-sm-2">
-                                          <input type="file" name="file" accept="image/*" (change)="handleInputChange($event)" style="left: -600px;">
+                                          <img [src]="imageSrc" (load)="handleImageLoad()" [class.loaded]="imageLoaded" style="height: 200px; margin-top: -220px; width: 250px" />
+
+                                          <input type="file" [(ngModel)]="file" accept="image/*" (change)="handleInputChange($event)" style="left: -600px;">
                                         </div>
                                       </div>
-                                      <div class="b" style="margin-top: -150px">
+                                      <div class="" style="margin-top: -150px">
                                         <label class="">ID</label>
                                         <div class="form-group row">
                                           <label class="col-sm-2 col-form-label" for="text-input">NIRC/Passport No</label>
                                           <div class="col-sm-3">
-                                            <select id="select7" name="select3" class="form-control form-control">
+                                            <select [(ngModel)]="passport" name="passport" class="form-control">
                                               <option value="0">select</option>
-                                              <option value="1">Right</option>
-                                              <option value="2">Left</option>
+                                              <option value="studentpass">Student Passport</option>
+                                              <option value="employeepass">Employee passport</option>
                                               <option value="3">Both</option>
                                             </select>
                                           </div>
                                         </div>
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">NIRC</label>
-                                          <div class="col-sm-3">
-                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                          </div>
-                                        </div>
+
                                       </div>
                                       <div class="f" style="margin-left: 400px; margin-right: -400px; margin-top: -100px;">
                                         <div class="form-group row">
                                           <label class="col-sm-2 col-form-label" for="text-input">NIRC</label>
                                           <div class="col-sm-3">
-                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                            <input type="text" class="form-control" [(ngModel)]="nirc" placeholder="nirc" />
+
                                           </div>
                                         </div>
                                         <div class="form-group row">
                                           <label class="col-sm-2 col-form-label" for="text-input">In/Out patient</label>
                                           <div class="col-sm-3">
-                                            <select id="select7" name="select3" class="form-control form-control">
+                                            <select [(ngModel)]="outpatient" name="outpatient" class="form-control">
                                               <option value="0">select</option>
-                                              <option value="1">Right</option>
-                                              <option value="2">Left</option>
-                                              <option value="3">Both</option>
+                                              <option value="in">IN</option>
+                                              <option value="out">Out</option>
                                             </select>
                                           </div>
                                         </div>
@@ -221,7 +203,7 @@
                                         <div class="form-group row">
                                           <label class="col-sm-2 col-form-label" for="text-input">Birth Date</label>
                                           <div class="col-sm-3">
-                                            <input type="text"
+                                            <input type="text" [(ngModel)]="birthdate"
                                                    class="form-control"
                                                    [minDate]="minDate"
                                                    [maxDate]="maxDate"
@@ -233,28 +215,27 @@
                                         <div class="form-group row">
                                           <label class="col-sm-2 col-form-label" for="text-input">Birth Place</label>
                                           <div class="col-sm-3">
-                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                            <input type="text" class="form-control" [(ngModel)]="birthplace" placeholder="place birth" />
                                           </div>
                                         </div>
                                         <div class="form-group row">
                                           <label class="col-sm-2 col-form-label" for="text-input">Gender</label>
                                           <div class="col-sm-3">
-                                            <select id="select7" name="select3" class="form-control form-control">
+                                            <select [(ngModel)]="gender" name="gender" class="form-control">
                                               <option value="0">select</option>
-                                              <option value="1">Right</option>
-                                              <option value="2">Left</option>
-                                              <option value="3">Both</option>
+                                              <option value="male">Male</option>
+                                              <option value="female">Female</option>
+                                              <option value="other">Other</option>
                                             </select>
                                           </div>
                                         </div>
                                         <div class="form-group row">
                                           <label class="col-sm-2 col-form-label" for="text-input">Marital Status</label>
                                           <div class="col-sm-3">
-                                            <select id="select7" name="select3" class="form-control form-control">
+                                            <select [(ngModel)]="maritalstatus" name="maritalstatus" class="form-control">
                                               <option value="0">select</option>
-                                              <option value="1">Right</option>
-                                              <option value="2">Left</option>
-                                              <option value="3">Both</option>
+                                              <option value="single">Single</option>
+                                              <option value="married">Married</option>
                                             </select>
                                           </div>
                                         </div>
@@ -263,50 +244,51 @@
                                         <div class="form-group row">
                                           <label class="col-sm-2 col-form-label" for="text-input">Religion</label>
                                           <div class="col-sm-3">
-                                            <select id="select7" name="select3" class="form-control form-control">
+                                            <select [(ngModel)]="religion" name="religion" class="form-control">
                                               <option value="0">select</option>
-                                              <option value="1">Right</option>
-                                              <option value="2">Left</option>
-                                              <option value="3">Both</option>
+                                              <option value="a">a</option>
+                                              <option value="b">b</option>
+                                              <option value="c">c</option>
                                             </select>
                                           </div>
                                         </div>
                                         <div class="form-group row">
                                           <label class="col-sm-2 col-form-label" for="text-input">Age</label>
                                           <div class="col-sm-3">
-                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                            <input type="text" class="form-control" [(ngModel)]="age" placeholder="age" />
+
                                           </div>
                                         </div>
                                         <div class="form-group row">
                                           <label class="col-sm-2 col-form-label" for="text-input">Allergy</label>
                                           <div class="col-sm-3">
-                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                            <input type="text" class="form-control" [(ngModel)]="allergy" placeholder="Allergy" />
                                           </div>
                                         </div>
                                         <div class="form-group row">
                                           <label class="col-sm-2 col-form-label" for="text-input">Language</label>
                                           <div class="col-sm-3">
-                                            <select id="select7" name="select3" class="form-control form-control">
-                                              <option value="0">select</option>
-                                              <option value="1">Right</option>
-                                              <option value="2">Left</option>
-                                              <option value="3">Both</option>
+                                            <select [(ngModel)]="language" name="language" class="form-control">
+                                              <option value="">select</option>
+                                              <option value="English">English</option>
+                                              <option value="Malay">Malay</option>
+                                              <option value="both">Both</option>
                                             </select>
                                           </div>
                                         </div>
                                       </div>
-                                    </form>
+                                    </div>
                                   </div>
                                 </div>
                                 <div class="modal-footer">
-                                  <button type="button" class="btn btn-primary">Submit</button>
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="buttonAdd()">Submit</button>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </tab>
+          <!--End modal-->
+                      </tab>
                         <tab heading="Home/Mailing">
                           <div class="row">
                             <div class="col-md-12">

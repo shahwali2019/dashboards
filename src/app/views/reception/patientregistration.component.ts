@@ -29,12 +29,53 @@ export class PatientregistrationComponent {
 
   onSubmit() { this.submitted = true; }
 
-  // TODO: Remove this when we're done
+  //  we're done
   get diagnostic() { return JSON.stringify(this.model); }
   showFormControls(form: any) {
     return form && form.controls[''] &&
-      form.controls[''].value; // Dr. IQ
+      form.controls[''].value; 
   }
+/* Patient Registration */
+  title = 'Patient Registration';
+  public salutation: string;
+  public fullname: string;
+  public other: string;
+  public active: string;
+  public file: any;
+  public passport: number;
+  public nirc: number;
+  public outpatient: number;
+  public birthdate: number;
+  public birthplace: string;
+  public gender: string;
+  public maritalstatus: string;
+  public religion: string;
+  public age: number;
+  public allergy: string;
+  public language: string;
+  public rows: Array<{ salutation: string, fullname: string, other: string, active: string, file: any, passport: number, nirc: number, outpatient: number, birthdate: number, birthplace: string, gender: string, maritalstatus: string, religion: string, age: number, allergy: string, language: string }> = [];
+
+  buttonAdd() {
+    this.rows.push({ salutation: this.salutation, fullname: this.fullname, other: this.other, active: this.active, file: this.file, passport: this.passport, nirc: this.nirc, outpatient: this.outpatient, birthdate: this.birthdate, birthplace: this.birthplace, gender: this.gender, maritalstatus: this.maritalstatus, religion: this.religion, age: this.age, allergy: this.allergy, language: this.language });
+
+    //if you want to clear input
+    this.salutation = null;
+    this.fullname = null;
+    this.other = null;
+    this.active = null;
+    this.file = null;
+    this.passport = null;
+    this.nirc = null;
+    this.outpatient = null;
+    this.birthdate = null;
+    this.gender = null;
+    this.maritalstatus = null;
+    this.religion = null;
+    this.age = null;
+    this.allergy = null;
+    this.language = null;
+  }
+
 
   activeColor: string = 'green';
   baseColor: string = '#ccc';
@@ -46,12 +87,12 @@ export class PatientregistrationComponent {
   imageSrc: string = '';
 
   handleDragEnter() {
-    console.log("handleDragEnter")
+    console.log("")
     this.dragging = true;
   }
 
   handleDragLeave() {
-    console.log("handleDragLeave")
+    console.log("")
     this.dragging = false;
   }
 
@@ -66,7 +107,7 @@ export class PatientregistrationComponent {
   }
 
   handleInputChange(e) {
-    console.log("input change")
+    console.log("")
     var file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
 
     var pattern = /image-*/;
@@ -84,11 +125,13 @@ export class PatientregistrationComponent {
   }
 
   _handleReaderLoaded(e) {
-    console.log("_handleReaderLoaded")
+    console.log("")
     var reader = e.target;
     this.imageSrc = reader.result;
     this.loaded = true;
   }
+
+  /*End Patient Registration*/
 
 }
 
