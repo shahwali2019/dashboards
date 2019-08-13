@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { EventSettingsModel, View } from '@syncfusion/ej2-angular-schedule';
 import { Worklist } from './worklist';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
 import { WORKLISTS } from './mock-worklists';
 
 @Component({
 
- selector: '',
- templateUrl: './patientappointments.component.html',
- styleUrls: ['./patientappointments.component.css']
-    })
+  selector: '',
+  templateUrl: './patientappointments.component.html',
+  styleUrls: ['./patientappointments.component.css']
+})
 export class PatientappointmentsComponent implements OnInit {
 
+
   myDateValue: Date;
-
-
-
   onDateChange(newDate: Date) {
     console.log(newDate);
   }
@@ -56,6 +56,7 @@ export class PatientappointmentsComponent implements OnInit {
     this.comment = null;
   }
 
+
   ngOnInit() {
     this.myDateValue = new Date();
   }
@@ -84,15 +85,25 @@ export class PatientappointmentsComponent implements OnInit {
       Subject: 'appointment with board',
       StartTime: new Date(2019, 10, 30, 9, 30),
       EndTime: new Date(2019, 10, 30, 11, 0)
-      },
-      {
-        Id: 4,
-        Subject: 'Meeting with president',
-        StartTime: new Date(2019, 7, 30, 9, 30),
-        EndTime: new Date(2019, 7, 30, 11, 0)
-      }
+    },
+    {
+      Id: 4,
+      Subject: 'Meeting with president',
+      StartTime: new Date(2019, 7, 30, 9, 30),
+      EndTime: new Date(2019, 7, 30, 11, 0)
+    }
     ]
   }
+
+  /* Practise*/
+
+  isValid: boolean = true;
+  changeValue(valid: boolean) {
+    this.isValid = valid;
+  }
+
+  show: boolean = true
+
 
 }
 

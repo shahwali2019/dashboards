@@ -3,412 +3,566 @@
     <div class="col-lg-12">
       <!-- Nav tabs -->
       <tabset>
-        <tab heading="system admin">
-
-          <div class="container col-12 bg-primary py-3">
-            <div class="row justify-content-center">
-              <h1>Patient Registration</h1>
+        <div class="table-responsive table-sm">
+          <tab heading="system admin">
+            <!--
+            <div>
+              <p>Today is: {{today | date:'fullDate'}}</p>
+              <p>The time is {{today | date:'h:mm a'}} </p>
             </div>
-          </div>
-          <!--  modal -->
-          <div class="animated fadeIn" style="background-color: lightgrey">
-            <div class="row">
-              <div class="col-lg-12">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal" style="background-color: lightgrey">Add new patient</button>
+            -->
+            <div class="container col-12 bg-primary py-3">
+              <div class="row justify-content-center">
+                <h1>Patient Registration</h1>
               </div>
             </div>
-          </div>
-          <hr />
-          <div class="table-responsive table-sm ">
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th>Salutation</th>
-                  <th>Full Name</th>
-                  <th>Other</th>
-                  <th>Active</th>
-                  <th>File</th>
-                  <th>NIRC/Passport No</th>
-                  <th>NIRC</th>
-                  <th>In/Outpatient</th>
-                  <th>Birth Date</th>
-                  <th>Birth Place</th>
-                  <th>Gender</th>
-                  <th>Marital Status</th>
-                  <th>Religion</th>
-                  <th>Age</th>
-                  <th>Allergy</th>
-                  <th>Language</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>a</td>
-                  <td>King</td>
-                  <td>abc</td>
-                  <td>yes</td>
-                  <td>image</td>
-                  <th>0065435</th>
-                  <td>01</td>
-                  <td>yes</td>
-                  <td>09/08/2019</td>
-                  <th>abcd</th>
-                  <td>male</td>
-                  <th>single</th>
-                  <td>a</td>
-                  <td>23</td>
-                  <td>allergy</td>
-                  <td>abcd</td>
-
-                </tr>
-                <tr>
-                  <td>a</td>
-                  <td>King</td>
-                  <td>abc</td>
-                  <td>yes</td>
-                  <td>image</td>
-                  <th>0065435</th>
-                  <td>01</td>
-                  <td>yes</td>
-                  <td>09/08/2019</td>
-                  <th>abcd</th>
-                  <td>male</td>
-                  <th>single</th>
-                  <td>a</td>
-                  <td>23</td>
-                  <td>allergy</td>
-                  <td>abcd</td>
-
-                </tr>
-                <tr *ngFor="let row of rows">
-                  <td>{{row.salutation}}</td>
-                  <td>{{row.fullname}}</td>
-                  <td>{{row.other}}</td>
-                  <td>{{row.active}}</td>
-                  <td>{{row.file}}</td>
-                  <td>{{row.passport}}</td>
-                  <td>{{row.nirc}}</td>
-                  <td>{{row.outpatient}}</td>
-                  <td>{{row.birthdate }}</td>
-                  <td>{{row.birthplace }}</td>
-                  <td>{{row.gender}}</td>
-                  <td>{{row.maritalstatus }}</td>
-                  <td>{{row.religion }}</td>
-                  <td>{{row.age }}</td>
-                  <td>{{row.allergy }}</td>
-                  <td>{{row.language }}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="modal fade bd-example-modal-lg" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin: 100px;">
-            <div class="modal-dialog modal-lg" role="document">
-              <div class="modal-content">
-                <div class="animated fadeIn" style="background-color: lightblue">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <!-- Nav tabs -->
-                      <div class="card-header">Add New Patient</div>
-                      <tabset>
-                        <tab heading="Home">
-                          <hr />
-                          <!-- Modal -->
-                          <div class="row">
-                            <div class="col-md-12">
-                              <div class="card">
-                                <div class="container">
-                                  <div [hidden]="submitted">
-                                    <div class="modal-body">
-                                      <i class="">
-                                        Name
-                                      </i>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Salutation</label>
-                                        <div class="col-sm-3">
-                                          <select [(ngModel)]="salutation" name="salutation" class="form-control">
-                                            <option value="0">Please select</option>
-                                            <option value="a">a</option>
-                                            <option value="b">b</option>
-                                          </select>
+            <!--  modal -->
+            <div class="animated fadeIn" style="background-color: lightgrey">
+              <div class="row">
+                <div class="col-lg-12">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal" style="background-color: lightgrey">Add new patient</button>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="table-responsive table-sm ">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Salutation</th>
+                    <th>Full Name</th>
+                    <th>Other</th>
+                    <th>Active</th>
+                    <th>File</th>
+                    <th>NIRC/Passport No</th>
+                    <th>NIRC</th>
+                    <th>In/Outpatient</th>
+                    <th>Birth Date</th>
+                    <th>Birth Place</th>
+                    <th>Gender</th>
+                    <th>Marital Status</th>
+                    <th>Religion</th>
+                    <th>Age</th>
+                    <th>Allergy</th>
+                    <th>Language</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>a</td>
+                    <td>King</td>
+                    <td>abc</td>
+                    <td>yes</td>
+                    <td>image</td>
+                    <th>0065435</th>
+                    <td>01</td>
+                    <td>yes</td>
+                    <td>09/08/2019</td>
+                    <th>abcd</th>
+                    <td>male</td>
+                    <th>single</th>
+                    <td>a</td>
+                    <td>23</td>
+                    <td>allergy</td>
+                    <td>abcd</td>
+                  </tr>
+                  <tr>
+                    <td>a</td>
+                    <td>King</td>
+                    <td>abc</td>
+                    <td>yes</td>
+                    <td>image</td>
+                    <th>0065435</th>
+                    <td>01</td>
+                    <td>yes</td>
+                    <td>09/08/2019</td>
+                    <th>abcd</th>
+                    <td>male</td>
+                    <th>single</th>
+                    <td>a</td>
+                    <td>23</td>
+                    <td>allergy</td>
+                    <td>abcd</td>
+                  </tr>
+                  <tr *ngFor="let row of rows">
+                    <td>{{row.salutation}}</td>
+                    <td>{{row.fullname}}</td>
+                    <td>{{row.other}}</td>
+                    <td>{{row.active}}</td>
+                    <td>{{row.file}}</td>
+                    <td>{{row.passport}}</td>
+                    <td>{{row.nirc}}</td>
+                    <td>{{row.outpatient}}</td>
+                    <td>{{row.birthdate }}</td>
+                    <td>{{row.birthplace }}</td>
+                    <td>{{row.gender}}</td>
+                    <td>{{row.maritalstatus }}</td>
+                    <td>{{row.religion }}</td>
+                    <td>{{row.age }}</td>
+                    <td>{{row.allergy }}</td>
+                    <td>{{row.language }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal fade modal-fullscreen" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin: 50px;">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="animated fadeIn" style="background-color: lightblue">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <!-- Nav tabs -->
+                        <div class="card-header">Add New Patient</div>
+                        <tabset>
+                          <tab heading="Home">
+                            <hr />
+                            <!-- Modal -->
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="card">
+                                  <div class="container">
+                                    <div [hidden]="submitted">
+                                      <div class="modal-body">
+                                        <div class="table-responsive table-sm">
+                                          <h3>
+                                            Name
+                                          </h3>
+                                          <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label" for="text-input">Salutation</label>
+                                            <div class="col-sm-3">
+                                              <select [(ngModel)]="salutation" name="salutation" class="form-control">
+                                                <option value="0">Please select</option>
+                                                <option value="a">a</option>
+                                                <option value="b">b</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                          <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label" for="text-input">Fullname</label>
+                                            <div class="col-sm-3">
+                                              <input type="text" class="form-control" [(ngModel)]="fullname" placeholder="fullname" />
+                                            </div>
+                                          </div>
+                                          <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label" for="text-input">Other</label>
+                                            <div class="col-sm-3">
+                                              <input type="text" class="form-control" [(ngModel)]="other" placeholder="other" />
+                                            </div>
+                                          </div>
+                                          <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label" for="text-input">Active</label>
+                                            <div class="col-sm-3">
+                                              <select [(ngModel)]="active" name="active" class="form-control">
+                                                <option value="0">Please select</option>
+                                                <option value="no">No</option>
+                                                <option value="yes">Yes</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                          <div class="form-group row">
+                                            <label class="uploader" ondragover="return false;" [class.loaded]="loaded" [style.outlineColor]="dragging ? activeColor : baseColor" (dragenter)="handleDragEnter()" (dragleave)="handleDragLeave()" (drop)="handleDrop($event)" style="left: 0px; top: 0px"></label>
+                                            <div class="col-sm-3">
+                                              <img [src]="imageSrc" (load)="handleImageLoad()" [class.loaded]="imageLoaded" style="height: 212px; margin-top: -234px; width: 234px"/>
+                                              <input type="file" [(ngModel)]="file" accept="image/*" (change)="handleInputChange($event)" style="left: -600px;">
+                                            </div>
+                                          </div>
+                                          <div class="" style="margin-top: -150px">
+                                            <h3>ID</h3>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">NIRC/Passport No</label>
+                                              <div class="col-sm-3">
+                                                <select [(ngModel)]="passport" name="passport" class="form-control">
+                                                  <option value="0">select</option>
+                                                  <option value="studentpass">Student Passport</option>
+                                                  <option value="employeepass">Employee passport</option>
+                                                  <option value="3">Both</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="f" style="margin-left: 400px; margin-right: -400px; margin-top: -100px;">
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">NIRC</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" class="form-control" [(ngModel)]="nirc" placeholder="nirc" />
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">In/Out patient</label>
+                                              <div class="col-sm-3">
+                                                <select [(ngModel)]="outpatient" name="outpatient" class="form-control">
+                                                  <option value="0">select</option>
+                                                  <option value="in">IN</option>
+                                                  <option value="out">Out</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <br />
+                                          <div class="b" style="margin-top: 0px">
+                                            <h3>Personal</h3>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Birth Date</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" [(ngModel)]="birthdate" class="form-control" [minDate]="minDate" [maxDate]="maxDate" #dp="bsDatepicker" bsDatepicker [(bsValue)]="myDateValue">
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Birth Place</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" class="form-control" [(ngModel)]="birthplace" placeholder="place birth" />
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Gender</label>
+                                              <div class="col-sm-3">
+                                                <select [(ngModel)]="gender" name="gender" class="form-control">
+                                                  <option value="0">select</option>
+                                                  <option value="male">Male</option>
+                                                  <option value="female">Female</option>
+                                                  <option value="other">Other</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Marital Status</label>
+                                              <div class="col-sm-3">
+                                                <select [(ngModel)]="maritalstatus" name="maritalstatus" class="form-control">
+                                                  <option value="0">select</option>
+                                                  <option value="single">Single</option>
+                                                  <option value="married">Married</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="f" style="margin-left: 400px; margin-right: -400px; margin-top: -200px;">
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Religion</label>
+                                              <div class="col-sm-3">
+                                                <select [(ngModel)]="religion" name="religion" class="form-control">
+                                                  <option value="0">select</option>
+                                                  <option value="a">a</option>
+                                                  <option value="b">b</option>
+                                                  <option value="c">c</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Age</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" class="form-control" [(ngModel)]="age" placeholder="age" />
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Allergy</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" class="form-control" [(ngModel)]="allergy" placeholder="Allergy" />
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Language</label>
+                                              <div class="col-sm-3">
+                                                <select [(ngModel)]="language" name="language" class="form-control">
+                                                  <option value="">select</option>
+                                                  <option value="English">English</option>
+                                                  <option value="Malay">Malay</option>
+                                                  <option value="both">Both</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                            <div class="f" style="margin-left: 130px;">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="buttonAdd()">Submit</button>
+                                          </div>
+                                            </div>
                                         </div>
                                       </div>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Fullname</label>
-                                        <div class="col-sm-3">
-                                          <input type="text" class="form-control" [(ngModel)]="fullname" placeholder="fullname" />
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Other </label>
-                                        <div class="col-sm-3">
-                                          <input type="text" class="form-control" [(ngModel)]="other" placeholder="other" />
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Active </label>
-                                        <div class="col-sm-3">
-                                          <select [(ngModel)]="active" name="active" class="form-control">
-                                            <option value="0">Please select</option>
-                                            <option value="no">No</option>
-                                            <option value="yes">Yes</option>
-                                          </select>
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label class="uploader" ondragover="return false;" [class.loaded]="loaded" [style.outlineColor]="dragging ? activeColor : baseColor" (dragenter)="handleDragEnter()" (dragleave)="handleDragLeave()" (drop)="handleDrop($event)" style="left: 242px; top: -200px">
-                                        </label>
-                                        <div class="col-sm-2">
-                                          <img [src]="imageSrc" (load)="handleImageLoad()" [class.loaded]="imageLoaded" style="height: 200px; margin-top: -220px; width: 250px" />
-
-                                          <input type="file" [(ngModel)]="file" accept="image/*" (change)="handleInputChange($event)" style="left: -600px;">
-                                        </div>
-                                      </div>
-                                      <div class="" style="margin-top: -150px">
-                                        <label class="">ID</label>
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">NIRC/Passport No</label>
-                                          <div class="col-sm-3">
-                                            <select [(ngModel)]="passport" name="passport" class="form-control">
-                                              <option value="0">select</option>
-                                              <option value="studentpass">Student Passport</option>
-                                              <option value="employeepass">Employee passport</option>
-                                              <option value="3">Both</option>
-                                            </select>
-                                          </div>
-                                        </div>
-
-                                      </div>
-                                      <div class="f" style="margin-left: 400px; margin-right: -400px; margin-top: -100px;">
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">NIRC</label>
-                                          <div class="col-sm-3">
-                                            <input type="text" class="form-control" [(ngModel)]="nirc" placeholder="nirc" />
-
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">In/Out patient</label>
-                                          <div class="col-sm-3">
-                                            <select [(ngModel)]="outpatient" name="outpatient" class="form-control">
-                                              <option value="0">select</option>
-                                              <option value="in">IN</option>
-                                              <option value="out">Out</option>
-                                            </select>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <br />
-                                      <div class="b" style="margin-top: 0px">
-                                        <label class="">Personal</label>
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">Birth Date</label>
-                                          <div class="col-sm-3">
-                                            <input type="text" [(ngModel)]="birthdate"
-                                                   class="form-control"
-                                                   [minDate]="minDate"
-                                                   [maxDate]="maxDate"
-                                                   #dp="bsDatepicker"
-                                                   bsDatepicker [(bsValue)]="myDateValue">
-                                          </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">Birth Place</label>
-                                          <div class="col-sm-3">
-                                            <input type="text" class="form-control" [(ngModel)]="birthplace" placeholder="place birth" />
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">Gender</label>
-                                          <div class="col-sm-3">
-                                            <select [(ngModel)]="gender" name="gender" class="form-control">
-                                              <option value="0">select</option>
-                                              <option value="male">Male</option>
-                                              <option value="female">Female</option>
-                                              <option value="other">Other</option>
-                                            </select>
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">Marital Status</label>
-                                          <div class="col-sm-3">
-                                            <select [(ngModel)]="maritalstatus" name="maritalstatus" class="form-control">
-                                              <option value="0">select</option>
-                                              <option value="single">Single</option>
-                                              <option value="married">Married</option>
-                                            </select>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="f" style="margin-left: 400px; margin-right: -400px; margin-top: -200px;">
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">Religion</label>
-                                          <div class="col-sm-3">
-                                            <select [(ngModel)]="religion" name="religion" class="form-control">
-                                              <option value="0">select</option>
-                                              <option value="a">a</option>
-                                              <option value="b">b</option>
-                                              <option value="c">c</option>
-                                            </select>
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">Age</label>
-                                          <div class="col-sm-3">
-                                            <input type="text" class="form-control" [(ngModel)]="age" placeholder="age" />
-
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">Allergy</label>
-                                          <div class="col-sm-3">
-                                            <input type="text" class="form-control" [(ngModel)]="allergy" placeholder="Allergy" />
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">Language</label>
-                                          <div class="col-sm-3">
-                                            <select [(ngModel)]="language" name="language" class="form-control">
-                                              <option value="">select</option>
-                                              <option value="English">English</option>
-                                              <option value="Malay">Malay</option>
-                                              <option value="both">Both</option>
-                                            </select>
-                                          </div>
-                                        </div>
+                                      <div class="modal-footer">
                                       </div>
                                     </div>
                                   </div>
                                 </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="buttonAdd()">Submit</button>
-                                </div>
                               </div>
                             </div>
-                          </div>
-          <!--End modal-->
-                      </tab>
-                        <tab heading="Home/Mailing">
-                          <div class="row">
-                            <div class="col-md-12">
-                              <div class="card">
-                                <div class="container">
-                                  <div [hidden]="submitted">
-                                    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
-                                      <i class="">
-                                        Home Address
-                                      </i>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Address Line1</label>
-                                        <div class="col-sm-3">
-                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Address Line1</label>
-                                        <div class="col-sm-3">
-                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">City</label>
-                                        <div class="col-sm-3">
-                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Postal</label>
-                                        <div class="col-sm-3">
-                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Phone</label>
-                                        <div class="col-sm-3">
-                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Fax</label>
-                                        <div class="col-sm-3">
-                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                        </div>
-                                      </div>
-                                      <div class="b" style="margin-left: 400px; margin-right: -400px; margin-top: -100px;">
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">Status</label>
-                                          <div class="col-sm-3">
-                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">Country</label>
-                                          <div class="col-sm-3">
-                                            <select id="select7" name="select3" class="form-control form-control">
-                                              <option value="0">select</option>
-                                              <option value="1">Right</option>
-                                              <option value="2">Left</option>
-                                              <option value="3">Both</option>
-                                            </select>
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">Text1</label>
-                                          <div class="col-sm-3">
-                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">Email</label>
-                                          <div class="col-sm-3">
-                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="f">
-                                        <i class="">
-                                          Mailing Address <br /> Copy Home Address
-                                        </i>
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">Address Line1</label>
-                                          <div class="col-sm-3">
-                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">City</label>
-                                          <div class="col-sm-3">
-                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">Postal</label>
-                                          <div class="col-sm-3">
-                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">Phone</label>
-                                          <div class="col-sm-3">
-                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">Fax</label>
-                                          <div class="col-sm-3">
-                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                          </div>
-                                        </div>
-                                        <div class="b" style="margin-left: 400px; margin-right: -400px; margin-top: -100px;">
+                            <!--End modal-->
+                          </tab>
+                          <tab heading="Home/Mailing">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="card">
+                                  <div class="container">
+                                    <div [hidden]="submitted">
+                                      <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+                                        <div class="table-responsive">
+                                          <h3>
+                                            Home Address
+                                          </h3>
                                           <div class="form-group row">
-                                            <label class="col-sm-2 col-form-label" for="text-input">Status</label>
+                                            <label class="col-sm-2 col-form-label" for="text-input">Address Line1</label>
                                             <div class="col-sm-3">
                                               <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
                                             </div>
                                           </div>
                                           <div class="form-group row">
-                                            <label class="col-sm-2 col-form-label" for="text-input">Country</label>
+                                            <label class="col-sm-2 col-form-label" for="text-input">Address Line1</label>
+                                            <div class="col-sm-3">
+                                              <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                            </div>
+                                          </div>
+                                          <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label" for="text-input">City</label>
+                                            <div class="col-sm-3">
+                                              <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                            </div>
+                                          </div>
+                                          <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label" for="text-input">Postal</label>
+                                            <div class="col-sm-3">
+                                              <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                            </div>
+                                          </div>
+                                          <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label" for="text-input">Phone</label>
+                                            <div class="col-sm-3">
+                                              <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                            </div>
+                                          </div>
+                                          <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label" for="text-input">Fax</label>
+                                            <div class="col-sm-3">
+                                              <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                            </div>
+                                          </div>
+                                          <div class="b" style="margin-left: 400px; margin-right: -400px; margin-top: -100px;">
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Status</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Country</label>
+                                              <div class="col-sm-3">
+                                                <select id="select7" name="select3" class="form-control form-control">
+                                                  <option value="0">select</option>
+                                                  <option value="1">Right</option>
+                                                  <option value="2">Left</option>
+                                                  <option value="3">Both</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Text1</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Email</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="f">
+                                            <h3>
+                                              Mailing Address <br /> Copy Home Address
+                                            </h3>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Address Line1</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">City</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Postal</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Phone</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Fax</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                              </div>
+                                            </div>
+                                            <div class="b" style="margin-left: 400px; margin-right: -400px; margin-top: -100px;">
+                                              <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label" for="text-input">Status</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label" for="text-input">Country</label>
+                                                <div class="col-sm-3">
+                                                  <select id="select7" name="select3" class="form-control form-control">
+                                                    <option value="0">select</option>
+                                                    <option value="1">Right</option>
+                                                    <option value="2">Left</option>
+                                                    <option value="3">Both</option>
+                                                  </select>
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label" for="text-input">Text1</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label" for="text-input">Email</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">Submit</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </tab>
+                          <tab heading="Emergency">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="table-responsive">
+                                  <div class="card">
+                                    <div class="container">
+                                      <div [hidden]="submitted">
+                                        <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+                                          <div class="table-responsive">
+                                            <h3>
+                                              Emergeny
+                                            </h3>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Relationship</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Last Name</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">First Name</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Address Line1</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Address Line2</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">City</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Postal</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Phone</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label class="col-sm-2 col-form-label" for="text-input">Fax</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                              </div>
+                                            </div>
+                                            <div class="b" style="margin-left: 400px; margin-right: -400px; margin-top: -100px;">
+                                              <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label" for="text-input">Status</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Fundus">
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label" for="text-input">Country</label>
+                                                <div class="col-sm-3">
+                                                  <select id="select7" name="select3" class="form-control form-control">
+                                                    <option value="0">select</option>
+                                                    <option value="1">Right</option>
+                                                    <option value="2">Left</option>
+                                                    <option value="3">Both</option>
+                                                  </select>
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label" for="text-input">Text1</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label" for="text-input">Email</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </form>
+                                      </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-primary">Submit</button>
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </tab>
+                          <tab heading="attending">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="card">
+                                  <div class="container">
+                                    <div [hidden]="submitted">
+                                      <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+                                        <div class="table-responsive">
+                                          <h3>Insurance</h3>
+                                          <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label" for="text-input">Primery Physician</label>
                                             <div class="col-sm-3">
                                               <select id="select7" name="select3" class="form-control form-control">
                                                 <option value="0">select</option>
@@ -419,269 +573,108 @@
                                             </div>
                                           </div>
                                           <div class="form-group row">
-                                            <label class="col-sm-2 col-form-label" for="text-input">Text1</label>
+                                            <label class="col-sm-2 col-form-label" for="text-input">Reffering Physician1</label>
+                                            <div class="col-sm-3">
+                                              <select id="select7" name="select3" class="form-control form-control">
+                                                <option value="0">select</option>
+                                                <option value="1">Right</option>
+                                                <option value="2">Left</option>
+                                                <option value="3">Both</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                          <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label" for="text-input">Reffering Physician2</label>
+                                            <div class="col-sm-3">
+                                              <select id="select7" name="select3" class="form-control form-control">
+                                                <option value="0">select</option>
+                                                <option value="1">Right</option>
+                                                <option value="2">Left</option>
+                                                <option value="3">Both</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">Submit</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </tab>
+                          <tab heading="Insurance">
+                            <div class="table-responsive">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="card">
+                                    <div class="container">
+                                      <div [hidden]="submitted">
+                                        <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+
+                                          <h3>
+                                            Attending
+                                          </h3>
+                                          <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label" for="text-input">Insurance Company Name</label>
+                                            <div class="col-sm-3">
+                                              <select id="select7" name="select3" class="form-control form-control">
+                                                <option value="0">select</option>
+                                                <option value="1">Right</option>
+                                                <option value="2">Left</option>
+                                                <option value="3">Both</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                          <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label" for="text-input">Insurance Policy No</label>
                                             <div class="col-sm-3">
                                               <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
                                             </div>
                                           </div>
                                           <div class="form-group row">
-                                            <label class="col-sm-2 col-form-label" for="text-input">Email</label>
+                                            <label class="col-sm-2 col-form-label" for="text-input">Others</label>
                                             <div class="col-sm-3">
                                               <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
                                             </div>
                                           </div>
-                                        </div>
-                                      </div>
-                                    </form>
+                                          <button type="button" class="btn btn-primary">Submit</button>
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                        </form>
+                                    </div>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">Submit</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                   </div>
                                 </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-primary">Submit</button>
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-
-                                </div>
                               </div>
+                                </div>
                             </div>
-                          </div>
-                        </tab>
-                        <tab heading="Emergency">
-                          <div class="row">
-                            <div class="col-md-12">
-                              <div class="card">
-                                <div class="container">
-                                  <div [hidden]="submitted">
-                                    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
-                                      <i class="">
-                                        Emergeny
-                                      </i>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Relationship</label>
-                                        <div class="col-sm-3">
-                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Last Name</label>
-                                        <div class="col-sm-3">
-                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">First Name</label>
-                                        <div class="col-sm-3">
-                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Address Line1</label>
-                                        <div class="col-sm-3">
-                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Address Line2</label>
-                                        <div class="col-sm-3">
-                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">City</label>
-                                        <div class="col-sm-3">
-                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Postal</label>
-                                        <div class="col-sm-3">
-                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Phone</label>
-                                        <div class="col-sm-3">
-                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Fax</label>
-                                        <div class="col-sm-3">
-                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                        </div>
-                                      </div>
-                                      <div class="b" style="margin-left: 400px; margin-right: -400px; margin-top: -100px;">
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">Status</label>
-                                          <div class="col-sm-3">
-                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Fundus">
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">Country</label>
-                                          <div class="col-sm-3">
-                                            <select id="select7" name="select3" class="form-control form-control">
-                                              <option value="0">select</option>
-                                              <option value="1">Right</option>
-                                              <option value="2">Left</option>
-                                              <option value="3">Both</option>
-                                            </select>
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">Text1</label>
-                                          <div class="col-sm-3">
-                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                          </div>
-                                        </div>
-                                        <div class="form-group row">
-                                          <label class="col-sm-2 col-form-label" for="text-input">Email</label>
-                                          <div class="col-sm-3">
-                                            <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </form>
-                                  </div>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-primary">Submit</button>
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </tab>
-                        <tab heading="attending">
-                          <div class="row">
-                            <div class="col-md-12">
-                              <div class="card">
-                                <div class="container">
-                                  <div [hidden]="submitted">
-                                    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
-                                      <h6>Insurance</h6>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Primery Physician</label>
-                                        <div class="col-sm-3">
-                                          <select id="select7" name="select3" class="form-control form-control">
-                                            <option value="0">select</option>
-                                            <option value="1">Right</option>
-                                            <option value="2">Left</option>
-                                            <option value="3">Both</option>
-                                          </select>
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Reffering Physician1</label>
-                                        <div class="col-sm-3">
-                                          <select id="select7" name="select3" class="form-control form-control">
-                                            <option value="0">select</option>
-                                            <option value="1">Right</option>
-                                            <option value="2">Left</option>
-                                            <option value="3">Both</option>
-                                          </select>
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Reffering Physician2</label>
-                                        <div class="col-sm-3">
-                                          <select id="select7" name="select3" class="form-control form-control">
-                                            <option value="0">select</option>
-                                            <option value="1">Right</option>
-                                            <option value="2">Left</option>
-                                            <option value="3">Both</option>
-                                          </select>
-                                        </div>
-                                      </div>
-                                    </form>
-                                  </div>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-primary">Submit</button>
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </tab>
-                        <tab heading="Insurance">
-                          <div class="row">
-                            <div class="col-md-12">
-                              <div class="card">
-                                <div class="container">
-                                  <div [hidden]="submitted">
-                                    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
-                                      <i class="">
-                                        Attending
-                                      </i>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Insurance Company Name</label>
-                                        <div class="col-sm-3">
-                                          <select id="select7" name="select3" class="form-control form-control">
-                                            <option value="0">select</option>
-                                            <option value="1">Right</option>
-                                            <option value="2">Left</option>
-                                            <option value="3">Both</option>
-                                          </select>
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Insurance Policy No</label>
-                                        <div class="col-sm-3">
-                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                        </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label" for="text-input">Others</label>
-                                        <div class="col-sm-3">
-                                          <input type="text" id="text-input" name="text-input" class="form-control" placeholder="">
-                                        </div>
-                                      </div>
-                                    </form>
-                                  </div>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-primary">Submit</button>
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </tab>
-                      </tabset>
+                          </tab>
+                        </tabset>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </tab>
-        <tab heading="Adminstration">
-
-        </tab>
-        <tab heading="ChempTheropy">
-
-        </tab>
-        <tab heading="Radio Theropy">
-
-        </tab>
-        <tab heading="Lab">
-
-        </tab>
-        <tab heading="Pharmacy">
-
-        </tab>
-        <tab heading="Finance">
-
-        </tab>
-        <tab heading="Store">
-
-        </tab>
-        <tab heading="Reports">
-
-        </tab>
+          </tab>
+          <tab heading="Adminstration"></tab>
+          <tab heading="ChempTheropy"></tab>
+          <tab heading="Radio Theropy"></tab>
+          <tab heading="Lab"></tab>
+          <tab heading="Pharmacy"></tab>
+          <tab heading="Finance"></tab>
+          <tab heading="Store"></tab>
+          <tab heading="Reports"></tab>
+        </div>
       </tabset>
-    </div><!--/.col-->
-  </div><!--/.row-->
+    </div>
+    <!--/.col-->
+  </div>
+  <!--/.row-->
 </div>

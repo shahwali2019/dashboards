@@ -10,19 +10,16 @@
                 <div class="card">
                   <div class="table-responsive-lg">
                     <table class="table" style="margin-right: 100px">
-                      <ejs-schedule [eventSettings]="eventData"  width='900px' height='550px' [selectedDate]="currentDate" timezone="UTC" [currentView]="newViewMode"></ejs-schedule>
-
+                      <ejs-schedule [eventSettings]="eventData" width='900px' height='550px' [selectedDate]="currentDate" timezone="UTC" [currentView]="newViewMode"></ejs-schedule>
                     </table>
                   </div>
                 </div>
-                </div>
               </div>
             </div>
+          </div>
         </tab>
         <tab heading="Patinet Appointment View">
-
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal">create</button>
-
           <div class="table-responsive-lg">
             <table class="table table-bordered">
               <thead>
@@ -75,7 +72,6 @@
                   <td>{{row.staff}}</td>
                   <td>{{row.status}}</td>
                   <td>{{row.comment}}</td>
-
                 </tr>
               </tbody>
             </table>
@@ -92,109 +88,101 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <h2>add</h2>
-                  <div class="f" style="margin-left: 50px; margin-right: -150px; margin-top: 0px;">
-
-                    <div class="form-group row">
-                      <label for="recipient-name" class="col-md-2 col-form-label">Patient Name:</label>
-                      <div class="col-md-6">
-                        <input type="text" class="form-control" [(ngModel)]="pname" placeholder="pname" />
-
+                  <div class="table-responsive">
+                    <h2>add</h2>
+                    <div class="f" style="margin-left: 50px; margin-right: -150px; margin-top: 0px;">
+                      <div class="form-group row">
+                        <label for="pname" class="col-md-2 col-form-label">Patient Name:</label>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control" [(ngModel)]="pname" placeholder="pname" id="pname">
+                        </div>
+                      </div>Comment
+                      <div class="form-group row">
+                        <label for="md" class="col-md-2 col-form-label">MD:</label>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control" [(ngModel)]="md" placeholder="md" />
+                        </div>
                       </div>
-                    </div>Comment
-                    <div class="form-group row">
-                      <label for="recipient-name" class="col-md-2 col-form-label">MD:</label>
-                      <div class="col-md-6">
-                        <input type="text" class="form-control" [(ngModel)]="md" placeholder="md" />
+                      <label class="">Personal</label>
+                      <div class="form-group row">
+                        <label class="col-md-2 col-form-label" for="date">Birth Date</label>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control" [(ngModel)]="date" placeholder="date" [minDate]="minDate" [maxDate]="maxDate" #dp="bsDatepicker" bsDatepicker [(bsValue)]="myDateValue" />
+                        </div>
                       </div>
-                    </div>
-                    <label class="">Personal</label>
-                    <div class="form-group row">
-                      <label class="col-md-2 col-form-label" for="text-input">Birth Date</label>
-                      <div class="col-md-6">
-                        <input type="text" class="form-control" [(ngModel)]="date" placeholder="date"
-                               [minDate]="minDate"
-                               [maxDate]="maxDate"
-                               #dp="bsDatepicker"
-                               bsDatepicker [(bsValue)]="myDateValue" />
+                      <div class="form-group row">
+                        <label for="time" class="col-md-2 col-form-label">Time:</label>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control" [(ngModel)]="time" placeholder="time" />
+                        </div>
                       </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="recipient-name" class="col-md-2 col-form-label">MD:</label>
-                      <div class="col-md-6">
-                        <select [(ngModel)]="age" name="age" class="form-control">
-                          <option value="0">select MD</option>
-                          <option value="Right">Right</option>
-                          <option value="Left">Left</option>
-                          <option value="Both">Both</option>
-                        </select>
+                      <div class="form-group row">
+                        <label for="activity" class="col-md-2 col-form-label">Activity:</label>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control" [(ngModel)]="activity" placeholder="activity" />
+                        </div>
                       </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="recipient-name" class="col-md-2 col-form-label">Time:</label>
-                      <div class="col-md-6">
-                        <input type="text" class="form-control" [(ngModel)]="time" placeholder="time" />
-
+                      <div class="form-group row">
+                        <label for="duration" class="col-md-2 col-form-label">Duration:</label>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control" [(ngModel)]="duration" placeholder="duration" />
+                        </div>
                       </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="recipient-name" class="col-md-2 col-form-label">Activity:</label>
-                      <div class="col-md-6">
-                        <input type="text" class="form-control" [(ngModel)]="activity" placeholder="activity" />
-
+                      <div class="form-group row">
+                        <label for="location" class="col-md-2 col-form-label">Location:</label>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control" [(ngModel)]="location" placeholder="location" />
+                        </div>
                       </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="recipient-name" class="col-md-2 col-form-label">Duration:</label>
-                      <div class="col-md-6">
-                        <input type="text" class="form-control" [(ngModel)]="duration" placeholder="duration" />
-
+                      <div class="form-group row">
+                        <label for="staff" class="col-md-2 col-form-label">staff:</label>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control" [(ngModel)]="staff" placeholder="staff" />
+                        </div>
                       </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="recipient-name" class="col-md-2 col-form-label">Location:</label>
-                      <div class="col-md-6">
-                        <input type="text" class="form-control" [(ngModel)]="location" placeholder="location" />
-
+                      <div class="form-group row">
+                        <label for="status" class="col-md-2 col-form-label">Status:</label>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control" [(ngModel)]="status" placeholder="status" />
+                        </div>
                       </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="recipient-name" class="col-md-2 col-form-label">staff:</label>
-                      <div class="col-md-6">
-                        <input type="text" class="form-control" [(ngModel)]="staff" placeholder="staff" />
-
+                      <div class="form-group row">
+                        <label for="comment" class="col-md-2 col-form-label">Comment:</label>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control" [(ngModel)]="comment" placeholder="comment">
+                        </div>
                       </div>
                     </div>
-                    <div class="form-group row">
-                      <label for="recipient-name" class="col-md-2 col-form-label">Status:</label>
-                      <div class="col-md-6">
-                        <input type="text" class="form-control" [(ngModel)]="status" placeholder="status" />
-
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="recipient-name" class="col-md-2 col-form-label">Comment:</label>
-                      <div class="col-md-6">
-                        <input type="text" class="form-control" [(ngModel)]="comment" placeholder="comment" />
-
-                      </div>
-                    </div>
-
                   </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="buttonAdd()">Submit</button>
-
+                  <button type="button" [disabled]="!pname || !md || !date || !time || !activity || !duration || !location || !staff   || !status || !comment" class="btn btn-primary" data-dismiss="modal" (click)="buttonAdd()">Submit</button>
                 </div>
               </div>
             </div>
           </div>
-
-
-
+        </tab>
+        <tab heading="practise">
+          <h3>Using NgIf</h3>
+          <div>
+            <input type="radio" name="rad1" (click)="changeValue(true)">True
+            <input type="radio" name="rad1" (click)="changeValue(false)">False
+          </div>
+          <div *ngIf="isValid">
+            <b>Data is valid.</b>
+          </div>
+          <div *ngIf="!isValid">
+            <b>Data is invalid.</b>
+          </div>
+          <p>Show this all the time</p>
+          <div *ngIf="show">
+            <p>Show this only if "show" is true</p>
+          </div>
         </tab>
       </tabset>
-    </div><!--/.col-->
-  </div><!--/.row-->
+    </div>
+    <!--/.col-->
+  </div>
+  <!--/.row-->
 </div>

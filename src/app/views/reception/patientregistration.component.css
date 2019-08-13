@@ -6,26 +6,22 @@
 }
 
 .uploader {
-  align-items: center;
   background-color: #efefef;
   background-color: rgba(0, 0, 0, 0.02);
-  cursor: pointer;
   display: -webkit-flex;
   display: flex;
   height: 190px;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline: 3px dashed #ccc;
-  outline-offset: 5px;
   position: relative;
-  width: 220px;
-  margin-left: 250px;
+  width: 0px;
+  margin-left: 450px;
+  
 }
 
-.uploader img,
-.uploader .icon {
-  pointer-events: none;
-}
+
+  .uploader img,
+  .uploader .icon {
+    pointer-events: none;
+  }
 
 .uploader,
 .uploader .icon {
@@ -63,6 +59,8 @@
 .uploader img.loaded {
   opacity: 1;
 }
+
+
 
 
 
