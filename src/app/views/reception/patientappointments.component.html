@@ -96,7 +96,9 @@
                         <div class="col-md-6">
                           <input type="text" class="form-control" [(ngModel)]="pname" placeholder="pname" id="pname">
                         </div>
-                      </div>Comment
+                      </div>
+
+                      Comment
                       <div class="form-group row">
                         <label for="md" class="col-md-2 col-form-label">MD:</label>
                         <div class="col-md-6">
@@ -157,28 +159,49 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" [disabled]="!pname || !md || !date || !time || !activity || !duration || !location || !staff   || !status || !comment" class="btn btn-primary" data-dismiss="modal" (click)="buttonAdd()">Submit</button>
+                  <button type="button" [disabled]="!pname || !md || !date || !time || !activity || !duration || !location || !staff   || !status || !comment" class="btn btn-success" data-dismiss="modal" (click)="buttonAdd()">Submit</button>
                 </div>
               </div>
             </div>
           </div>
         </tab>
         <tab heading="practise">
-          <h3>Using NgIf</h3>
-          <div>
-            <input type="radio" name="rad1" (click)="changeValue(true)">True
-            <input type="radio" name="rad1" (click)="changeValue(false)">False
+          <form #re="ngForm" (ngSubmit)="Submit(re.value)">
+
+            <input type="text" name="lname" placeholder="lname" ngModel>
+            <br />
+            <input type="text" name="fname" placeholder="fname" ngModel>
+            <br />
+            <input type="submit" value="submit">
+
+
+          </form>
+
+          <p>
+            {{lname}}
+            {{fname}}
+          </p>
+          <br /><b>Example-2:</b><br /><br />
+          <div>Enter Age:	<input type="text" [(ngModel)]='age'> </div> <br />
+          <div *ngIf="age < 18; else elseAgeBlock">
+            <b>Not eligible to vote.</b>
           </div>
-          <div *ngIf="isValid">
-            <b>Data is valid.</b>
-          </div>
-          <div *ngIf="!isValid">
-            <b>Data is invalid.</b>
-          </div>
-          <p>Show this all the time</p>
-          <div *ngIf="show">
-            <p>Show this only if "show" is true</p>
-          </div>
+          <ng-template #elseAgeBlock>
+            <b>Eligible to vote.</b>
+          </ng-template>
+        </tab>
+
+        <tab heading ="sidenav">
+
+          <form #re="ngForm" (ngSubmit)="Submit(re.value)">
+            <input type="text" name="name" placeholder="name" />
+
+          </form>
+
+          <p>
+            name is: {{name}}
+          </p>
+
         </tab>
       </tabset>
     </div>

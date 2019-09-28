@@ -32,23 +32,33 @@
 
 
 
+<!-- sidebar -->
 
 <div class="app-body">
-  <app-sidebar [fixed]="true" [display]="'lg'">
-    <app-sidebar-nav [navItems]="navItems" [perfectScrollbar] [disabled]="sidebarMinimized"></app-sidebar-nav>
+  <span [class]="icon"></span>
+
+  <app-sidebar [fixed]="true" [display]="'lg'" >
+
+    <app-sidebar-nav [navItems]="navItems" [perfectScrollbar] [disabled]="sidebarMinimized" >
+     
+
+    </app-sidebar-nav>
     <app-sidebar-minimizer></app-sidebar-minimizer>
+
 
   </app-sidebar>
   <!-- Main content -->
   <main class="main">
 
     <cui-breadcrumb>
+
       <!-- Breadcrumb Menu-->
       <div class="nav navbar-nav ml-auto">
         <ul class="breadcrumb-menu d-md-down-none ">
           <li class="btn-group" role="group" aria-label="Button group with nested dropdown ml-auto">
 
             <a class="" [routerLink]="['/dashboard']"></a>
+
           </li>
         </ul>
       </div>

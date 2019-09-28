@@ -13,6 +13,7 @@ import { WORKLISTS } from './mock-worklists';
 })
 export class PatientappointmentsComponent implements OnInit {
 
+  
 
   myDateValue: Date;
   onDateChange(newDate: Date) {
@@ -24,7 +25,21 @@ export class PatientappointmentsComponent implements OnInit {
   selectedWorklist: Worklist;
   constructor() { }
 
+  isValid: boolean = true;
+  age: number = 12;
+  changeValue(valid: boolean) {
+    this.isValid = valid;
+  }
 
+  public lname: string;
+  public fname: string;
+
+  Submit(data) {
+
+    this.lname = data.lname;
+    this.fname = data.fname;
+    
+  }
   title = 'New Appointment';
 
   public pname: string;
@@ -57,9 +72,16 @@ export class PatientappointmentsComponent implements OnInit {
   }
 
 
+  public bookTitle: string;
+  public bookAuthor: string;
+  public bookNoOfPages: number;
+
+
   ngOnInit() {
     this.myDateValue = new Date();
   }
+
+
 
   onSelect(worklist: Worklist): void {
     this.selectedWorklist = worklist;
@@ -95,14 +117,6 @@ export class PatientappointmentsComponent implements OnInit {
     ]
   }
 
-  /* Practise*/
-
-  isValid: boolean = true;
-  changeValue(valid: boolean) {
-    this.isValid = valid;
-  }
-
-  show: boolean = true
 
 
 }

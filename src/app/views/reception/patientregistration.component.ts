@@ -10,6 +10,7 @@ import { User } from '../user';
 })
 export class PatientregistrationComponent {
 
+
   myDateValue: Date;
 
   ngOnInit() {
@@ -56,26 +57,25 @@ export class PatientregistrationComponent {
   public rows: Array<{ salutation: string, fullname: string, other: string, active: string, file: any, passport: number, nirc: number, outpatient: number, birthdate: number, birthplace: string, gender: string, maritalstatus: string, religion: string, age: number, allergy: string, language: string }> = [];
 
   buttonAdd() {
-    this.rows.push({ salutation: this.salutation, fullname: this.fullname, other: this.other, active: this.active, file: this.file, passport: this.passport, nirc: this.nirc, outpatient: this.outpatient, birthdate: this.birthdate, birthplace: this.birthplace, gender: this.gender, maritalstatus: this.maritalstatus, religion: this.religion, age: this.age, allergy: this.allergy, language: this.language });
+      this.rows.push({ salutation: this.salutation, fullname: this.fullname, other: this.other, active: this.active, file: this.file, passport: this.passport, nirc: this.nirc, outpatient: this.outpatient, birthdate: this.birthdate, birthplace: this.birthplace, gender: this.gender, maritalstatus: this.maritalstatus, religion: this.religion, age: this.age, allergy: this.allergy, language: this.language });
 
-    //if you want to clear input
-    this.salutation = null;
-    this.fullname = null;
-    this.other = null;
-    this.active = null;
-    this.file = null;
-    this.passport = null;
-    this.nirc = null;
-    this.outpatient = null;
-    this.birthdate = null;
-    this.gender = null;
-    this.maritalstatus = null;
-    this.religion = null;
-    this.age = null;
-    this.allergy = null;
-    this.language = null;
-  }
-
+      //if you want to clear input
+      this.salutation = null;
+      this.fullname = null;
+      this.other = null;
+      this.active = null;
+      this.file = null;
+      this.passport = null;
+      this.nirc = null;
+      this.outpatient = null;
+      this.birthdate = null;
+      this.gender = null;
+      this.maritalstatus = null;
+      this.religion = null;
+      this.age = null;
+      this.allergy = null;
+      this.language = null;
+    }
 
   activeColor: string = 'green';
   baseColor: string = '#ccc';
@@ -87,12 +87,12 @@ export class PatientregistrationComponent {
   imageSrc: string = '';
 
   handleDragEnter() {
-    console.log("")
+    console.log("handleDragEnter")
     this.dragging = true;
   }
 
   handleDragLeave() {
-    console.log("")
+    console.log("handleDragLeave")
     this.dragging = false;
   }
 
@@ -107,7 +107,7 @@ export class PatientregistrationComponent {
   }
 
   handleInputChange(e) {
-    console.log("")
+    console.log("input change")
     var file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
 
     var pattern = /image-*/;
@@ -125,7 +125,7 @@ export class PatientregistrationComponent {
   }
 
   _handleReaderLoaded(e) {
-    console.log("")
+    console.log("_handleReaderLoaded")
     var reader = e.target;
     this.imageSrc = reader.result;
     this.loaded = true;

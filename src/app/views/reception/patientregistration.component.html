@@ -130,150 +130,151 @@
                                           <div class="form-group row">
                                             <label class="col-sm-2 col-form-label" for="text-input">Salutation</label>
                                             <div class="col-sm-3">
-                                              <select [(ngModel)]="salutation" name="salutation" class="form-control">
+                                              <select [(ngModel)]="salutation" name="salutation" class="form-control" #ctrlTitle="ngModel" required>
                                                 <option value="0">Please select</option>
                                                 <option value="a">a</option>
                                                 <option value="b">b</option>
                                               </select>
                                             </div>
+                                            <label *ngIf="ctrlTitle.invalid && (ctrlTitle.touched || ctrlTitle.dirty)" style="color: red">This field is mandatory</label><br>
                                           </div>
                                           <div class="form-group row">
                                             <label class="col-sm-2 col-form-label" for="text-input">Fullname</label>
                                             <div class="col-sm-3">
-                                              <input type="text" class="form-control" [(ngModel)]="fullname" placeholder="fullname" />
+                                              <input type="text" class="form-control" [(ngModel)]="fullname" placeholder="fullname" #ctrlTitle="ngModel" required>
                                             </div>
+                                            <label *ngIf="ctrlTitle.invalid && (ctrlTitle.touched || ctrlTitle.dirty)" style="color: red">This field is mandatory</label><br>
+
                                           </div>
-                                          <div class="form-group row">
-                                            <label class="col-sm-2 col-form-label" for="text-input">Other</label>
-                                            <div class="col-sm-3">
-                                              <input type="text" class="form-control" [(ngModel)]="other" placeholder="other" />
-                                            </div>
-                                          </div>
-                                          <div class="form-group row">
-                                            <label class="col-sm-2 col-form-label" for="text-input">Active</label>
-                                            <div class="col-sm-3">
-                                              <select [(ngModel)]="active" name="active" class="form-control">
-                                                <option value="0">Please select</option>
-                                                <option value="no">No</option>
-                                                <option value="yes">Yes</option>
-                                              </select>
-                                            </div>
-                                          </div>
-                                          <div class="form-group row">
-                                            <label class="uploader" ondragover="return false;" [class.loaded]="loaded" [style.outlineColor]="dragging ? activeColor : baseColor" (dragenter)="handleDragEnter()" (dragleave)="handleDragLeave()" (drop)="handleDrop($event)" style="left: 0px; top: 0px"></label>
-                                            <div class="col-sm-3">
-                                              <img [src]="imageSrc" (load)="handleImageLoad()" [class.loaded]="imageLoaded" style="height: 212px; margin-top: -234px; width: 234px"/>
-                                              <input type="file" [(ngModel)]="file" accept="image/*" (change)="handleInputChange($event)" style="left: -600px;">
-                                            </div>
-                                          </div>
-                                          <div class="" style="margin-top: -150px">
-                                            <h3>ID</h3>
                                             <div class="form-group row">
-                                              <label class="col-sm-2 col-form-label" for="text-input">NIRC/Passport No</label>
+                                              <label class="col-sm-2 col-form-label" for="text-input">Other</label>
                                               <div class="col-sm-3">
-                                                <select [(ngModel)]="passport" name="passport" class="form-control">
-                                                  <option value="0">select</option>
-                                                  <option value="studentpass">Student Passport</option>
-                                                  <option value="employeepass">Employee passport</option>
-                                                  <option value="3">Both</option>
-                                                </select>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="f" style="margin-left: 400px; margin-right: -400px; margin-top: -100px;">
-                                            <div class="form-group row">
-                                              <label class="col-sm-2 col-form-label" for="text-input">NIRC</label>
-                                              <div class="col-sm-3">
-                                                <input type="text" class="form-control" [(ngModel)]="nirc" placeholder="nirc" />
+                                                <input type="text" class="form-control" [(ngModel)]="other" placeholder="other">
                                               </div>
                                             </div>
                                             <div class="form-group row">
-                                              <label class="col-sm-2 col-form-label" for="text-input">In/Out patient</label>
+                                              <label class="col-sm-2 col-form-label" for="text-input">Active</label>
                                               <div class="col-sm-3">
-                                                <select [(ngModel)]="outpatient" name="outpatient" class="form-control">
-                                                  <option value="0">select</option>
-                                                  <option value="in">IN</option>
-                                                  <option value="out">Out</option>
-                                                </select>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <br />
-                                          <div class="b" style="margin-top: 0px">
-                                            <h3>Personal</h3>
-                                            <div class="form-group row">
-                                              <label class="col-sm-2 col-form-label" for="text-input">Birth Date</label>
-                                              <div class="col-sm-3">
-                                                <input type="text" [(ngModel)]="birthdate" class="form-control" [minDate]="minDate" [maxDate]="maxDate" #dp="bsDatepicker" bsDatepicker [(bsValue)]="myDateValue">
-                                              </div>
-                                            </div>
-                                            <div class="form-group row">
-                                              <label class="col-sm-2 col-form-label" for="text-input">Birth Place</label>
-                                              <div class="col-sm-3">
-                                                <input type="text" class="form-control" [(ngModel)]="birthplace" placeholder="place birth" />
-                                              </div>
-                                            </div>
-                                            <div class="form-group row">
-                                              <label class="col-sm-2 col-form-label" for="text-input">Gender</label>
-                                              <div class="col-sm-3">
-                                                <select [(ngModel)]="gender" name="gender" class="form-control">
-                                                  <option value="0">select</option>
-                                                  <option value="male">Male</option>
-                                                  <option value="female">Female</option>
-                                                  <option value="other">Other</option>
+                                                <select [(ngModel)]="active" name="active" class="form-control">
+                                                  <option value="0">Please select</option>
+                                                  <option value="no">No</option>
+                                                  <option value="yes">Yes</option>
                                                 </select>
                                               </div>
                                             </div>
                                             <div class="form-group row">
-                                              <label class="col-sm-2 col-form-label" for="text-input">Marital Status</label>
+                                              <label class="uploader" ondragover="return false;" [class.loaded]="loaded" [style.outlineColor]="dragging ? activeColor : baseColor" (dragenter)="handleDragEnter()" (dragleave)="handleDragLeave()" (drop)="handleDrop($event)" style="left: 0px; top: 0px"></label>
                                               <div class="col-sm-3">
-                                                <select [(ngModel)]="maritalstatus" name="maritalstatus" class="form-control">
-                                                  <option value="0">select</option>
-                                                  <option value="single">Single</option>
-                                                  <option value="married">Married</option>
-                                                </select>
+                                                <img [src]="imageSrc" (load)="handleImageLoad()" [class.loaded]="imageLoaded" style="height: 212px; margin-top: -234px; width: 234px" />
+                                                <input type="file" [(ngModel)]="file" accept="image/*" (change)="handleInputChange($event)" style="left: -600px;">
                                               </div>
                                             </div>
-                                          </div>
-                                          <div class="f" style="margin-left: 400px; margin-right: -400px; margin-top: -200px;">
-                                            <div class="form-group row">
-                                              <label class="col-sm-2 col-form-label" for="text-input">Religion</label>
-                                              <div class="col-sm-3">
-                                                <select [(ngModel)]="religion" name="religion" class="form-control">
-                                                  <option value="0">select</option>
-                                                  <option value="a">a</option>
-                                                  <option value="b">b</option>
-                                                  <option value="c">c</option>
-                                                </select>
+                                            <div class="" style="margin-top: -150px">
+                                              <h3>ID</h3>
+                                              <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label" for="text-input">NIRC/Passport No</label>
+                                                <div class="col-sm-3">
+                                                  <select [(ngModel)]="passport" name="passport" class="form-control">
+                                                    <option value="0">select</option>
+                                                    <option value="studentpass">Student Passport</option>
+                                                    <option value="employeepass">Employee passport</option>
+                                                    <option value="3">Both</option>
+                                                  </select>
+                                                </div>
                                               </div>
                                             </div>
-                                            <div class="form-group row">
-                                              <label class="col-sm-2 col-form-label" for="text-input">Age</label>
-                                              <div class="col-sm-3">
-                                                <input type="text" class="form-control" [(ngModel)]="age" placeholder="age" />
+                                            <div class="f" style="margin-left: 400px; margin-right: -400px; margin-top: -100px;">
+                                              <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label" for="text-input">NIRC</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" [(ngModel)]="nirc" placeholder="nirc">
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label" for="text-input">In/Out patient</label>
+                                                <div class="col-sm-3">
+                                                  <select [(ngModel)]="outpatient" name="outpatient" class="form-control" #ctrlTitle="ngModel" required>
+                                                    <option value="0">select</option>
+                                                    <option value="in">IN</option>
+                                                    <option value="out">Out</option>
+                                                  </select>
+                                                  <label *ngIf="ctrlTitle.invalid && (ctrlTitle.touched || ctrlTitle.dirty)" style="color: red">This field is mandatory</label>
+                                                </div>
                                               </div>
                                             </div>
-                                            <div class="form-group row">
-                                              <label class="col-sm-2 col-form-label" for="text-input">Allergy</label>
-                                              <div class="col-sm-3">
-                                                <input type="text" class="form-control" [(ngModel)]="allergy" placeholder="Allergy" />
+                                            <br />
+                                            <div class="b" style="margin-top: 0px">
+                                              <h3>Personal</h3>
+                                              <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label" for="text-input">Birth Date</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" [(ngModel)]="birthdate" class="form-control" [minDate]="minDate" [maxDate]="maxDate" #dp="bsDatepicker" bsDatepicker [(bsValue)]="myDateValue">                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label" for="text-input">Birth Place</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" [(ngModel)]="birthplace" placeholder="place birth">                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label" for="text-input">Gender</label>
+                                                <div class="col-sm-3">
+                                                  <select [(ngModel)]="gender" name="gender" class="form-control">
+                                                    <option value="0">select</option>
+                                                    <option value="male">Male</option>
+                                                    <option value="female">Female</option>
+                                                    <option value="other">Other</option>
+                                                  </select>
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label" for="text-input">Marital Status</label>
+                                                <div class="col-sm-3">
+                                                  <select [(ngModel)]="maritalstatus" name="maritalstatus" class="form-control">
+                                                    <option value="0">select</option>
+                                                    <option value="single">Single</option>
+                                                    <option value="married">Married</option>
+                                                  </select>
+                                                </div>
                                               </div>
                                             </div>
-                                            <div class="form-group row">
-                                              <label class="col-sm-2 col-form-label" for="text-input">Language</label>
-                                              <div class="col-sm-3">
-                                                <select [(ngModel)]="language" name="language" class="form-control">
-                                                  <option value="">select</option>
-                                                  <option value="English">English</option>
-                                                  <option value="Malay">Malay</option>
-                                                  <option value="both">Both</option>
-                                                </select>
+                                            <div class="f" style="margin-left: 400px; margin-right: -400px; margin-top: -200px;">
+                                              <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label" for="text-input">Religion</label>
+                                                <div class="col-sm-3">
+                                                  <select [(ngModel)]="religion" name="religion" class="form-control">
+                                                    <option value="0">select</option>
+                                                    <option value="a">a</option>
+                                                    <option value="b">b</option>
+                                                    <option value="c">c</option>
+                                                  </select>
+                                                </div>
                                               </div>
-                                            </div>
-                                            <div class="f" style="margin-left: 130px;">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="buttonAdd()">Submit</button>
-                                          </div>
+                                              <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label" for="text-input">Age</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" [(ngModel)]="age" placeholder="age" >                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label" for="text-input">Allergy</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" [(ngModel)]="allergy" placeholder="Allergy">
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label" for="text-input">Language</label>
+                                                <div class="col-sm-3">
+                                                  <select [(ngModel)]="language" name="language" class="form-control">
+                                                    <option value="">select</option>
+                                                    <option value="English">English</option>
+                                                    <option value="Malay">Malay</option>
+                                                    <option value="both">Both</option>
+                                                  </select>
+                                                </div>
+                                              </div>
+                                              <div class="" style="margin-left: 130px;">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="buttonAdd()">Submit</button>
+                                              </div>
                                             </div>
                                         </div>
                                       </div>

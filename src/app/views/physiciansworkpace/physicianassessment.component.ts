@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as jsPDF from "jspdf";
 
 @Component({
   templateUrl: 'physicianassessment.component.html'

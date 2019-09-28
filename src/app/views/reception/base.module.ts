@@ -1,6 +1,6 @@
 // Angular
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { PatientregistrationComponent } from './patientregistration.component';
@@ -21,6 +21,7 @@ import { DatepickerModule, BsDatepickerModule } from 'ngx-bootstrap/datepicker';
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     BaseRoutingModule,
     TabsModule,
     ScheduleModule,

@@ -126,3 +126,10 @@ nav a {
 }
 
 
+#fa-home {
+  color: red;
+  font-size: 80px;
+  background: #000;
+  padding: 15px;
+}
+

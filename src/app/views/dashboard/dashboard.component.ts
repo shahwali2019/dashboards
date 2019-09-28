@@ -6,6 +6,7 @@ import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
   templateUrl: 'dashboard.component.html'
 })
 export class DashboardComponent implements OnInit {
+  imageUrl = 'assets/img/brand/user.png';
 
   // barChart
   public barChart1Data: Array<any> = [
