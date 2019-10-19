@@ -1,16 +1,12 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 // Import Containers
-import { DefaultLayoutComponent } from './containers';
-
-
+import { DefaultLayoutComponent} from './containers';
 import { LoginComponent } from './views/login/login.component';
-import { RegisterComponent } from './views/register/register.component';
+import { RegisterComponent} from './views/register/register.component';
 import { RegComponent } from './views/reg/reg.component';
 
-export
-  const routes: Routes = [{
+export const routes: Routes = [{
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',
@@ -26,16 +22,13 @@ export
     data: {
       title: 'Register Page'
     }
-    },
-    {
-      path: 'reg',
-      component: RegComponent,
-      data: {
-        title: 'Register Page'
-      }
-    },
-
-    {
+  }, {
+    path: 'reg',
+    component: RegComponent,
+    data: {
+      title: 'Register Page'
+    }
+  }, {
     path: '',
     component: DefaultLayoutComponent,
     data: {
@@ -53,9 +46,7 @@ export
     }, {
       path: 'reception',
       loadChildren: './views/reception/base.module#BaseModule'
-      },
-
-      {
+    }, {
       path: 'clinicadmin',
       loadChildren: './views/clinicadmin/base.module#BaseModule'
     }, {
@@ -94,10 +85,16 @@ export
     }, {
       path: 'pharmacy',
       loadChildren: './views/pharmacy/base.module#BaseModule'
-      },
-
-
-      {
+    }, {
+      path: 'reportsanddocuments',
+      loadChildren: './views/reportsanddocuments/base.module#BaseModule'
+    }, {
+      path: 'finance',
+      loadChildren: './views/finance/base.module#BaseModule'
+    }, {
+      path: 'administrationoperations',
+      loadChildren: './views/administrationoperations/base.module#BaseModule'
+    }, {
       path: 'pharmacystockinventory',
       loadChildren: './views/pharmacystockinventory/base.module#BaseModule'
     }, {
@@ -110,10 +107,9 @@ export
       path: 'widgets',
       loadChildren: './views/widgets/widgets.module#WidgetsModule'
     }]
-  },];
-
-@NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
-})
-export class AppRoutingModule {}
+  },]; @
+    NgModule({
+      imports: [RouterModule.forRoot(routes)],
+      exports: [RouterModule]
+    })
+export class AppRoutingModule { }

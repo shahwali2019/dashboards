@@ -1,18 +1,505 @@
+<div class="animated fadeIn" style="background-color: lightblue">
+  <div class="row">
+    <div class="col-lg-12">
+      <br />
+      <a class="" style="width: 940px;">
+        <span class="" style="font-size: 35px; color: skyblue"> <ngx-avatar size="70" src="assets/img/brand/photo.png"></ngx-avatar></span>
+        <p class="h6 card-title font-weight-bold" style="padding-right: 20px;  margin-top: -40px;text-align: center ">TestA</p>
+        <br />
+        <br />
+        <p class="h6 card-title font-weight-bold " style="padding-right: 754px; margin-top: -37px; text-align: center">Appt:</p>
+        <br />
+        <p class="h6 card-title font-weight-bold " style="padding-right: 724px; margin-top: -27px;text-align: center">Diagnosis:</p>
+        <br />
+        <p class="h6 card-title font-weight-bold" style="padding-left: 64px; margin-top: -55px;text-align: center">DOB: Jun, 1960 | 58 years old</p>
+        <br />
+        <p class="h6 card-title font-weight-bold " style="padding-left: 64px; margin-top: -27px;text-align: center">Attending: Grumble, Beverly</p>
+      </a>
+      <!-- Nav tabs -->
+      <tabset>
+        <tab heading="Chart Summary">
+          <style>
+            ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+            }
 
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>
-    <p>Dashboard</p>
-  </title>
-</head>
-<body>
-  <img [src]="imageUrl">
-</body>
-</html>
+            li {
+              float: left;
+            }
 
+              li a {
+                text-align: center;
+                padding: 20px;
+                background-color: cornflowerblue;
+                color: white;
+              }
+          </style>
+          <div class="" style="background-color: lightblue;">
+            <div class="card">
+              <div class="card-header">
+                <!--Chart Summary--> <strong>Chart Summary</strong>
+              </div>
+              <div class="card-body">
+                <div class="list-group nav nav-tabs nav-justified">
+                  <h6 class="media-heading">
+                    <a [routerLink]="['/physiciansworkpace/physician']" class="btn btn-primary btn-lg active list-group-item list-group-item-action" role="button" aria-pressed="true" style="">Physician Workspace</a>
+                  </h6>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6" style="padding-left: 60px">
+                  <div class="">
+                    <div class="">
+                      <div class="">
+                        <ul class="nav nav-tabs nav-justified" role="tablist">
+                          <li>
+                            <a data-toggle="tab" href="#tab1" heading="tab">Problems</a>
+                          </li>
+                          <li>
+                            <a [routerLink]="['/physiciansworkpace/physician']">Record</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <br />
+                      <h6 class="media-heading">
+                        <a [routerLink]="['/physiciansworkpace/physician']">Physician Notes</a>
+                      </h6>
+                      <h6 class="media-heading">
+                        <a [routerLink]="['/physiciansworkpace/physicianassessment']">Physicians Workspace</a>
+                      </h6>
+                    </div>
+                    <!-- / media-body -->
+                  </div>
+                  <!-- / media -->
+                  <div class="">
+                    <div class="">
+                      <ul class="nav nav-tabs nav-justified" role="tablist">
+                        <li>
+                          <a data-toggle="tab" href="#tab1" role="tab">Other history </a>
+                        </li>
+                        <li>
+                          <a [routerLink]="['/physiciansworkpace/physicianassessment']">Record</a>
+                        </li>
+                      </ul>
+                      <br />
+                      <h6 class="media-heading">
+                        <a [routerLink]="['/physiciansworkpace/physicianassessment']">Physicians Workspace</a>
+                      </h6>
+                      <h6 class="media-heading">
+                        <a [routerLink]="['/physiciansworkpace/careplans']">Past Medical History</a>
+
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="">
+                      <ul class="nav nav-tabs nav-justified" role="tablist">
+                        <li>
+                          <a data-toggle="tab" href="#tab1" role="tab">Allergies</a>
+                        </li>
+                        <li>
+                          <a [routerLink]="['/physiciansworkpace/careplans']">Record</a>
+                        </li>
+                      </ul>
+                      <br />
+                      <h6 class="media-heading">
+                        <a [routerLink]="['/physiciansworkpace/orders']">Orders</a>
+                      </h6>
+                      <h6>
+                        <a href="#menu1" class="btn btn-primary collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"><i class=""></i> <span class="hidden-sm-down">Recent Patients</span></a>
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="">
+                    <div class="">
+                      <ul class="nav nav-tabs nav-justified" role="tablist">
+                        <li>
+                          <a data-toggle="tab" href="#tab1" role="tab"> Medications </a>
+                        </li>
+                        <li>
+                          <a [routerLink]="['/pharmacy/dispensing']">Record</a>
+                        </li>
+                      </ul>
+                      <br />
+                      <h6 class="media-heading">
+                        <a [routerLink]="['/pharmacy/dispensing']">Pharmacy</a>
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="">
+                      <ul class="nav nav-tabs nav-justified" role="tablist">
+                        <li>
+                          <a data-toggle="tab" href="#tab1" role="tab">Recrnt vitals</a>
+                        </li>
+                        <li>
+                          <a [routerLink]="['/nurseworkspace']">Record</a>
+                        </li>
+                      </ul>
+                      <br />
+                      <h6 class="media-heading">
+                        <a [routerLink]="['/nurseworkspace/nursingflowsheet']">Vital sign</a>
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="media-body">
+                      <ul class="nav nav-tabs nav-justified" role="tablist">
+                        <li>
+                          <a data-toggle="tab" href="#tab1" role="tab"> Encounters</a>
+                        </li>
+                        <li>
+                          <a data-toggle="tab" href="#" role="tab">Record</a>
+                        </li>
+                      </ul>
+                      <br />
+                      <h6 class="media-heading">
+                        <a [routerLink]="['/reception/patientappointments']">Patient Appointments</a>
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="tab-content">
+                  <div class="tab-pane fade in active" id=""></div>
+                  <div class="collapse" id="menu1">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="">
+                          <div class="">
+                            <div class="">
+                              <a href="#">
+                                <span class="" style="font-size: 35px; color: skyblue"> <ngx-avatar size="70" src="assets/img/brand/photo.png"></ngx-avatar></span>
+                                <p class="h6 card-title font-weight-bold" style="padding-left: 85px; margin-top: -55px;">TestA</p>
+                                <br />
+                                <br />
+                                <br />
+                                <p class="h6 card-title font-weight-bold" style="padding-left: 85px; margin-top: -55px;">DOB: Jun, 1960 | 58 years old</p>
+                                <br />
+                              </a>
+                            </div>
+                            <br />
+                            <a href="#">
+                              <span class="" style="font-size: 35px; color: skyblue"> <ngx-avatar size="70" src="assets/img/brand/photo.png"></ngx-avatar></span>
+                              <p class="h6 card-title font-weight-bold" style="padding-left: 85px; margin-top: -55px;">TestA</p>
+                              <br />
+                              <br />
+                              <br />
+                              <p class="h6 card-title font-weight-bold" style="padding-left: 85px; margin-top: -55px;">DOB: Jun, 1960 | 58 years old</p>
+                              <br />
+                            </a>
+                            <br />
+                            <a href="#">
+                              <span class="" style="font-size: 35px; color: skyblue"> <ngx-avatar size="70" src="assets/img/brand/photo.png"></ngx-avatar></span>
+                              <p class="h6 card-title font-weight-bold" style="padding-left: 85px; margin-top: -55px;">TestA</p>
+                              <br />
+                              <br />
+                              <br />
+                              <p class="h6 card-title font-weight-bold" style="padding-left: 85px; margin-top: -55px;">DOB: Jun, 1960 | 58 years old</p>
+                              <br />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="">
+                          <div class="">
+                            <a href="#">
+                              <span class="" style="font-size: 35px; color: skyblue"> <ngx-avatar size="70" src="assets/img/brand/photo.png"></ngx-avatar></span>
+                              <p class="h6 card-title font-weight-bold" style="padding-left: 85px; margin-top: -55px;">TestA</p>
+                              <br />
+                              <br />
+                              <br />
+                              <p class="h6 card-title font-weight-bold" style="padding-left: 85px; margin-top: -55px;">DOB: Jun, 1960 | 58 years old</p>
+                              <br />
+                            </a>
+                            <br />
+                            <a href="#">
+                              <span class="" style="font-size: 35px; color: skyblue"> <ngx-avatar size="70" src="assets/img/brand/photo.png"></ngx-avatar></span>
+                              <p class="h6 card-title font-weight-bold" style="padding-left: 85px; margin-top: -55px;">TestA</p>
+                              <br />
+                              <br />
+                              <br />
+                              <p class="h6 card-title font-weight-bold" style="padding-left: 85px; margin-top: -55px;">DOB: Jun, 1960 | 58 years old</p>
+                            </a>
+                            <br />
+                            <br />
+                            <a href="#">
+                              <span class="" style="font-size: 35px; color: skyblue"> <ngx-avatar size="70" src="assets/img/brand/photo.png"></ngx-avatar></span>
+                              <p class="h6 card-title font-weight-bold" style="padding-left: 85px; margin-top: -55px;">TestA</p>
+                              <br />
+                              <br />
+                              <br />
+                              <p class="h6 card-title font-weight-bold" style="padding-left: 85px; margin-top: -55px;">DOB: Jun, 1960 | 58 years old</p>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </tab>
+        <tab heading="ASSESSMENTS">
+          <div class="" style="background-color: lightblue;">
+            <div class="">
+              <div class="">
+                <div class="card">
+                  <div class="card-header">
+                    <!--Specialist Assessment & Reports--> <strong>Assessments</strong>
+                  </div>
+                  <div class="card-body">
+                    <div class="list-group nav nav-tabs nav-justified">
+                      <h6 class="media-heading">
+                        <a [routerLink]="['//physiciansworkpace/physician']" class="btn btn-primary btn-lg active list-group-item list-group-item-action" role="button" aria-pressed="true" style="">Physician Workspace</a>
+                      </h6>
+                      <h6 class="media-heading">
+                        <a [routerLink]="['/physiciansworkpace/physician']" class="btn btn-primary btn-lg active list-group-item list-group-item-action" role="button" aria-pressed="true" style="">Nurse workspace</a>
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="media">
+                        <div class="media-body" style="padding-left:30px">
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/physiciansworkpace/physician']">Physician Assessment</a>
+                          </h6>
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/physiciansworkpace/physicianassessment']">Nuresing Assessment</a>
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </tab>
+        <tab heading="ORDERS">
+          <div class="" style="background-color: lightblue;">
+            <div class="">
+              <div class="">
+                <div class="card">
+                  <div class="card-header">
+                    <!--ORDERS --> <strong>Physician Workspace</strong>
+                  </div>
+                  <div class="card-body">
+                    <div class="list-group nav nav-tabs nav-justified">
+                      <h6 class="media-heading">
+                        <a [routerLink]="['//physiciansworkpace/physician']" class="btn btn-primary btn-lg active list-group-item list-group-item-action" role="button" aria-pressed="true" style="">Physician Workspace</a>
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="media">
+                        <div class="media-body" style="padding-left:30px">
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/physiciansworkpace/orders']">ORDERS/ORDER SETS</a>
+                          </h6>
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/physiciansworkpace/careplans']">CARE PLANS</a>
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </tab>
+        <tab heading="MEDICATIONS">
+          <div class="" style="background-color: lightblue;">
+            <div class="">
+              <div class="">
+                <div class="card">
+                  <div class="card-header">
+                    <!--MEDICATIONS--> <strong>MEDICATIONS</strong>
+                  </div>
+                  <div class="card-body">
+                    <div class="list-group nav nav-tabs nav-justified">
+                      <h6 class="media-heading">
+                        <a [routerLink]="['//physiciansworkpace/physician']" class="btn btn-primary btn-lg active list-group-item list-group-item-action" role="button" aria-pressed="true" style="">Physician Workspace</a>
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="media">
+                        <div class="media-body" style="padding-left:30px">
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/physiciansworkpace/orders']">ORDERS/ORDER SETS</a>
+                          </h6>
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/pharmacy/dispensing']">PHARMACY</a>
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </tab>
+        <tab heading="RESULTS/REPORTS">
+          <div class="" style="background-color: lightblue;">
+            <div class="">
+              <div class="">
+                <div class="card">
+                  <div class="card-header">
+                    <!--RESULTS/REPORTS--> <strong>RESULTS/REPORTS </strong>
+                  </div>
+                  <div class="card-body">
+                    <div class="list-group nav nav-tabs nav-justified">
+                      <h6 class="media-heading">
+                        <a [routerLink]="['//physiciansworkpace/physician']" class="btn btn-primary btn-lg active list-group-item list-group-item-action" role="button" aria-pressed="true" style="">SPECIFIC EXAMS OR PROCIDURES</a>
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="media">
+                        <div class="media-body" style="padding-left:30px">
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/specificexaminationsprocedures/generalxray/worklists']">General X-Ray</a>
+                          </h6>
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/specificexaminationsprocedures/mammogram/worklist']">Mammogram</a>
+                          </h6>
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/specificexaminationsprocedures/endoscopy/frequency']">Endosopy</a>
+                          </h6>
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/specificexaminationsprocedures/endoscopy/route']">Ultrasound</a>
+                          </h6>
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/specificexaminationsprocedures/exercisestresstest/route']">Exercise Stress Test</a>
+                          </h6>
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/specificexaminationsprocedures/eyevisiontests/route']">Eye and vision Tests</a>
+                          </h6>
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/laboratory/laboratoryanalysis']">Laboratory Analysis </a>
+                          </h6>
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/physiciansworkpace/careplans']">Health Screening Report </a>
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </tab>
+        <tab heading="DOCUMENTS">
+          <div class="" style="background-color: lightblue;">
+            <div class="">
+              <div class="">
+                <div class="card">
+                  <div class="card-header">
+                    <!--DOCUMENTS--> <strong>DOCUMENTS</strong>
+                  </div>
+                  <div class="card-body">
+                    <div class="list-group nav nav-tabs nav-justified">
+                      <h6 class="media-heading">
+                        <a [routerLink]="['']" class="btn btn-primary btn-lg active list-group-item list-group-item-action" role="button" aria-pressed="true" style="">Consent for specific test</a>
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="media">
+                        <div class="media-body" style="padding-left:30px">
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/reportsanddocuments/consentform']">Consent Forms</a>
+                          </h6>
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/reportsanddocuments/medicalcertificate']">Medical Certificate</a>
+                          </h6>
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/specificexaminationsprocedures/endoscopy/frequency']">Endosopy</a>
+                          </h6>
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/specificexaminationsprocedures/endoscopy/route']">Ultrasound</a>
+                          </h6>
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/specificexaminationsprocedures/exercisestresstest/route']">Exercise Stress Test</a>
+                          </h6>
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/specificexaminationsprocedures/eyevisiontests/route']">Eye and vision Tests</a>
+                          </h6>
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/laboratory/laboratoryanalysis']">Laboratory Analysis </a>
+                          </h6>
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/physiciansworkpace/careplans']">Health Screening Report </a>
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </tab>
+        <tab heading="BILLS">
+          <div class="" style="background-color: lightblue;">
+            <div class="">
+              <div class="">
+                <div class="card">
+                  <div class="card-header">
+                    <!--BILLS--> <strong>BILLS</strong>
+                  </div>
+                  <div class="card-body">
+                    <div class="list-group nav nav-tabs nav-justified">
+                      <h6 class="media-heading">
+                        <a [routerLink]="['']" class="btn btn-primary btn-lg active list-group-item list-group-item-action" role="button" aria-pressed="true" style="">Consent for specific test</a>
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="media">
+                        <div class="media-body" style="padding-left:30px">
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/reception/billinginvoicing']">Billing & Invoicing</a>
+                          </h6>
+                          <h6 class="media-heading">
+                            <a [routerLink]="['/finance/billingmanager']">Billing Manager</a>
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </tab>
+        <tab heading="TEST">
+          <div #content class="content">
+            <p>Start editing to see some magic happen :)</p>
+          </div>
+          <button (click)="makePdf()">make pdf</button>
+        </tab>
+      </tabset>
+    </div>
+  </div>
+</div>

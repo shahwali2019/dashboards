@@ -6,6 +6,7 @@ import { PhysicianassessmentComponent } from './physicianassessment.component';
 import { OrdersComponent } from './orders.component';
 import { CareplansComponent } from './careplans.component';
 import { PhysiciannotesComponent } from './physiciannotes.component';
+import { MedicationprescriptionComponent } from './medicationprescription.component';
 import { BaseRoutingModule } from './base-routing.module';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { BaseRoutingModule } from './base-routing.module';
     OrdersComponent,
     CareplansComponent,
     PhysiciannotesComponent,
+    MedicationprescriptionComponent,
     
   ]
 

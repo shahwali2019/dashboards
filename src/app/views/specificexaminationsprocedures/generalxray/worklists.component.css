@@ -9,3 +9,53 @@
 .col-lg-12 {
   background-color: lightblue;
 }
+
+
+p {
+  font-family: Lato;
+}
+
+.content {
+  background: #fff;
+}
+
+
+
+.btn-search {
+  background: #424242;
+  border-radius: 0;
+  color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #1c1c1c;
+}
+
+  .btn-search:link, .btn-search:visited {
+    color: #fff;
+  }
+
+  .btn-search:active, .btn-search:hover {
+    background: #1c1c1c;
+    color: #fff;
+  }
+
+table {
+  width: 100%;
+  font: 14px Verdana;
+}
+
+table, th, td {
+  border: solid 1px #999999;
+  border-collapse: collapse;
+  padding: 2px 3px;
+  text-align: center;
+}
+
+th {
+  font-weight: bold;
+}
+
+table tr.highlight {
+  background-color: #4CAF50 !important;
+  color: #ffffff;
+}

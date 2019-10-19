@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DispensingComponent } from './dispensing.component';
 import { RequisitionComponent } from './requisition.component';
+
 const routes: Routes = [{
   path: '',
   data: {

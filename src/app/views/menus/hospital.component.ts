@@ -7,4 +7,5 @@ export class HospitalComponent {
 
   constructor() { }
 
+
 }

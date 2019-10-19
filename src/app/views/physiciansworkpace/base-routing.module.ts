@@ -5,6 +5,8 @@ import { PhysicianassessmentComponent } from './physicianassessment.component';
 import { OrdersComponent } from './orders.component';
 import { CareplansComponent } from './careplans.component';
 import { PhysiciannotesComponent } from './physiciannotes.component';
+import { MedicationprescriptionComponent } from './medicationprescription.component';
+
 const routes: Routes = [{
   path: '',
   data: {
@@ -31,7 +33,15 @@ const routes: Routes = [{
     data: {
       title: 'Careplans'
     }
-  }, {
+    }, {
+      path: 'medicationprescription',
+      component: MedicationprescriptionComponent,
+      data: {
+        title: 'Medicationprescription'
+      }
+    }, 
+
+    {
     path: 'physician',
     component: PhysiciannotesComponent,
     data: {

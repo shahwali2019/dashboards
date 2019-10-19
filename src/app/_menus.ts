@@ -1,14 +1,10 @@
 interface NavAttributes {
   [propName: string]: any;
-
-
 }
 interface NavWrapper {
   attributes: NavAttributes;
   element: string;
-
 }
-
 interface NavBadge {
   text: string;
 }
@@ -28,24 +24,17 @@ export interface NavData {
   label?: NavLabel;
   wrapper?: NavWrapper;
   imageUrl?: string;
-
 }
-
-
-
-export const navItems: NavData[] = [{
-  name: "Dashboard",
-  url: '/dashboard',
-  icon: "fas fa-home",
-  imageUrl: 'assets/img/brand/user.png',
-
-},
-
-    {
+export
+  const navItems: NavData[] = [{
+    name: "Dashboard",
+    url: '/dashboard',
+    icon: "fa fa-home",
+    imageUrl: 'assets/img/brand/user.png',
+  }, {
     name: 'System Admin',
     url: '/icons',
-      icon: "fa fa-unlock",
-
+    icon: "fa fa-unlock",
     children: [{
       name: 'Hospital',
       url: '/menus/hospital',
@@ -57,15 +46,15 @@ export const navItems: NavData[] = [{
     }, {
       name: 'Role',
       url: '/menus/role',
-        icon: 'fa fa-h-square custom'
+      icon: 'fa fa-h-square custom'
     }, {
       name: 'Permissions',
       url: '/menus/forms',
-        icon: 'fa fa-lock'
+      icon: 'fa fa-lock'
     }, {
       name: 'Holidays',
       url: '/menus/holidays',
-        icon: 'fa fa-adjust custom'
+      icon: 'fa fa-adjust custom'
     }, {
       name: 'Masters',
       url: '/menus',
@@ -77,33 +66,33 @@ export const navItems: NavData[] = [{
       }, {
         name: 'City',
         url: '/menus/city',
-          icon: 'fa fa-building-o'
+        icon: 'fa fa-building-o'
       }, {
         name: 'Religion',
         url: '/menus/religion',
-          icon: 'fa fa-user-md custom'
+        icon: 'fa fa-user-md custom'
       }, {
         name: 'Maritial',
         url: '/menus/maritial',
-          icon: 'fa fa-genderless custom'
+        icon: 'fa fa-genderless custom'
       }, {
         name: 'Status',
         url: '/menus/status',
-          icon: 'fas fa-male fa-female'
+        icon: 'fas fa-male fa-female'
       }]
     }, {}]
   }, {
     name: 'Clinic Admin',
     url: '/icons',
-      icon: 'fa fa-unlock',
+    icon: 'fa fa-unlock',
     children: [{
       name: 'uom',
       url: '/clinicadmin/uom',
-      icon: 'fas fa-hospital-symbol'
+      icon: 'fa fa-hospital-o'
     }, {
       name: 'Drugs Category',
       url: '/icons',
-        icon: 'fa fa-medkit',
+      icon: 'fa fa-medkit',
       children: [{
         name: 'Drugs',
         url: '/clinicadmin/drugscategory/drugs',
@@ -111,28 +100,28 @@ export const navItems: NavData[] = [{
       }, {
         name: 'Route',
         url: '/clinicadmin/drugscategory/route',
-          icon: 'fa fa-h-square custom'
+        icon: 'fa fa-h-square custom'
       }, {
         name: 'Frequency',
         url: '/clinicadmin/drugscategory/frequency',
-          icon: 'fa fa-thermometer-half'
+        icon: 'fa fa-thermometer-half'
       }]
     }, {
       name: 'Departments',
       url: '/clinicadmin/departments',
-        icon: 'fa fa-building-o'
+      icon: 'fa fa-building-o'
     }, {
       name: 'Locations',
       url: '/clinicadmin/locations',
-        icon: 'fa fa-location-arrow'
+      icon: 'fa fa-location-arrow'
     }, {
       name: 'Service Type',
       url: '/clinicadmin/servicetype',
-        icon: 'fas fa-cogs'
+      icon: 'fas fa-cogs'
     }, {
       name: 'Procedures',
       url: '/icons',
-        icon: 'fas fa-procedures',
+      icon: 'fa fa-user-md custom',
       children: [{
         name: 'Radiology Masters',
         url: '/clinicadmin/procedures/radiologymasters',
@@ -140,33 +129,33 @@ export const navItems: NavData[] = [{
       }, {
         name: 'Gastroentrology Masters',
         url: '/clinicadmin/procedures/gastroentrologymasters',
-          icon: 'fas fa-diagnoses'
+        icon: 'fas fa-diagnoses'
       }, {
         name: 'Cardiology masters',
         url: '/clinicadmin/procedures/cardiologymasters',
-          icon: 'fas fa-heartbeat'
+        icon: 'fas fa-heartbeat'
       }, {
         name: 'Ophthalmology Masters',
         url: '/clinicadmin/procedures/ophthalmologymasters',
-          icon: 'fa fa-eye'
+        icon: 'fa fa-eye'
       }]
     }, {
       name: 'Activity Masters',
       url: '/menus/religion',
-        icon: 'fa fa-user-md custom'
+      icon: 'fa fa-user-md custom'
     }, {
       name: 'External Physicians',
       url: '/menus/religion',
-        icon: 'fa fa-user-md custom'
+      icon: 'fa fa-user-md custom'
     }, {
       name: 'Insurance Companies',
       url: '/menus/religion',
-        icon: 'fa fa-industry'
+      icon: 'fa fa-industry'
     }, {}]
   }, {
     name: 'Reception',
     url: '/icons',
-      icon: 'fa fa-registered',
+    icon: 'fa fa-registered',
     children: [{
       name: 'Patient Registration',
       url: '/reception/patientregistration',
@@ -174,38 +163,33 @@ export const navItems: NavData[] = [{
     }, {
       name: 'Patient Appointments',
       url: '/reception/patientappointments',
-        icon: 'fa fa-hospital-o custom'
-      },
-      {
+      icon: 'fa fa-hospital-o custom'
+    }, {
       name: 'Generate Queue No',
       url: '/reception/generatequeuno',
-        icon: 'fa fa-h-square custom'
+      icon: 'fa fa-h-square custom'
     }, {
       name: 'Billing & Invoicing',
       url: '/reception/billinginvoicing',
-        icon: "fas fa-file-invoice",
+      icon: "fa fa-medkit",
     }, {
       name: 'Remarks',
       url: '/pages',
-        icon: 'fas fa-book-medical',
+      icon: 'fa fa-medkit',
       children: [{
         name: 'Generate Queue No',
         url: '/login',
-        icon: 'fas fa-id-card-alt'
+        icon: 'fa fa-user-md custom'
       }, {
         name: 'Redirct to QMS',
         url: '/register',
         icon: 'fa fa-external-link'
       }]
     }]
-    },
-
-
-
-    {
+  }, {
     name: "Physician's Workspace",
-    url: 'physiciansworkspace',
-    icon: 'fas fa-user-md',
+    url: '/physiciansworkspace',
+    icon: 'fa fa-user-md custom',
     children: [{
       name: 'Physician Assessment',
       url: '/physiciansworkpace/physicianassessment',
@@ -221,42 +205,46 @@ export const navItems: NavData[] = [{
     }, {
       name: 'Physician Notes',
       url: '/physiciansworkpace/physician',
-        icon: 'fas fa-briefcase-medical'
+      icon: 'fa fa-tasks'
     }]
   }, {
     name: "Nurse's Workspace",
-    url: '/nurseworkspace',
-      icon: 'fas fa-user-nurse',
+    url: '/views/nurseworkspace',
+    icon: 'fa fa-user-md custom',
     children: [{
       name: 'Nursing Assessment',
       url: '/nurseworkspace/nursingassessment',
-      icon: 'fas fa-prescription-bottle-alt'
+      icon: 'fa fa-tasks'
     }, {
       name: 'Nursing Flowsheet',
       url: '/nurseworkspace/nursingflowsheet',
       icon: 'fa fa-bar-chart'
     }, {
+      name: 'Medication Prescription',
+      url: '/physiciansworkpace/medicationprescription',
+      icon: 'fa fa-tasks'
+    }, {
       name: 'Nursing Notes',
       url: '/nurseworkspace/nursingnotes',
-        icon: 'fa fa-sticky-note'
+      icon: 'fa fa-sticky-note'
     }]
   }, {
     name: 'Specific Examinations /Procedures',
     url: '/icons',
-      icon: 'fas fa-address-book',
+    icon: 'fa fa-tasks',
     children: [{
       name: 'General X-Ray',
       url: '/icons',
-      icon: 'fas fa-x-ray',
+      icon: 'fa fa-tasks',
       children: [{
         name: 'General X-ray',
         url: '/specificexaminationsprocedures/generalxray/worklists',
-        icon: 'fas fa-x-ray'
+        icon: 'fa fa-file'
       }]
     }, {
       name: 'Specialist Assessment & Report',
       url: '/icons',
-        icon: 'fa fa-file',
+      icon: 'fa fa-file',
       children: [{
         name: 'Allied Health Notes',
         url: '/specificexaminationsprocedures/specialistassessmentreport/healthalliednotes',
@@ -264,7 +252,7 @@ export const navItems: NavData[] = [{
       }, {
         name: 'Allied Health Notes',
         url: '/specificexaminationsprocedures/specialistassessmentreport/heroes',
-          icon: 'fa fa-file'
+        icon: 'fa fa-file'
       }]
     }, {
       name: 'Mammogram',
@@ -278,28 +266,28 @@ export const navItems: NavData[] = [{
     }, {
       name: 'Endoscopy',
       url: '/icons',
-        icon: 'fas fa-file-medical-alt',
+      icon: 'fa fa-file',
       children: [{
         name: 'Endoscopy I Worklist',
         url: '/specificexaminationsprocedures/endoscopy/route',
-        icon: 'fas fa-file-medical-alt'
+        icon: 'fa fa-file'
       }, {
         name: 'Endoscopy II Worklist',
         url: '/specificexaminationsprocedures/endoscopy/frequency',
-          icon: 'fas fa-file-medical-alt'
+        icon: 'fa fa-list-alt'
       }, {
         name: 'Specialist Assessment & Reports',
         url: '/specificexaminationsprocedures/endoscopy/specialistassessmentreports',
-          icon: 'fa fa-file'
+        icon: 'fa fa-file'
       }, {
         name: 'Allied Health Notes',
         url: '/specificexaminationsprocedures/endoscopy/healthalliednotes',
-          icon: 'fa fa-file'
+        icon: 'fa fa-file'
       }]
     }, {
       name: 'Ultrosound',
       url: '/icons',
-        icon: 'fa fa-stethoscope',
+      icon: 'fa fa-stethoscope',
       children: [{
         name: 'U/S I Worklist',
         url: '/specificexaminationsprocedures/endoscopy/route',
@@ -307,20 +295,20 @@ export const navItems: NavData[] = [{
       }, {
         name: 'U/S II Worklist',
         url: '/specificexaminationsprocedures/endoscopy/frequency',
-          icon: 'fa fa-list-alt'
+        icon: 'fa fa-list-alt'
       }, {
         name: 'Specialist Assessment & Reports',
         url: '/specificexaminationsprocedures/endoscopy/specialistassessmentreports',
-          icon: 'fas fa-notes-medical'
+        icon: 'fas fa-notes-medical'
       }, {
         name: 'Allied Health Notes',
         url: '/specificexaminationsprocedures/endoscopy/healthalliednotes',
-          icon: 'fas fa-notes-medical'
+        icon: 'fas fa-notes-medical'
       },]
     }, {
       name: 'Exercise Stress Test',
       url: '/icons',
-        icon: 'fas fa-weight',
+      icon: 'fas fa-weight',
       children: [{
         name: 'Worklist',
         url: '/specificexaminationsprocedures/exercisestresstest/route',
@@ -328,148 +316,152 @@ export const navItems: NavData[] = [{
       }, {
         name: 'Specialist Assessment & Reports',
         url: '//specificexaminationsprocedures/exercisestresstest/specialistassessmentreports',
-          icon: 'fas fa-notes-medical',
+        icon: 'fa fa-address-card',
       }, {
         name: 'Allied Health Notes',
         url: '/specificexaminationsprocedures/exercisestresstest/healthalliednotes',
-          icon: 'fas fa-pager'
+        icon: 'fa fa-folder-open'
       },]
     }, {
       name: 'Eye & Vision Tests',
       url: '/icons',
-        icon: 'fa fa-eye',
+      icon: 'fa fa-eye',
       children: [{
         name: 'Worklist',
         url: '/specificexaminationsprocedures/eyevisiontests/route',
-        icon: 'fas fa-tasks'
+        icon: 'fa fa-folder-open'
       }, {
         name: 'Specialist Assessment Reports',
         url: '/specificexaminationsprocedures/eyevisiontests/specialistassessmentreports',
-          icon: 'fas fa-notes-medical',
+        icon: 'fa fa-file-image-o',
       }, {
         name: 'Allied Health Notes',
         url: '/specificexaminationsprocedures/eyevisiontests/healthalliednotes',
-          icon: 'fas fa-tasks'
+        icon: 'fa fa-file-image-o'
       },]
     },]
   }, {
     name: 'Laboratory',
     url: '/icons',
-      icon: 'fa fa-stethoscope custom fa-7x',
+    icon: 'fa fa-stethoscope custom fa-7x',
     children: [{
       name: 'Laboratory Analysis',
       url: '/laboratory/laboratoryanalysis',
-      icon: 'fas fa-comment-medical'
+      icon: 'fa fa-file-text'
     }, {
       name: 'Lab Stock & Inventory',
       url: '/laboratory/labstockinventory',
-        icon: 'fas fa-comment-medical'
+      icon: 'fa fa-hospital-o'
     }, {
       name: 'Master List',
       url: '/laboratory/masterlist',
-        icon: 'fa fa-list-alt'
+      icon: 'fa fa-list-alt'
     }, {
       name: 'Reagent Library',
       url: '/laboratory/reagentlibrary',
-        icon: 'fas fa-book-open'
+      icon: 'fa fa-medkit'
     },]
   }, {
     name: 'Pharmacy',
     url: '/icons',
-      icon: 'fa fa-file-o',
+    icon: 'fa fa-file-o',
     children: [{
       name: 'Dispensing ',
       url: '/pharmacy/dispensing',
-      icon: 'fas fa-capsules'
+      icon: 'fa fa-heartbeat'
     }, {
       name: 'Requisition',
       url: '/pharmacy/requisition',
-        icon: 'fas fa-cannabis'
+      icon: 'fa fa-heartbeat'
     }, {
       name: 'Pharmacy Stock & Inventory',
       url: '/icons',
-        icon: 'fas fa-comment-medical',
+      icon: 'fa fa-hospital-o',
       children: [{
         name: 'Master List',
         url: '/pharmacystockinventory/masterlist',
-        icon: 'fas fa-file-prescription'
+        icon: '"fa fa-user-md'
       }, {
         name: 'Drug Library',
         url: '/pharmacystockinventory/druglibrary',
-          icon: 'fas fa-book-open'
+        icon: 'fa fa-h-square'
       },]
     },]
   }, {
-    name: 'Reports',
-    url: '/buttons/dropdowns',
-      icon: 'fas fa-chart-bar',
+    name: 'Reports & Documents',
+    url: '/reportsanddocuments',
+    icon: 'fa fa-tasks',
     children: [{
+      name: 'Consent Form ',
+      url: '/reportsanddocuments/consentform',
+      icon: 'fa fa-h-square'
+    }, {
       name: 'Health Screening Report ',
-      url: '/menus/progress',
-      icon: 'fas fa-file-medical-alt'
+      url: '/reportsanddocuments/healtscreeningreoprt',
+      icon: 'fa fa-files-o'
     }, {
       name: 'Medical Certificate',
-      url: '/menus/progress',
-        icon: 'fa fa-spinner'
+      url: '/reportsanddocuments/medicalcertificate',
+      icon: 'fa fa-spinner'
     }, {
       name: 'Referral Notes',
-      url: '/buttons/dropdowns',
-        icon: 'fas fa-file-medical-alt',
+      url: '/reportsanddocuments/referralnotes',
+      icon: 'fa fa-files-o',
     }, {
-      name: 'Report for Specific Examination/Procedure Report',
-      url: '/menus/progress',
-        icon: 'fas fa-procedures'
+      name: 'Request for Specific Examination/Procedure Report',
+      url: '/reportsanddocuments/examprocedures',
+      icon: 'fa fa-files-o',
     },]
   }, {
     name: 'Administration & Operations',
-    url: '/buttons/dropdowns',
-      icon: 'fa fa-area-chart',
+    url: '/operationdashboard',
+    icon: 'fa fa-area-chart',
     children: [{
       name: 'Operation Dashboard',
-      url: '/menus/progress',
+      url: '/administrationoperations/operationdashboard',
       icon: 'fa fa-dashboard'
     },]
   }, {
     name: 'Finance',
-    url: '/buttons/dropdowns',
-      icon: 'fa fa-credit-card',
+    url: '/finace',
+    icon: 'fa fa-credit-card',
     children: [{
       name: 'Financial Dashboard',
-      url: '/menus/progress',
-      icon: 'fas fa-warehouse'
+      url: '/finance/financialdashboard',
+      icon: 'fa fa-credit-card-alt'
     }, {
       name: 'Billing Manager',
-      url: '/menus/progress',
-        icon: 'fa fa-user-md custom'
+      url: '/finance/billingmanager',
+      icon: 'fa fa-user-md custom'
     }, {
       name: 'Ledgers',
-      url: '/menus/progress',
-        icon: 'fas fa-book-open'
+      url: '/finance/ledgers',
+      icon: 'fa fa-credit-card-alt'
     }, {
       name: 'Accounts Payable',
-      url: '/menus/progress',
-        icon: 'fa fa-credit-card'
+      url: '/finance/accountspayable',
+      icon: 'fa fa-credit-card'
     }, {
       name: 'Accounts Receivable',
-      url: '/menus/progress',
-        icon: 'fa fa-credit-card'
+      url: '/finance/accountsreceivable',
+      icon: 'fa fa-credit-card'
     }, {
       name: 'Asset Management',
-      url: '/menus/progress',
-        icon: 'fa fa-credit-card'
+      url: '/finance/assetmanagement',
+      icon: 'fa fa-credit-card'
     }, {
       name: 'Material Management',
-      url: '/menus/progress',
-        icon: 'fa fa-credit-card'
+      url: '/finance/materialmanagement',
+      icon: 'fa fa-credit-card'
     }, {
       name: 'Insurance Management',
-      url: '/menus/progress',
-        icon: 'fa fa-user-md custom'
+      url: '/finance/insurancemanagement',
+      icon: 'fa fa-user-md custom'
     },]
   }, {
     name: 'Facility Management',
     url: '/buttons/dropdowns',
-      icon: 'fa fa-tasks',
+    icon: 'fa fa-tasks',
     children: [{
       name: 'Clinic Manager',
       url: '/menus/progress',
@@ -477,25 +469,23 @@ export const navItems: NavData[] = [{
     }, {
       name: 'Maintenance Schedule & Update Notes',
       url: '/menus/progress',
-        icon: 'fa fa-calendar-check-o'
+      icon: 'fa fa-calendar-check-o'
     },]
   }, {
     name: 'Signin/Signup',
     url: '/pages',
-      icon: 'fa fa-user-circle-o',
+    icon: 'fa fa-user-circle-o',
     children: [{
       name: 'Login',
       url: '/login',
       icon: 'fa fa-sign-in'
-    },
-      {
-        name: 'Reg',
-        url: '/reg',
-        icon: 'fa fa-registered'
-      },
-      {
+    }, {
+      name: 'Reg',
+      url: '/reg',
+      icon: 'fa fa-registered'
+    }, {
       name: 'Register',
       url: '/register',
-        icon: 'fa fa-registered'
+      icon: 'fa fa-registered'
     }]
   }];

@@ -1,18 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import * as jsPDF from "jspdf"; 
 import { Worklist } from './worklist';
 import { WORKLISTS } from './mock-worklists';
-/* import * as jsPDF from "jspdf"; */
+
 @Component({
   templateUrl: './worklists.component.html',
   styleUrls: ['./worklists.component.css']
 })
 export class WorklistsComponent implements OnInit {
 
+  today: number = Date.now();
+
+
+  @ViewChild('content') content: ElementRef;
+
+  makePdf() {
+    let doc = new jsPDF();
+    doc.addHTML(this.content.nativeElement, function () {
+      doc.save("report.pdf");
+    });
+  }
+
   worklists = WORKLISTS;
   imageSource: boolean = false;
 
   selectedWorklist: Worklist;
-  constructor() { }
 
   ngOnInit() {
   }
@@ -20,6 +32,13 @@ export class WorklistsComponent implements OnInit {
   onSelect(worklist: Worklist): void {
     this.selectedWorklist = worklist;
   }
+
+  public selectedName: any;
+
+  public highlightRow(worklist) {
+    this.selectedName = worklist.id;
+  }
+
   /*
   downloadPdf() {
    let doc = new jsPDF();

@@ -1,0 +1,67 @@
+<div class="dash-table-container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>
+          Prescription
+          Medications
+          <i class="fas fa-sort-amount-down sorting-icon"></i>
+          <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+          <i class="fas fa-sort sorting-icon" style="display: none;"></i>
+        </th>
+        <th>
+          Purpose or
+          Reason
+          Taken
+          <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
+          <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+          <i class="fas fa-sort sorting-icon-default"></i>
+        </th>
+        <th>
+          Dose
+          <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
+          <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+          <i class="fas fa-sort sorting-icon-default"></i>
+        </th>
+        <th>
+          Time(s)
+          of Day
+          <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
+          <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+          <i class="fas fa-sort sorting-icon-default"></i>
+        </th>
+        <th>
+          Form
+          (Liquid, cap
+          <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
+          <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+          <i class="fas fa-sort sorting-icon-default"></i>
+        </th>
+        <th>
+          Special
+          Instructions
+          <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
+          <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+          <i class="fas fa-sort sorting-icon-default"></i>
+        </th>
+    </thead>
+    <!--<tfoot>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </tfoot>-->
+    <tbody>
+      <tr *ngFor="let u of users; let i=index;" (click)="selectUsers($event, u);" [class.selected]="u.flag === true">
+        <td>{{u.Prescription}}</td>
+        <td>{{u.Purpose}}</td>
+        <td>{{u.Dose}}</td>
+        <td>{{u.Time}}</td>
+        <td>{{u.Form}}</td>
+        <td>{{u.Special}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

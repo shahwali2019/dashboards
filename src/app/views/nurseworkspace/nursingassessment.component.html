@@ -217,5 +217,88 @@
         </div>
       </div>
       <!--General Eye Examination -->
+      <!--Allergies-->
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-header">
+            <strong>Allergies</strong>
+          </div>
+          <div class="card-body">
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="select1">Chief Complaint</label>
+              <div class="col-md-9">
+                <select id="select1" name="select1" class="form-control">
+                  <option value="0">Please select</option>
+                  <option value="1">Check Up</option>
+                  <option value="2">OPD Case</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="select2">Emergency</label>
+              <div class="col-md-9">
+                <select id="select2" name="select2" class="form-control form-control">
+                  <option value="0">Please select</option>
+                  <option value="1">No</option>
+                  <option value="2">Yes</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="select3">Pain</label>
+              <div class="col-md-9">
+                <select id="select3" name="select3" class="form-control form-control">
+                  <option value="0">Please select</option>
+                  <option value="1">No</option>
+                  <option value="2">Yes</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="select3">Emotion</label>
+              <div class="col-md-9">
+                <ng-multiselect-dropdown [placeholder]="'Please select'" [data]="dropdownList" [(ngModel)]="selectedItems" [settings]="dropdownSettings" (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)"></ng-multiselect-dropdown>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="select3">Fall Risk</label>
+              <div class="col-md-9">
+                <select id="select3" name="select3" class="form-control form-control">
+                  <option value="0">Please select</option>
+                  <option value="1">No</option>
+                  <option value="2">Yes and Advice</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="select14">General Appearance</label>
+              <div class="col-md-9">
+                <select id="select14" name="select14" class="form-control form-control">
+                  <option value="0">Please select</option>
+                  <option value="1">Skin</option>
+                  <option value="2">Head</option>
+                  <option value="3">Eye</option>
+                  <option value="4">Ear</option>
+                  <option value="5">Head</option>
+                  <option value="6">Thyroid</option>
+                  <option value="7">Nose</option>
+                  <option value="8">Throat</option>
+                  <option value="9">Cervical Lymph Node</option>
+                  <option value="10">Chest</option>
+                  <option value="11">Heart</option>
+                  <option value="12">Abdomen</option>
+                  <option value="13">Extremities</option>
+                  <option value="14">Nervous System</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+          </div>
+        </div>
+      </div>
     </div>
+    <!--Allergies-->
+  </div>
   </div>
