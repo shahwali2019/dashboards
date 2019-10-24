@@ -6,228 +6,218 @@
         <tab heading="List of Patients">
           <div class="card">
             <div class="card-header">
-              <!--Assessment-->
-              <strong>Assessments</strong>
+              <!--Assessment--> <strong>Assessments</strong>
             </div>
             <div class="card-body">
               <div class="list-group">
                 <div class="nav nav-tabs">
-
                   <a data-toggle="tab" href="#tab2" class="list-group-item list-group-item-action">Patient A</a>
-
                 </div>
                 <div class="nav nav-tabs">
-
                   <a data-toggle="tab" href="#tab2" class="list-group-item list-group-item-action">Patient A</a>
-
                 </div>
                 <div class="nav nav-tabs">
-
                   <a data-toggle="tab" href="#tab2" class="list-group-item list-group-item-action">Patient B</a>
-
                 </div>
                 <div class="nav nav-tabs">
-
                   <a data-toggle="tab" href="#tab2" class="list-group-item list-group-item-action">Patient C</a>
-
                 </div>
               </div>
             </div>
           </div>
-            <div class="container">
-              <div class="tab-content">
-                <div class="tab-pane fade in active" id=""></div>
-                <div class="tab-pane fade" id="tab2">
-                  <div class="row">
-                    <div class="col-md-12">
+          <div class="container">
+            <div class="tab-content">
+              <div class="tab-pane fade in active" id=""></div>
+              <div class="tab-pane fade" id="tab2">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="">
                       <div class="">
-                        <div class="">
-                          <div class="animated fadeIn" style="">
-                            <div class="row">
-                              <div class="col-lg-12">
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal">New Prescription </button>
-                              </div>
+                        <div class="animated fadeIn" style="">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal">New Prescription</button>
                             </div>
                           </div>
-                          <hr />
-                          <div class="table-responsive table-sm ">
-                            <table class="table table-bordered">
-                              <thead>
-                                <tr>
-                                  <th>Patient Name</th>
-                                  <th>Prescriber</th>
-                                  <th>Medication Name</th>
-                                  <th>Dose Amount</th>
-                                  <th>Days</th>
-                                  <th>Frequency</th>
-                                  <th>Refill</th>
-                                  <th>Direction to Patient</th>
-                                  <th>Note to Pharmacy</th>
-                                  <th>Med/Allergy</th>
-                                  <th>Date Dispensed</th>
-                                  <th>Quantity Dispensed</th>
-                                  <th>Direction to Patient</th>
-                                  <th>Billable Amount</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>ABC</td>
-                                  <td>ABCD</td>
-                                  <td>Dr. Jack</td>
-                                  <th>9055</th>
-                                  <td>2</td>
-                                  <td>03</td>
-                                  <td>ACD</td>
-                                  <th>ACDE</th>
-                                  <td>Note </td>
-                                  <th>ABCDE</th>
-                                  <td>02/04/2019</td>
-                                  <th>ABCDET</th>
-                                  <td>ACW</td>
-                                  <th>10009</th>
-                                </tr>
-                                <tr>
-                                  <td>ABC</td>
-                                  <td>ABCD</td>
-                                  <td>Dr. Jack</td>
-                                  <th>1000</th>
-                                  <td>2</td>
-                                  <td>03</td>
-                                  <td>ACD</td>
-                                  <th>ACDE</th>
-                                  <td>Note </td>
-                                  <th>ABCDE</th>
-                                  <td>02/04/2019</td>
-                                  <th>ABCDET</th>
-                                  <td>ACW</td>
-                                  <th>10009</th>
-                                </tr>
-                                <tr *ngFor="let row of rows">
-                                  <td>{{row.pname}}</td>
-                                  <td>{{row.prescriber}}</td>
-                                  <td>{{row.mdname}}</td>
-                                  <td>{{row.doseamount}}</td>
-                                  <td>{{row.days}}</td>
-                                  <td>{{row.frequency}}</td>
-                                  <td>{{row.refill}}</td>
-                                  <td>{{row.direpatient}}</td>
-                                  <td>{{row.pharmacy}}</td>
-                                  <td>{{row.allergy}}</td>
-                                  <td>{{row.date}}</td>
-                                  <td>{{row.quantity}}</td>
-                                  <td>{{row.diretopatient}}</td>
-                                  <td>{{row.billable}}</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                          <hr />
-                          <!-- Modal -->
-                          <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">add new Prescription</h5>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                </div>
-                                <div class="modal-body">
-                                  <div class="table-responsive">
-                                    <h2>add</h2>
-                                    <div class="f" style="margin-left: 50px; margin-right: -150px; margin-top: 0px;">
-                                      <div class="form-group row">
-                                        <label for="pname" class="col-md-2 col-form-label">Patient Name:</label>
-                                        <div class="col-md-6">
-                                          <input type="text" class="form-control" [(ngModel)]="pname" placeholder="pname" id="pname">
-                                        </div>
+                        </div>
+                        <hr />
+                        <div class="table-responsive table-sm ">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>Patient Name</th>
+                                <th>Prescriber</th>
+                                <th>Medication Name</th>
+                                <th>Dose Amount</th>
+                                <th>Days</th>
+                                <th>Frequency</th>
+                                <th>Refill</th>
+                                <th>Direction to Patient</th>
+                                <th>Note to Pharmacy</th>
+                                <th>Med/Allergy</th>
+                                <th>Date Dispensed</th>
+                                <th>Quantity Dispensed</th>
+                                <th>Direction to Patient</th>
+                                <th>Billable Amount</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>ABC</td>
+                                <td>ABCD</td>
+                                <td>Dr. Jack</td>
+                                <th>9055</th>
+                                <td>2</td>
+                                <td>03</td>
+                                <td>ACD</td>
+                                <th>ACDE</th>
+                                <td>Note</td>
+                                <th>ABCDE</th>
+                                <td>02/04/2019</td>
+                                <th>ABCDET</th>
+                                <td>ACW</td>
+                                <th>10009</th>
+                              </tr>
+                              <tr>
+                                <td>ABC</td>
+                                <td>ABCD</td>
+                                <td>Dr. Jack</td>
+                                <th>1000</th>
+                                <td>2</td>
+                                <td>03</td>
+                                <td>ACD</td>
+                                <th>ACDE</th>
+                                <td>Note</td>
+                                <th>ABCDE</th>
+                                <td>02/04/2019</td>
+                                <th>ABCDET</th>
+                                <td>ACW</td>
+                                <th>10009</th>
+                              </tr>
+                              <tr *ngFor="let row of rows">
+                                <td>{{row.pname}}</td>
+                                <td>{{row.prescriber}}</td>
+                                <td>{{row.mdname}}</td>
+                                <td>{{row.doseamount}}</td>
+                                <td>{{row.days}}</td>
+                                <td>{{row.frequency}}</td>
+                                <td>{{row.refill}}</td>
+                                <td>{{row.direpatient}}</td>
+                                <td>{{row.pharmacy}}</td>
+                                <td>{{row.allergy}}</td>
+                                <td>{{row.date}}</td>
+                                <td>{{row.quantity}}</td>
+                                <td>{{row.diretopatient}}</td>
+                                <td>{{row.billable}}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <hr />
+                        <!-- Modal -->
+                        <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">add new Prescription</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="table-responsive">
+                                  <h2>add</h2>
+                                  <div class="f" style="margin-left: 50px; margin-right: -150px; margin-top: 0px;">
+                                    <div class="form-group row">
+                                      <label for="pname" class="col-md-2 col-form-label">Patient Name:</label>
+                                      <div class="col-md-6">
+                                        <input type="text" class="form-control" [(ngModel)]="pname" placeholder="pname" id="pname">
                                       </div>
-                                      <div class="form-group row">
-                                        <label for="prescriber" class="col-md-2 col-form-label">Prescriber:</label>
-                                        <div class="col-md-6">
-                                          <input type="text" class="form-control" [(ngModel)]="prescriber" placeholder="prescriber" />
-                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="prescriber" class="col-md-2 col-form-label">Prescriber:</label>
+                                      <div class="col-md-6">
+                                        <input type="text" class="form-control" [(ngModel)]="prescriber" placeholder="prescriber" />
                                       </div>
-                                      <div class="form-group row">
-                                        <label class="col-md-2 col-form-label" for="mdname">Medication Name</label>
-                                        <div class="col-md-6">
-                                          <input type="text" class="form-control" [(ngModel)]="mdname" placeholder="mdname" />
-                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label class="col-md-2 col-form-label" for="mdname">Medication Name</label>
+                                      <div class="col-md-6">
+                                        <input type="text" class="form-control" [(ngModel)]="mdname" placeholder="mdname" />
                                       </div>
-                                      <div class="form-group row">
-                                        <label class="col-md-2 col-form-label" for="doseamount">Dose Amount</label>
-                                        <div class="col-md-6">
-                                          <input type="text" class="form-control" [(ngModel)]="doseamount" placeholder="doseamount" />
-                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label class="col-md-2 col-form-label" for="doseamount">Dose Amount</label>
+                                      <div class="col-md-6">
+                                        <input type="text" class="form-control" [(ngModel)]="doseamount" placeholder="doseamount" />
                                       </div>
-                                      <div class="form-group row">
-                                        <label for="days" class="col-md-2 col-form-label">Days</label>
-                                        <div class="col-md-6">
-                                          <input type="text" class="form-control" [(ngModel)]="days" placeholder="days" />
-                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="days" class="col-md-2 col-form-label">Days</label>
+                                      <div class="col-md-6">
+                                        <input type="text" class="form-control" [(ngModel)]="days" placeholder="days" />
                                       </div>
-                                      <div class="form-group row">
-                                        <label for="duration" class="col-md-2 col-form-label">Frequency:</label>
-                                        <div class="col-md-6">
-                                          <input type="text" class="form-control" [(ngModel)]="frequency" placeholder="frequency" />
-                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="duration" class="col-md-2 col-form-label">Frequency:</label>
+                                      <div class="col-md-6">
+                                        <input type="text" class="form-control" [(ngModel)]="frequency" placeholder="frequency" />
                                       </div>
-                                      <div class="form-group row">
-                                        <label for="refill" class="col-md-2 col-form-label">Refill:</label>
-                                        <div class="col-md-6">
-                                          <input type="text" class="form-control" [(ngModel)]="refill" placeholder="refill" />
-                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="refill" class="col-md-2 col-form-label">Refill:</label>
+                                      <div class="col-md-6">
+                                        <input type="text" class="form-control" [(ngModel)]="refill" placeholder="refill" />
                                       </div>
-                                      <div class="form-group row">
-                                        <label for="direpatient" class="col-md-2 col-form-label">Direction to Patient</label>
-                                        <div class="col-md-6">
-                                          <input type="text" class="form-control" [(ngModel)]="direpatient" placeholder="direpatient" />
-                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="direpatient" class="col-md-2 col-form-label">Direction to Patient</label>
+                                      <div class="col-md-6">
+                                        <input type="text" class="form-control" [(ngModel)]="direpatient" placeholder="direpatient" />
                                       </div>
-                                      <div class="form-group row">
-                                        <label for="pharmacy" class="col-md-2 col-form-label">Note to Pharmacy</label>
-                                        <div class="col-md-6">
-                                          <input type="text" class="form-control" [(ngModel)]="pharmacy" placeholder="pharmacy" />
-                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="pharmacy" class="col-md-2 col-form-label">Note to Pharmacy</label>
+                                      <div class="col-md-6">
+                                        <input type="text" class="form-control" [(ngModel)]="pharmacy" placeholder="pharmacy" />
                                       </div>
-                                      <div class="form-group row">
-                                        <label for="allergy" class="col-md-2 col-form-label">Med/Allergy</label>
-                                        <div class="col-md-6">
-                                          <input type="text" class="form-control" [(ngModel)]="allergy" placeholder="allergy">
-                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="allergy" class="col-md-2 col-form-label">Med/Allergy</label>
+                                      <div class="col-md-6">
+                                        <input type="text" class="form-control" [(ngModel)]="allergy" placeholder="allergy">
                                       </div>
-                                      <div class="form-group row">
-                                        <label for="date" class="col-md-2 col-form-label">Date Dispensed</label>
-                                        <div class="col-md-6">
-                                          <input type="text" class="form-control" [(ngModel)]="date" placeholder="date" [minDate]="minDate" [maxDate]="maxDate" #dp="bsDatepicker" bsDatepicker [(bsValue)]="myDateValue" />
-                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="date" class="col-md-2 col-form-label">Date Dispensed</label>
+                                      <div class="col-md-6">
+                                        <input type="text" class="form-control" [(ngModel)]="date" placeholder="date" [minDate]="minDate" [maxDate]="maxDate" #dp="bsDatepicker" bsDatepicker [(bsValue)]="myDateValue" />
                                       </div>
-                                      <div class="form-group row">
-                                        <label for="quantity" class="col-md-2 col-form-label">Quantity Dispensed</label>
-                                        <div class="col-md-6">
-                                          <input type="text" class="form-control" [(ngModel)]="quantity" placeholder="quantity" />
-                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="quantity" class="col-md-2 col-form-label">Quantity Dispensed</label>
+                                      <div class="col-md-6">
+                                        <input type="text" class="form-control" [(ngModel)]="quantity" placeholder="quantity" />
                                       </div>
-                                      <div class="form-group row">
-                                        <label for="diretopatient" class="col-md-2 col-form-label">Direction to Patient</label>
-                                        <div class="col-md-6">
-                                          <input type="text" class="form-control" [(ngModel)]="diretopatient" placeholder="diretopatient" />
-                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="diretopatient" class="col-md-2 col-form-label">Direction to Patient</label>
+                                      <div class="col-md-6">
+                                        <input type="text" class="form-control" [(ngModel)]="diretopatient" placeholder="diretopatient" />
                                       </div>
-                                      <div class="form-group row">
-                                        <label for="billable" class="col-md-2 col-form-label">Billable Amount</label>
-                                        <div class="col-md-6">
-                                          <input type="text" class="form-control" [(ngModel)]="billable" placeholder="billable" />
-                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="billable" class="col-md-2 col-form-label">Billable Amount</label>
+                                      <div class="col-md-6">
+                                        <input type="text" class="form-control" [(ngModel)]="billable" placeholder="billable" />
                                       </div>
                                     </div>
                                   </div>
                                 </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <button type="button" [disabled]="" class="btn btn-success" data-dismiss="modal" (click)="buttonAdd()">Submit</button>
-                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" [disabled]="" class="btn btn-success" data-dismiss="modal" (click)="buttonAdd()">Submit</button>
                               </div>
                             </div>
                           </div>
@@ -238,203 +228,204 @@
                 </div>
               </div>
             </div>
+          </div>
         </tab>
         <!--
-          <tab heading="PatientA" class="a">
-            <div class="table-responsive table-sm ">
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th>
-                      Prescription
-                      Medications
-                      <i class="fas fa-sort-amount-down sorting-icon"></i>
-                      <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort sorting-icon" style="display: none;"></i>
-                    </th>
-                    <th>
-                      Purpose or
-                      Reason
-                      Taken
-                      <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort sorting-icon-default"></i>
-                    </th>
-                    <th>
-                      Dose
-                      <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort sorting-icon-default"></i>
-                    </th>
-                    <th>
-                      Time(s)
-                      of Day
-                      <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort sorting-icon-default"></i>
-                    </th>
-                    <th>
-                      Form
-                      (Liquid, cap
-                      <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort sorting-icon-default"></i>
-                    </th>
-                    <th>
-                      Special
-                      Instructions
-                      <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort sorting-icon-default"></i>
-                    </th>
-                </thead>
+                <tab heading="PatientA" class="a">
+                  <div class="table-responsive table-sm ">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>
+                            Prescription
+                            Medications
+                            <i class="fas fa-sort-amount-down sorting-icon"></i>
+                            <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort sorting-icon" style="display: none;"></i>
+                          </th>
+                          <th>
+                            Purpose or
+                            Reason
+                            Taken
+                            <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort sorting-icon-default"></i>
+                          </th>
+                          <th>
+                            Dose
+                            <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort sorting-icon-default"></i>
+                          </th>
+                          <th>
+                            Time(s)
+                            of Day
+                            <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort sorting-icon-default"></i>
+                          </th>
+                          <th>
+                            Form
+                            (Liquid, cap
+                            <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort sorting-icon-default"></i>
+                          </th>
+                          <th>
+                            Special
+                            Instructions
+                            <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort sorting-icon-default"></i>
+                          </th>
+                      </thead>
 
-                <tbody>
-                  <tr *ngFor="let u of users; let i=index;" (click)="selectUsers($event, u);" [class.selected]="u.flag === true">
-                    <td>{{u.Prescription}}</td>
-                    <td>{{u.Purpose}}</td>
-                    <td>{{u.Dose}}</td>
-                    <td>{{u.Time}}</td>
-                    <td>{{u.Form}}</td>
-                    <td>{{u.Special}}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </tab>
-          <tab heading="PatientB" class="a">
-            <div class="table-responsive table-sm ">
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th>
-                      Prescription
-                      Medications
-                      <i class="fas fa-sort-amount-down sorting-icon"></i>
-                      <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort sorting-icon" style="display: none;"></i>
-                    </th>
-                    <th>
-                      Purpose or
-                      Reason
-                      Taken
-                      <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort sorting-icon-default"></i>
-                    </th>
-                    <th>
-                      Dose
-                      <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort sorting-icon-default"></i>
-                    </th>
-                    <th>
-                      Time(s)
-                      of Day
-                      <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort sorting-icon-default"></i>
-                    </th>
-                    <th>
-                      Form
-                      (Liquid, cap
-                      <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort sorting-icon-default"></i>
-                    </th>
-                    <th>
-                      Special
-                      Instructions
-                      <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort sorting-icon-default"></i>
-                    </th>
-                </thead>
+                      <tbody>
+                        <tr *ngFor="let u of users; let i=index;" (click)="selectUsers($event, u);" [class.selected]="u.flag === true">
+                          <td>{{u.Prescription}}</td>
+                          <td>{{u.Purpose}}</td>
+                          <td>{{u.Dose}}</td>
+                          <td>{{u.Time}}</td>
+                          <td>{{u.Form}}</td>
+                          <td>{{u.Special}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </tab>
+                <tab heading="PatientB" class="a">
+                  <div class="table-responsive table-sm ">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>
+                            Prescription
+                            Medications
+                            <i class="fas fa-sort-amount-down sorting-icon"></i>
+                            <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort sorting-icon" style="display: none;"></i>
+                          </th>
+                          <th>
+                            Purpose or
+                            Reason
+                            Taken
+                            <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort sorting-icon-default"></i>
+                          </th>
+                          <th>
+                            Dose
+                            <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort sorting-icon-default"></i>
+                          </th>
+                          <th>
+                            Time(s)
+                            of Day
+                            <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort sorting-icon-default"></i>
+                          </th>
+                          <th>
+                            Form
+                            (Liquid, cap
+                            <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort sorting-icon-default"></i>
+                          </th>
+                          <th>
+                            Special
+                            Instructions
+                            <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort sorting-icon-default"></i>
+                          </th>
+                      </thead>
 
-                <tbody>
-                  <tr *ngFor="let u of user; let i=index;" (click)="selectUser($event, u);" [class.selected]="u.flag === true">
-                    <td>{{u.Prescription}}</td>
-                    <td>{{u.Purpose}}</td>
-                    <td>{{u.Dose}}</td>
-                    <td>{{u.Time}}</td>
-                    <td>{{u.Form}}</td>
-                    <td>{{u.Special}}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </tab>
-          <tab heading="PatientC">
+                      <tbody>
+                        <tr *ngFor="let u of user; let i=index;" (click)="selectUser($event, u);" [class.selected]="u.flag === true">
+                          <td>{{u.Prescription}}</td>
+                          <td>{{u.Purpose}}</td>
+                          <td>{{u.Dose}}</td>
+                          <td>{{u.Time}}</td>
+                          <td>{{u.Form}}</td>
+                          <td>{{u.Special}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </tab>
+                <tab heading="PatientC">
 
 
-            <div class="table-responsive table-sm ">
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th>
-                      Prescription
-                      Medications
-                      <i class="fas fa-sort-amount-down sorting-icon"></i>
-                      <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort sorting-icon" style="display: none;"></i>
-                    </th>
-                    <th>
-                      Purpose or
-                      Reason
-                      Taken
-                      <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort sorting-icon-default"></i>
-                    </th>
-                    <th>
-                      Dose
-                      <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort sorting-icon-default"></i>
-                    </th>
-                    <th>
-                      Time(s)
-                      of Day
-                      <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort sorting-icon-default"></i>
-                    </th>
-                    <th>
-                      Form
-                      (Liquid, cap
-                      <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort sorting-icon-default"></i>
-                    </th>
-                    <th>
-                      Special
-                      Instructions
-                      <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
-                      <i class="fas fa-sort sorting-icon-default"></i>
-                    </th>
-                </thead>
+                  <div class="table-responsive table-sm ">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>
+                            Prescription
+                            Medications
+                            <i class="fas fa-sort-amount-down sorting-icon"></i>
+                            <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort sorting-icon" style="display: none;"></i>
+                          </th>
+                          <th>
+                            Purpose or
+                            Reason
+                            Taken
+                            <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort sorting-icon-default"></i>
+                          </th>
+                          <th>
+                            Dose
+                            <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort sorting-icon-default"></i>
+                          </th>
+                          <th>
+                            Time(s)
+                            of Day
+                            <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort sorting-icon-default"></i>
+                          </th>
+                          <th>
+                            Form
+                            (Liquid, cap
+                            <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort sorting-icon-default"></i>
+                          </th>
+                          <th>
+                            Special
+                            Instructions
+                            <i class="fas fa-sort-amount-down sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort-amount-up sorting-icon" style="display: none;"></i>
+                            <i class="fas fa-sort sorting-icon-default"></i>
+                          </th>
+                      </thead>
 
-                <tbody>
-                  <tr *ngFor="let u of userz; let i=index;" (click)="selectUser($event, u);" [class.selected]="u.flag === true">
-                    <td>{{u.Prescription}}</td>
-                    <td>{{u.Purpose}}</td>
-                    <td>{{u.Dose}}</td>
-                    <td>{{u.Time}}</td>
-                    <td>{{u.Form}}</td>
-                    <td>{{u.Special}}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </tab>
-  -->
+                      <tbody>
+                        <tr *ngFor="let u of userz; let i=index;" (click)="selectUser($event, u);" [class.selected]="u.flag === true">
+                          <td>{{u.Prescription}}</td>
+                          <td>{{u.Purpose}}</td>
+                          <td>{{u.Dose}}</td>
+                          <td>{{u.Time}}</td>
+                          <td>{{u.Form}}</td>
+                          <td>{{u.Special}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </tab>
+        -->
         <tab heading="Select Patient">
           <!--  modal -->
           <div class="animated fadeIn" style="background-color: lightgrey">
             <div class="row">
               <div class="col-lg-12">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal">New Prescription </button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal">New Prescription</button>
               </div>
             </div>
           </div>
@@ -469,7 +460,7 @@
                   <td>03</td>
                   <td>ACD</td>
                   <th>ACDE</th>
-                  <td>Note </td>
+                  <td>Note</td>
                   <th>ABCDE</th>
                   <td>02/04/2019</td>
                   <th>ABCDET</th>
@@ -485,7 +476,7 @@
                   <td>03</td>
                   <td>ACD</td>
                   <th>ACDE</th>
-                  <td>Note </td>
+                  <td>Note</td>
                   <th>ABCDE</th>
                   <td>02/04/2019</td>
                   <th>ABCDET</th>
@@ -628,19 +619,12 @@
                 <div class="card-header">
                   Patient Chart
                   <div class="card-header-actions">
-
                     <a [routerLink]="['/reception/patientregistration']"><small class="text-muted">Registration</small> </a>
-
                   </div>
                 </div>
                 <div class="card-body">
                   <div class="chart-wrapper">
-                    <canvas baseChart class="chart"
-                            [datasets]="radarChartData"
-                            [labels]="radarChartLabels"
-                            [chartType]="radarChartType"
-                            (chartHover)="chartHovered($event)"
-                            (chartClick)="chartClicked($event)"></canvas>
+                    <canvas baseChart class="chart" [datasets]="radarChartData" [labels]="radarChartLabels" [chartType]="radarChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
                   </div>
                 </div>
               </div>
@@ -650,7 +634,7 @@
         <tab heading="Scan Queue Ticket">
           <nav class="navbar-dark bg-dark text-center p-3 text-light">
             <div class="row">
-              <div class="col-4"> </div>
+              <div class="col-4"></div>
               <div class="col-4">
                 <h6>Medsys Queue System</h6>
               </div>
@@ -659,19 +643,17 @@
           </nav>
           <div class="container-fluid p-3">
             <div class="row">
-              <div class="col-4"> </div>
+              <div class="col-4"></div>
               <p>Please Enter your I.C. & name issue of Queue Ticket</p>
             </div>
             <div class="row">
               <div class="col-sm-2"></div>
               <div class="col-sm-8">
-
                 <div class="form-group">
                   <input #name type="text" placeholder="Enter YOUR NMAE PLEASE" class="form-control">
                 </div>
               </div>
             </div>
-
             <div class="row">
               <div class="col-sm-2"></div>
               <div class="col-sm-8">
@@ -681,7 +663,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-4"> </div>
+              <div class="col-4"></div>
               <div class="col-8 col-md-4 col-md-4">
                 <button class="btn btn-primary btn-block" (click)="addContact(name.value,phone.value)">Submit</button>
               </div>
@@ -690,21 +672,19 @@
             <br />
             <br />
             <table>
-
               <tr *ngFor="let contact of contacts" style="margin-bottom: 100px;" class="alert-success m-3 p-3">
                 <td>{{contact.descr}}</td>
-                <td><button (click)="removeContact(contact)" class="btn btn-primary btn-block">Delete</button></td>
+                <td>
+                  <button (click)="removeContact(contact)" class="btn btn-primary btn-block">Delete</button>
+                </td>
               </tr>
             </table>
           </div>
           <br />
           <br />
           <br />
-
           <footer class="page-footer font-small indigo bg-dark text-light">
-            <div class="footer-copyright text-center py-3">
-              Welcome to Medsys Queue System display panel
-            </div>
+            <div class="footer-copyright text-center py-3">Welcome to Medsys Queue System display panel</div>
           </footer>
         </tab>
       </tabset>

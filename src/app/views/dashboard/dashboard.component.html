@@ -1,20 +1,36 @@
 <div class="animated fadeIn" style="background-color: lightblue">
-  <div class="row">
-    <div class="col-lg-12">
-      <br />
-      <a class="" style="width: 940px;">
-        <span class="" style="font-size: 35px; color: skyblue"> <ngx-avatar size="70" src="assets/img/brand/photo.png"></ngx-avatar></span>
-        <p class="h6 card-title font-weight-bold" style="padding-right: 20px;  margin-top: -40px;text-align: center ">TestA</p>
-        <br />
-        <br />
-        <p class="h6 card-title font-weight-bold " style="padding-right: 754px; margin-top: -37px; text-align: center">Appt:</p>
-        <br />
-        <p class="h6 card-title font-weight-bold " style="padding-right: 724px; margin-top: -27px;text-align: center">Diagnosis:</p>
-        <br />
-        <p class="h6 card-title font-weight-bold" style="padding-left: 64px; margin-top: -55px;text-align: center">DOB: Jun, 1960 | 58 years old</p>
-        <br />
-        <p class="h6 card-title font-weight-bold " style="padding-left: 64px; margin-top: -27px;text-align: center">Attending: Grumble, Beverly</p>
-      </a>
+  <div id="user-profile-2" class="user-profile">
+    <div class="tabbable">
+      <div class="tab-content no-border padding-24" style="background-color: lightblue">
+        <div id="home" class="tab-pane in active">
+          <div class="row">
+            <div class="col-xs-12 col-sm-3 center">
+              <span class="" style="font-size: 35px; color: skyblue"> <ngx-avatar size="100" src="assets/img/brand/photo.png"></ngx-avatar></span>
+            </div>
+            <div class="col-xs-12 col-sm-9">
+              <h4 class="blue">
+                <span class="middle">John</span>
+              </h4>
+              <div class="profile-user-info">
+                <div class="profile-info-row">
+                  <div class="profile-info-name">Appt:</div>
+                  <div class="profile-info-value">
+                    <span>DOB: Jun, 1960 | 58 years old</span>
+                  </div>
+                </div>
+                <div class="profile-info-row">
+                  <div class="profile-info-name">Diagnosis</div>
+                  <div class="profile-info-value">
+                    <div class="profile-info-value">
+                      <span>Attending: Grumble, Beverly</span>
+                    </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- Nav tabs -->
       <tabset>
         <tab heading="Chart Summary">
@@ -145,7 +161,7 @@
                       </ul>
                       <br />
                       <h6 class="media-heading">
-                        <a [routerLink]="['/nurseworkspace/nursingflowsheet']">Vital sign</a>
+                        <a [routerLink]="['/physiciansworkpace/physicianassessment']">Vital sign</a>
                       </h6>
                     </div>
                   </div>
