@@ -1,0 +1,186 @@
+<div class="main-content" style="background-color: lightblue;">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <strong>Orders/Order Sets</strong>
+          </div>
+          <div class="card-body">
+            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <div class="form-group row"></div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Care Plans</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Health Screening Follow-Up</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Physician Notes</label>
+                <div class="col-md-9">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Physician's Recommendation"></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Standard Health Screening Order Set</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Chest X-Ray (PA)</option>
+                    <option value="1">Ultrasound Upper Abdomen (Liver, Pancreas, Gallbladder)</option>
+                    <option value="2">Ultrasound Lower Abdomen</option>
+                    <option value="3">General Eye Examination</option>
+                    <option value="4">Specialist Eye Examination</option>
+                    <option value="5">Exercise Stress Test</option>
+                    <option value="6">Biochemistry</option>
+                    <option value="7">Immunology</option>
+                    <option value="8">Hematology</option>
+                    <option value="9">Urinalysis</option>
+                    <option value="10">Stool Examination</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">General X-Ray</label>
+                <div class="col-md-9">
+                  <ng-multiselect-dropdown [placeholder]="'Please select'" [data]="dropdownList" [(ngModel)]="selectedItems" [settings]="dropdownSettings" (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)"></ng-multiselect-dropdown>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select7">AC Joints</label>
+                <div class="col-md-9">
+                  <select id="select7" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select7">AC Joints - Bilateral</label>
+                <div class="col-md-9">
+                  <select id="select7" name="select3" class="form-control form-control">
+                    <option value="0">Ankle 3 Views</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select8">Bones</label>
+                <div class="col-md-9">
+                  <select id="select8" name="select8" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Bone Age</option>
+                    <option value="2">Bone Survey Infant</option>
+                    <option value="3">Bone Survey Metastasis</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select7">Clavicle</label>
+                <div class="col-md-9">
+                  <select id="select7" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Cervical Spine</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Complete 4+ Views">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Cervical Spine</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Cervical Spine 2-3 Views">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Cervical Spine</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Cervical Spine Neck Soft Tissue">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Cervical Spine</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder=" Cervical Spine with Flex & Extension">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Cervical Spine</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Cervical Spine Flex & Extension Only">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Chest 1 View</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Chest 1 View">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Chest 2 View</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Chest 2 View">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Chest 3 View</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Chest 3 View">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Chest Fluoro</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Chest Fluoro">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Elbow Complete</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Elbow Complete 3+ Views">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Facial Bones</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Complete 3+ Views">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Standard Health Screening Order Set</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Chest X-Ray (PA)</option>
+                    <option value="1">Ultrasound Upper Abdomen (Liver, Pancreas, Gallbladder)</option>
+                    <option value="2">Ultrasound Lower Abdomen</option>
+                    <option value="3">General Eye Examination</option>
+                    <option value="4">Specialist Eye Examination</option>
+                    <option value="5">Exercise Stress Test</option>
+                    <option value="6">Biochemistry</option>
+                    <option value="7">Immunology</option>
+                    <option value="8">Hematology</option>
+                    <option value="9">Urinalysis</option>
+                    <option value="10">Stool Examination</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer">
+            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+          </div>
+        </div>
+        <!--Physical Examination-->
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,193 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 col-xs-1 p-l-0 p-r-0 collapse in" id="sidebar" style="background-color: lightblue">
+      <div class="list-group panel">
+        <a href="#menu1" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"><i class=""></i> <span class="hidden-sm-down">Unread Exams</span> </a>
+        <div class="collapse" id="menu1">
+          <a href="#menu1sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false">Unread ER</a>
+        </div>
+        <a href="#menu3" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"><i class="fa fa-book"></i> <span class="hidden-sm-down">All Exams</span></a>
+        <div class="collapse" id="menu3">
+          <a href="#" class="list-group-item" data-parent="#menu3">Mammogram</a>
+          <a href="#menu3sub2" class="list-group-item" data-toggle="collapse" aria-expanded="false">Mammogram</a>
+          <div class="collapse" id="menu3sub2">
+            <a href="#" class="list-group-item" data-parent="#menu3sub2">Mammo 1</a>
+            <a href="#" class="list-group-item" data-parent="#menu3sub2">Mammo 2</a>
+            <a href="#" class="list-group-item" data-parent="#menu3sub2">Mammo 3</a>
+          </div>
+          <a href="#" class="list-group-item" data-parent="#menu3">Endoscopy</a>
+          <a href="#" class="list-group-item" data-parent="#menu3">Ultrasound</a>
+          <a href="#" class="list-group-item" data-parent="#menu3">Exercise Stress Test</a>
+          <a href="#" class="list-group-item" data-parent="#menu3">Eye & Vision Tests</a>
+
+          <div>
+            <button type="button" class="btn btn-primary btn-lg" (click)="imageSource = '/assets/img/brand/xray.jpg'">x-ray</button>
+            <button type="button" class="btn btn-primary btn-lg" (click)="imageSource = '/assets/img/brand/xray1.jpeg'">x-ray</button>
+            <button type="button" class="btn btn-primary btn-lg" (click)="imageSource = '/assets/img/brand/xray2.jpg'">x-ray</button>
+            <button type="button" class="btn btn-primary btn-lg" *ngIf="imageSource" (click)="imageSource=false">Cancel</button>
+            <img [src]="imageSource " *ngIf="imageSource" style="width: 100%" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="col-md-9 col-xs-11 p-l-2 p-t-2" style="background-color: lightblue">
+      <a href="#sidebar" data-toggle="collapse"><i class="fa fa-navicon fa-lg"></i></a>
+      <hr>
+      <div class="page-header">
+        <div class="animated fadeIn">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-header">
+                  <i class="">
+                    Mammogram
+                  </i>
+                </div>
+                <br />
+                <!--search...-->
+                <div class="container">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for..." [(ngModel)]="searchText">
+                    <span class="input-group-btn">
+                      <button class="btn btn-search" type="button"><i class="fa fa-search fa-fw"></i> Search</button>
+                    </span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <table class="table-responsive table-sm">
+                    <thead>
+                      <tr>
+                        <th>Status</th>
+                        <th>Patient ID</th>
+                        <th>Patient Name</th>
+                        <th>Sex</th>
+                        <th>Age</th>
+                        <th>Study Date</th>
+                        <th>Modality</th>
+                        <th>Study Description</th>
+                        <th>Accession No:</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let worklist of worklists| filter:searchText" [class.selected]="worklist === selectedWorklist" (click)="onSelect(worklist);" (mouseover)="highlightRow(worklist)"
+                          [ngClass]="{'highlight' : worklist.id == selectedName}">
+                        <td>{{worklist.status}}</td>
+                        <td>{{worklist.id}}</td>
+                        <td>{{worklist.name}}</td>
+                        <td>{{worklist.sex}}</td>
+                        <td>{{worklist.age}}</td>
+                        <td>{{worklist.date}}</td>
+                        <td>{{worklist.modality}}</td>
+                        <td>{{worklist.study}}</td>
+                        <td>{{worklist.accession}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <br />
+                  <div *ngIf="selectedWorklist">
+                    <table class="table table-bordered table-striped table-responsive">
+                      <thead>
+                        <tr>
+                          <th>Status</th>
+                          <th>Patient ID</th>
+                          <th>Patient Name</th>
+                          <th>Sex</th>
+                          <th>Age</th>
+                          <th>Study Date</th>
+                          <th>Modality</th>
+                          <th>Study Description</th>
+                          <th>Accession #</th>
+                        </tr>
+                      </thead>
+                      <tr *ngIf="selectedWorklist">
+                        <td><span>status: </span>{{selectedWorklist.status}}</td>
+                        <td><span>id: </span>{{selectedWorklist.id}}</td>
+                        <td><span>name: </span>{{selectedWorklist.name}}</td>
+                        <td><span>sex: </span>{{selectedWorklist.sex}}</td>
+                        <td><span>age: </span>{{selectedWorklist.age}}</td>
+                        <td><span>date: </span>{{selectedWorklist.date}}</td>
+                        <td><span>modality: </span>{{selectedWorklist.study}}</td>
+                        <td><span>Study Description: </span>{{selectedWorklist.modality}}</td>
+                        <td><span>Accession No: </span>{{selectedWorklist.accession}}</td>
+                      </tr>
+                    </table>
+
+                    <div #content class="content">
+
+                      <table class="table table-bordered table-striped table-sm">
+                        <thead>
+                          <tr>
+                            <th>{{today | date:'fullDate'}}</th>
+                          </tr>
+                        </thead>
+                      </table>
+                      <div class="card-body">
+                        <div><span>Accession No: </span>{{selectedWorklist.accession}}</div>
+                        <div><span>Patient Name: </span>{{selectedWorklist.name}}</div>
+                        <div><span>Exam Date: </span>{{selectedWorklist.date}}</div>
+                        <div><span>Study Comment: </span>{{selectedWorklist.study}}</div>
+                        <div><span>Sex: </span>{{selectedWorklist.sex}}</div>
+                        <div><span>Age: </span>{{selectedWorklist.age}}</div>
+                      </div>
+                    </div>
+                    <button class="table table-bordered table-striped table-sm" (click)="makePdf()">Download report</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="lead">QMS</p>
+    </main>
+  </div>
+</div>
+
+<!--
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i>
+        </div>
+        <div class="search-hero">
+          <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a patient by id or name ">
+        </div>
+        <div class="card-body">
+          <table class="table table-bordered table-striped table-sm">
+            <thead>
+              <tr>
+                <th>Status</th>
+                <th>Patient ID</th>
+                <th>Patient Name</th>
+                <th>Sex</th>
+                <th>Age</th>
+                <th>Study Date</th>
+                <th>Modality</th>
+                <th>Study Description</th>
+                <th>Accession #</th>
+              </tr>
+            </thead>
+            <tbody>
+
+  <tr *ngFor="let work of works | filter:searchText;">
+    <td>{{work.status}}</td>
+    <td>{{work.id}}</td>
+    <td>{{work.name}}</td>
+    <td>{{work.sex}}</td>
+    <td>{{work.age}}</td>
+    <td>{{work.date}}</td>
+    <td>{{work.modality}}</td>
+    <td>{{work.study}}</td>
+    <td>{{work.accession}}</td>
+  </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+-->

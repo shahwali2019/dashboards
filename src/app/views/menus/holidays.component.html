@@ -1,0 +1,18 @@
+<div class="navbar">
+  <div *ngFor="let cat of category" class="dropdown">
+    <button class="dropbtn">
+      Link {{cat.catnumber}}
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="row">
+        <div *ngFor="let catg of cat.nest" class="column">
+          <h3>Category {{cat.catnumber}} {{catg.link}} </h3>
+          <a href="#">Link 81</a>
+          <a href="#">Link 992</a>
+          <a href="#">Link 93</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

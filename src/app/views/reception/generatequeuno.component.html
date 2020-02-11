@@ -1,0 +1,463 @@
+<!--
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal">create</button>
+
+<div class ="table-responsive-lg">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>image</th>
+        <th>Patient Name</th>
+        <th>MD</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Activity</th>
+        <th>Duration</th>
+        <th>Location</th>
+        <th>Staff</th>
+        <th>Status</th>
+        <th>Comment</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>image</td>
+        <td>01</td>
+        <td>you</td>
+        <td>25</td>
+        <th>Patient Name</th>
+        <td>01</td>
+        <td>you</td>
+        <td>25</td>
+        <th>Patient Name</th>
+        <td>25</td>
+        <th>Patient Name</th>
+      </tr>
+      <tr>
+        <td>image</td>
+        <td>02</td>
+        <td>me</td>
+        <td>28</td>
+        <th>Patient Name</th>
+        <td>01</td>
+        <td>you</td>
+        <td>25</td>
+        <th>Patient Name</th>
+        <td>25</td>
+        <th>Patient Name</th>
+      </tr>
+      <tr *ngFor="let row of rows">
+        <td>{{row.url}}</td>
+        <td>{{row.pname}}</td>
+        <td>{{row.md}}</td>
+        <td>{{row.date}}</td>
+        <td>{{row.time}}</td>
+        <td>{{row.activity}}</td>
+        <td>{{row.duration}}</td>
+        <td>{{row.location}}</td>
+        <td>{{row.staff}}</td>
+        <td>{{row.status}}</td>
+        <td>{{row.comment}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+<hr />
+<!-- Modal -->
+<!--
+<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">add new</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h2>add</h2>
+        <div class="f" style="margin-left: 50px; margin-right: -150px; margin-top: 0px;">
+          <div class="form-group row">
+            <label for="recipient-name" class="col-md-2 col-form-label">MD:</label>
+            <div class="col-md-6">
+              <img *ngFor='let url of urls' [src]="url" height="200"> <br />
+              <input type='file' (change)="onSelectFile($event)" multiple class="form-control" />
+
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="recipient-name" class="col-md-2 col-form-label">Patient Name:</label>
+            <div class="col-md-6">
+              <input type="text" class="form-control" [(ngModel)]="pname" placeholder="pname" />
+
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="recipient-name" class="col-md-2 col-form-label">MD:</label>
+            <div class="col-md-6">
+              <input type="text" class="form-control" [(ngModel)]="md" placeholder="md" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-2 col-form-label" for="text-input">Birth Date</label>
+            <div class="col-md-6">
+              <input type="text" class="form-control" [(ngModel)]="date" placeholder="date"
+                     [minDate]="minDate"
+                     [maxDate]="maxDate"
+                     #dp="bsDatepicker"
+                     bsDatepicker [(bsValue)]="myDateValue" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="recipient-name" class="col-md-2 col-form-label">MD:</label>
+            <div class="col-md-6">
+              <select [(ngModel)]="age" name="age" class="form-control">
+                <option value="0">select MD</option>
+                <option value="Right">Right</option>
+                <option value="Left">Left</option>
+                <option value="Both">Both</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="recipient-name" class="col-md-2 col-form-label">Time:</label>
+            <div class="col-md-6">
+              <input type="text" class="form-control" [(ngModel)]="time" placeholder="time" />
+
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="recipient-name" class="col-md-2 col-form-label">Activity:</label>
+            <div class="col-md-6">
+              <input type="text" class="form-control" [(ngModel)]="activity" placeholder="activity" />
+
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="recipient-name" class="col-md-2 col-form-label">Duration:</label>
+            <div class="col-md-6">
+              <input type="text" class="form-control" [(ngModel)]="duration" placeholder="duration" />
+
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="recipient-name" class="col-md-2 col-form-label">Location:</label>
+            <div class="col-md-6">
+              <input type="text" class="form-control" [(ngModel)]="location" placeholder="location" />
+
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="recipient-name" class="col-md-2 col-form-label">staff:</label>
+            <div class="col-md-6">
+              <input type="text" class="form-control" [(ngModel)]="staff" placeholder="staff" />
+
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="recipient-name" class="col-md-2 col-form-label">Status:</label>
+            <div class="col-md-6">
+              <input type="text" class="form-control" [(ngModel)]="status" placeholder="status" />
+
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="recipient-name" class="col-md-2 col-form-label">Comment:</label>
+            <div class="col-md-6">
+              <input type="text" class="form-control" [(ngModel)]="comment" placeholder="comment" />
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="buttonAdd()">Submit</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+-->
+<!--It is for testing-->
+      <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#createModal">create</button>
+<div class="table-responsive table-sm ">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Salutation</th>
+        <th>Full Name</th>
+        <th>Other</th>
+        <th>Active</th>
+        <th>File</th>
+        <th>NIRC/Passport No</th>
+        <th>NIRC</th>
+        <th>In/Outpatient</th>
+        <th>Birth Date</th>
+        <th>Birth Place</th>
+        <th>Gender</th>
+        <th>Marital Status</th>
+        <th>Religion</th>
+        <th>Age</th>
+        <th>Allergy</th>
+        <th>Language</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>image</td>
+        <td>01</td>
+        <td>you</td>
+        <td>25</td>
+        <th>Patient Name</th>
+        <td>01</td>
+        <td>you</td>
+        <td>25</td>
+        <th>Patient Name</th>
+        <td>25</td>
+        <th>Patient Name</th>
+        <td>01</td>
+        <td>you</td>
+        <td>25</td>
+        <td>25</td>
+        <td>image</td>
+
+      </tr>
+      <tr>
+        <td>image</td>
+        <td>image</td>
+        <td>02</td>
+        <td>me</td>
+        <td>28</td>
+        <th>Patient Name</th>
+        <td>01</td>
+        <td>you</td>
+        <td>25</td>
+        <th>Patient Name</th>
+        <td>25</td>
+        <th>Patient Name</th>
+        <td>01</td>
+        <td>you</td>
+        <td>25</td>
+        <td>25</td>
+
+      </tr>
+      <tr *ngFor="let row of rows">
+        <td>{{row.salutation}}</td>
+        <td>{{row.fullname}}</td>
+        <td>{{row.other}}</td>
+        <td>{{row.active}}</td>
+        <td>{{row.file}}</td>
+        <td>{{row.passport}}</td>
+        <td>{{row.nirc}}</td>
+        <td>{{row.outpatient}}</td>
+        <td>{{row.birthdate }}</td>
+        <td>{{row.birthplace }}</td>
+        <td>{{row.gender}}</td>
+        <td>{{row.maritalstatus }}</td>
+        <td>{{row.religion }}</td>
+        <td>{{row.age }}</td>
+        <td>{{row.allergy }}</td>
+        <td>{{row.language }}</td>
+
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+<hr />
+<!-- Modal -->
+
+
+<div class="modal fade bd-example-modal-lg" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin: 100px;">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="animated fadeIn" style="background-color: lightblue">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Nav tabs -->
+            <div class="card-header">Add New Patient</div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="container">
+                    <div [hidden]="submitted">
+                      <div class="modal-body">
+                        <i class="">
+                          Name
+                        </i>
+                        <div class="form-group row">
+                          <label class="col-sm-2 col-form-label" for="text-input">Salutation</label>
+                          <div class="col-sm-3">
+                            <select [(ngModel)]="salutation" name="salutation" class="form-control">
+                              <option value="0">Please select</option>
+                              <option value="a">a</option>
+                              <option value="b">b</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-2 col-form-label" for="text-input">Fullname</label>
+                          <div class="col-sm-3">
+                            <input type="text" class="form-control" [(ngModel)]="fullname" placeholder="fullname" />
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-2 col-form-label" for="text-input">Other </label>
+                          <div class="col-sm-3">
+                            <input type="text" class="form-control" [(ngModel)]="other" placeholder="fullname" />
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-2 col-form-label" for="text-input">Active </label>
+                          <div class="col-sm-3">
+                            <select [(ngModel)]="active" name="active" class="form-control">
+                              <option value="0">Please select</option>
+                              <option value="no">No</option>
+                              <option value="yes">Yes</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="uploader" ondragover="return false;" [class.loaded]="loaded" [style.outlineColor]="dragging ? activeColor : baseColor" (dragenter)="handleDragEnter()" (dragleave)="handleDragLeave()" (drop)="handleDrop($event)" style="left: 242px; top: -200px">
+                          </label>
+                          <div class="col-sm-2">
+                            <img [src]="imageSrc" (load)="handleImageLoad()" [class.loaded]="imageLoaded" style="height: 200px; margin-top: -220px; width: 250px" />
+
+                            <input type="file" [(ngModel)]="file" accept="image/*" (change)="handleInputChange($event)" style="left: -600px;">
+                          </div>
+                        </div>
+                        <div class="b" style="margin-top: -150px">
+                          <label class="">ID</label>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="text-input">NIRC/Passport No</label>
+                            <div class="col-sm-3">
+                              <select [(ngModel)]="passport" name="passport" class="form-control">
+                                <option value="0">select</option>
+                                <option value="studentpass">Student Passport</option>
+                                <option value="employeepass">Employee passport</option>
+                                <option value="3">Both</option>
+                              </select>
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="f" style="margin-left: 400px; margin-right: -400px; margin-top: -100px;">
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="text-input">NIRC</label>
+                            <div class="col-sm-3">
+                              <input type="text" class="form-control" [(ngModel)]="nirc" placeholder="fullname" />
+
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="text-input">In/Out patient</label>
+                            <div class="col-sm-3">
+                              <select [(ngModel)]="outpatient" name="outpatient" class="form-control">
+                                <option value="0">select</option>
+                                <option value="in">IN</option>
+                                <option value="out">Out</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <br />
+                        <div class="b" style="margin-top: 0px">
+                          <label class="">Personal</label>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="text-input">Birth Date</label>
+                            <div class="col-sm-3">
+                              <input type="text" [(ngModel)]="birthdate"
+                                     class="form-control"
+                                     [minDate]="minDate"
+                                     [maxDate]="maxDate"
+                                     #dp="bsDatepicker"
+                                     bsDatepicker [(bsValue)]="myDateValue">
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="text-input">Birth Place</label>
+                            <div class="col-sm-3">
+                              <input type="text" class="form-control" [(ngModel)]="birthplace" placeholder="birthplace" />
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="text-input">Gender</label>
+                            <div class="col-sm-3">
+                              <select [(ngModel)]="gender" name="gender" class="form-control">
+                                <option value="0">select</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="text-input">Marital Status</label>
+                            <div class="col-sm-3">
+                              <select [(ngModel)]="maritalstatus" name="maritalstatus" class="form-control">
+                                <option value="0">select</option>
+                                <option value="single">Single</option>
+                                <option value="married">Married</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="f" style="margin-left: 400px; margin-right: -400px; margin-top: -200px;">
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="text-input">Religion</label>
+                            <div class="col-sm-3">
+                              <select [(ngModel)]="religion" name="religion" class="form-control">
+                                <option value="0">select</option>
+                                <option value="a">a</option>
+                                <option value="b">b</option>
+                                <option value="c">c</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="text-input">Age</label>
+                            <div class="col-sm-3">
+                              <input type="text" class="form-control" [(ngModel)]="age" placeholder="age" />
+
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="text-input">Allergy</label>
+                            <div class="col-sm-3">
+                              <input type="text" class="form-control" [(ngModel)]="allergy" placeholder="Allergy" />
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="text-input">Language</label>
+                            <div class="col-sm-3">
+                              <select [(ngModel)]="language" name="language" class="form-control">
+                                <option value="">select</option>
+                                <option value="English">English</option>
+                                <option value="Malay">Malay</option>
+                                <option value="both">Both</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                   </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="buttonAdd()">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

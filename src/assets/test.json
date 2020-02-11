@@ -1,0 +1,35 @@
+{
+  "appiontment": [
+    {
+        "mqAppointment": "EXISTS",
+        "id": "3",
+        "patient": {
+        "sch_ID": "12803043",
+        "sch_Set_ID": "12629612",
+        "nric": "S1",
+        "patName": "Patient 1",
+        "locationName": "Treatment Room 1",
+        "app_DtTm": "2018-08-31T09:54:52.067",
+        "appointmentType": "RT",
+        "activity": "C1-ABD",
+        "schStaff": "Staff 1"
+      },
+      "hospital": [
+        {
+          "flagID": "TH1",
+          "flagText": "Hospital A",
+          "flagDescription": "Header Line 1"
+        },
+        {
+          "flagID": "TH2",
+          "flagText": "My Header line 2",
+          "flagDescription": "Header Line 2"
+        }
+      ]
+    },
+
+    {
+      
+    }
+  ]
+}

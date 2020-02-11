@@ -1,0 +1,731 @@
+<div class="main-content" style="background-color: lightblue;">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <strong>Orders/Order Sets</strong>
+          </div>
+          <div class="card-body">
+            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <div class="form-group row"></div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Care Plans</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Health Screening Follow-Up</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Physician Notes</label>
+                <div class="col-md-9">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Physician's Recommendation"></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Standard Health Screening Order Set</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Chest X-Ray (PA)</option>
+                    <option value="1">Ultrasound Upper Abdomen (Liver, Pancreas, Gallbladder)</option>
+                    <option value="2">Ultrasound Lower Abdomen</option>
+                    <option value="3">General Eye Examination</option>
+                    <option value="4">Specialist Eye Examination</option>
+                    <option value="5">Exercise Stress Test</option>
+                    <option value="6">Biochemistry</option>
+                    <option value="7">Immunology</option>
+                    <option value="8">Hematology</option>
+                    <option value="9">Urinalysis</option>
+                    <option value="10">Stool Examination</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">General X-Ray</label>
+                <div class="col-md-9">
+                  <ng-multiselect-dropdown [placeholder]="'Please select'" [data]="dropdownList" [(ngModel)]="selectedItems" [settings]="dropdownSettings" (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)"></ng-multiselect-dropdown>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select7">AC Joints</label>
+                <div class="col-md-9">
+                  <select id="select7" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select7">AC Joints - Bilateral</label>
+                <div class="col-md-9">
+                  <select id="select7" name="select3" class="form-control form-control">
+                    <option value="0">Ankle 3 Views</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select8">Bones</label>
+                <div class="col-md-9">
+                  <select id="select8" name="select8" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Bone Age</option>
+                    <option value="2">Bone Survey Infant</option>
+                    <option value="3">Bone Survey Metastasis</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select7">Clavicle</label>
+                <div class="col-md-9">
+                  <select id="select7" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Cervical Spine</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Complete 4+ Views">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Cervical Spine</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Cervical Spine 2-3 Views">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Cervical Spine</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Cervical Spine Neck Soft Tissue">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Cervical Spine</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder=" Cervical Spine with Flex & Extension">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Cervical Spine</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Cervical Spine Flex & Extension Only">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Chest 1 View</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Chest 1 View">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Chest 2 View</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Chest 2 View">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Chest 3 View</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Chest 3 View">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Chest Fluoro</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Chest Fluoro">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Elbow Complete</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Elbow Complete 3+ Views">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Facial Bones</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Complete 3+ Views">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer">
+            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+          </div>
+        </div>
+        <!--Mammography-->
+        <div class="card">
+          <div class="card-header">
+            <strong>Mammography</strong>
+          </div>
+          <div class="card-body">
+            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select1">Date of Last Mammogram</label>
+                <div class="col-md-9">
+                  <select id="select7" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer">
+            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+          </div>
+        </div>
+        <!--Endoscopy-->
+        <div class="card">
+          <div class="card-header">
+            <strong>Endoscopy</strong>
+          </div>
+          <div class="card-body">
+            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select1">EGD</label>
+                <div class="col-md-9">
+                  <select id="select1" name="select1" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">EGD with Dilation</option>
+                    <option value="2">ERCP</option>
+                    <option value="3">Brochoscopy</option>
+                    <option value="4">Colonoscopy</option>
+                    <option value="5">Flexible Sigmoidoscopy</option>
+                    <option value="6">PEG Placement (with EGD)</option>
+                    <option value="7">PEG Change with Endoscopic Guide</option>
+                    <option value="8">PEG Change without Endoscopic Guide</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select1">Complete Nursing Assessment Sheet</label>
+                <div class="col-md-9">
+                  <select id="select1" name="select1" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Start IV/ Access PAC</option>
+                    <option value="2">NS at 20ml/hr</option>
+                    <option value="3">Mylicon drops 40mg (0.6ml) po x 1 dose</option>
+                    <option value="4">Urine pregnancy test on all females of reproductive age who have not had surgical sterilization</option>
+                    <option value="5">Capillary Blood Glucose on all patients with history of Diabetes</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select1">Anaesthesia Assistance Needed?</label>
+                <div class="col-md-9">
+                  <select id="select1" name="select1" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">ASA score > 3</option>
+                    <option value="2">ERCP</option>
+                    <option value="3">Other Reason:</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer">
+            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+          </div>
+        </div>
+        <!--Ultrasound-->
+        <div class="card">
+          <div class="card-header">
+            <strong>Ultrasound</strong>
+          </div>
+          <div class="card-body">
+            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select1">Ultrasound Examinations</label>
+                <div class="col-md-9">
+                  <ng-multiselect-dropdown [placeholder]="'Please select'" [data]="dropdownList" [(ngModel)]="selectedItems" [settings]="dropdownSettings" (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)"></ng-multiselect-dropdown>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select1">Obstetrical</label>
+                <div class="col-md-9">
+                  <select id="select1" name="select1" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">OB14 Weeks + Transvaginal - Full Bladder</option>
+                    <option value="2">OB>=14 Weeks Complete - Full Bladder</option>
+                    <option value="3">Biophysical Profile w/o Non Stress Test</option>
+                    <option value="4">OB Follow-up - Full Bladder</option>
+                    <option value="5">OB Limited - Full Bladder</option>
+                    <option value="6">OB Transvaginal Only - Full Bladder</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select1">Ultrasound Guided Biopsies/ Procedures</label>
+                <div class="col-md-9">
+                  <select id="select1" name="select1" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Thyroid FNA</option>
+                    <option value="2">Thoracentesis</option>
+                    <option value="3">Liver Biopsy</option>
+                    <option value="4">Abscess Drain</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select1">Exercise Stress Test</label>
+                <div class="col-md-9">
+                  <select id="select1" name="select1" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Electrocardiogram (EKG)</option>
+                    <option value="2">Graded Exercise Stress Test (GEST)</option>
+                    <option value="3">Tilt Table</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select1">Medication Prescription</label>
+                <div class="col-md-9">
+                  <ng-multiselect-dropdown [placeholder]="'Please select'" [data]="dropdownList" [(ngModel)]="selectedItems" [settings]="dropdownSettings" (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)"></ng-multiselect-dropdown>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select1">medication at a time</label>
+                <div class="col-md-9">
+                  <select id="select1" name="select1" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">ad lib</option>
+                    <option value="2">bid</option>
+                    <option value="3">prn</option>
+                    <option value="4">q3h</option>
+                    <option value="5">q4h</option>
+                    <option value="6">qd</option>
+                    <option value="7">qid</option>
+                    <option value="8">qod</option>
+                    <option value="9">tid</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer">
+            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+          </div>
+        </div>
+      </div>
+      <!--Orders/Order Sets-->
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-header">
+            <strong>Orders/Order Sets</strong>
+          </div>
+          <div class="card-body">
+            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <div class="form-group row"></div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select1">Forearm</label>
+                <div class="col-md-9">
+                  <select id="select1" name="select1" class="form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select2">Femur 2 Views</label>
+                <div class="col-md-9">
+                  <select id="select2" name="select2" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Pain</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Fingers 2+ Views</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Foot Complete 3+ Views</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Hand Complete 3+ Views</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">OS Calcis</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Hip Complete 2+ Views</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Humerus</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Knee (Pain / No Injury)</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Hip Complete Bilateral</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Knee 4+ Views (with Injury)</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Knee Standing AP Bilateral</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Lumbar Spine 2-3 Views</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Lumbar...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Lumbar Spine Complete 4+ Views</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Lumbar...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Lumbar Spine W/Bend 6+ Views</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Lumbar...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Lumbar Spine Bend Only 2-3 Views (Flex & Extension)</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Lumbar...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Mandible 4+ Views</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Mandible...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Mandible 1-3 Views</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Nasal Bones 3+ Views</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Nasal...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Nasal Bones 3+ Views</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Nasal...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Orbits For Foreign Body</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Orbits...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Orbits Complete</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Orbits...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Pelvis 3+ Views Judet</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Pelvis...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Pelvis 1-2 Views</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Pelvis 1-2...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Ribs with Chest 4+ Views Bilateral</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Ribs with...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Ribs with Chest 3+ Views</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Sacrum / Coccyx 2+ Views</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Sacrum...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Scapula</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Scoliosis Standing Thoracolumbar</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Scoliosis...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Sella Turcica</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Scoliosis...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Shoulder</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">SI Joints 1-2 Views</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="SI Joints...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Sinuses Complete 3+ Views</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Sinuses Complete...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Sinuses 1-2 Views</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Sinuses 1-2...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Skull 4+ Views</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Skull 4+ Views...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Sternum 2+ Views</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Sternum 2+ Views...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">SC Joints 3+Views</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="SI Joints...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">SI Joints 1-2 Views</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="SI Joints...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">SI Joints 1-2 Views</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="SI Joints...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Tibia / Fibula 2 Views</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">TMJ Bilateral</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="SI Joints...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">TMJ</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Toe</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Thoracic Spine 2 Views</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Thoracic...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input">Thoracic Spine with Swimmers 3 Views</label>
+                <div class="col-md-9">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Thoracic Spine with Swimmers...">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Wrist 2 Views (No Injury)</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select3">Wrist Complete</label>
+                <div class="col-md-9">
+                  <select id="select3" name="select3" class="form-control form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Right</option>
+                    <option value="2">Left</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer">
+            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+          </div>
+        </div>
+        <!--Endoscopy-->
+        <div class="card">
+          <div class="card-header">
+            <strong>Endoscopy</strong>
+          </div>
+          <div class="card-body">
+            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select1">Date of Last Mammogram</label>
+                <div class="col-md-9"></div>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer">
+            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

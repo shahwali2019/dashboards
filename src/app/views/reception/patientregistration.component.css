@@ -1,0 +1,66 @@
+/* File Uploader Styles  */
+
+
+.uploader input {
+  display: none;
+}
+
+.uploader {
+  background-color: #efefef;
+  background-color: rgba(0, 0, 0, 0.02);
+  display: -webkit-flex;
+  display: flex;
+  height: 190px;
+  position: relative;
+  width: 0px;
+  margin-left: 450px;
+  
+}
+
+
+  .uploader img,
+  .uploader .icon {
+    pointer-events: none;
+  }
+
+.uploader,
+.uploader .icon {
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  -o-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+
+.uploader .icon {
+  color: #eee;
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 5em;
+}
+
+.uploader img {
+  left: 50%;
+  opacity: 0;
+  max-height: 10%;
+  max-width: 10%;
+  position: absolute;
+  top: 20%;
+  -webkit-transition: all 300ms ease-in;
+  -moz-transition: all 300ms ease-in;
+  -o-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.uploader img.loaded {
+  opacity: 1;
+}
+
+
+
+
+

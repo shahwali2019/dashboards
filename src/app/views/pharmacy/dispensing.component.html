@@ -1,0 +1,640 @@
+<div class="animated fadeIn" style="background-color: lightblue">
+  <div class="row">
+    <div class="col-lg-12">
+      <!-- Nav tabs -->
+      <tabset>
+        <tab heading="Rx Order">
+          <form>
+            <div class="table table-responsive">
+              <table border="1" class="text-align: left">
+                <thead>
+                  <tr>
+                    <th scope="col" width="40%">Patient</th>
+                    <th scope="col" width="40%">Rx Order Entry Number</th>
+                    <th scope="col" width="40%">Data Prescribed</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>
+                      <div class="custom-control form-control-sm custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck12">
+                        <label class="custom-control-label" for="customCheck12">Patient A</label>
+                      </div>
+                    </th>
+                    <td>
+                      <input type="text" name="name" size="50" />
+                    </td>
+                    <td>
+                      <input type="text" name="name" size="50" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control form-control-sm custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck12">
+                        <label class="custom-control-label" for="customCheck12">Patient A</label>
+                      </div>
+                    </th>
+                    <td>
+                      <input type="text" name="name" size="50" />
+                    </td>
+                    <td>
+                      <input type="text" name="name" size="50" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" size="0">
+                      <div class="custom-control form-control-sm custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck12">
+                        <label class="custom-control-label" for="customCheck12">Patient B</label>
+                      </div>
+                    </th>
+                    <td>
+                      <input type="text" name="name" size="50" />
+                    </td>
+                    <td>
+                      <input type="text" name="name" size="50" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control form-control-sm custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck12">
+                        <label class="custom-control-label" for="customCheck12">Patient C</label>
+                      </div>
+                    </th>
+                    <td>
+                      <input type="text" name="name" size="50" />
+                    </td>
+                    <td>
+                      <input type="text" name="name" size="50" />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search">
+              <div class="input-group-append">
+                <button class="btn btn-secondary" type="button">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+            </div>
+            <div class="tab-content no-border padding-24" style="background-color: lightblue">
+              <div id="" class="tab-pane in active">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-3 center">
+                    <span class="" style="font-size: 35px; color: skyblue"> <ngx-avatar size="100" src="assets/img/brand/photo.png"></ngx-avatar></span>
+                  </div>
+                  <div class="col-xs-12 col-sm-9">
+                    <h4 class="blue">
+                      <span class="middle">John</span>
+                    </h4>
+                    <div class="profile-user-info">
+                      <div class="profile-info-row">
+                        <div class="profile-info-name">Appt:</div>
+                        <div class="profile-info-value">
+                          <span>DOB: Jun, 1960 | 58 years old</span>
+                        </div>
+                      </div>
+                      <div class="profile-info-row">
+                        <div class="profile-info-name">Diagnosis</div>
+                        <div class="profile-info-value">
+                          <div class="profile-info-value">
+                            <span>Attending: Grumble, Beverly</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <!--kkkkkkkkkkkkkkk-->
+            <div class="table table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col" width="40%">New Prescription</th>
+                    <th scope="col" width="60%">
+                      <b>Refill</b>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Patient</th>
+                    <td>
+                      <input type="text" class="form-control" placeholder="" aria-label="Patient" aria-describedby="basic-addon1">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Prescriber</th>
+                    <td>
+                      <input type="text" class="form-control" placeholder="" aria-label="Prescriber" aria-describedby="basic-addon1">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Medication Name</th>
+                    <td>
+                      <input type="text" class="form-control" placeholder="" aria-label="Medication Name" aria-describedby="basic-addon1">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Dose Amount</th>
+                    <td>
+                      <input type="text" class="form-control" placeholder="" aria-label="Dose Amount" aria-describedby="basic-addon1">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Days</th>
+                    <td>
+                      <input type="text" class="form-control" placeholder="" aria-label="Days" aria-describedby="basic-addon1">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Frequency</th>
+                    <td>
+                      <input type="text" class="form-control" placeholder="" aria-label="Frequency" aria-describedby="basic-addon1">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Refill</th>
+                    <td>
+                      <input type="text" class="form-control" placeholder="" aria-label="Refill" aria-describedby="basic-addon1">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Direction to Patient</th>
+                    <td>
+                      <input type="text" class="form-control" placeholder="" aria-label="Direction to Patient" aria-describedby="basic-addon1">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Note to Pharmacy</th>
+                    <td>
+                      <input type="text" class="form-control" placeholder="" aria-label="Note to Pharmacy" aria-describedby="basic-addon1">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Medical Condition/Allergy Verified</th>
+                    <td>
+                      <!--yes-->
+                      <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="materialInline1" name="inlineMaterialRadiosExample">
+                        <label class="form-check-label" for="materialInline1">Yes</label>
+                      </div>
+                      <!-- No -->
+                      <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="materialInline2" name="inlineMaterialRadiosExample">
+                        <label class="form-check-label" for="materialInline2">No</label>
+                      </div>
+                      <br /> <b style="margin-left: -5px;">If No, Please specify</b>
+                      <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Date Dispensed</th>
+                    <td>
+                      <div class="input-append">
+                        <input type="text" class="" [minDate]="minDate" [maxDate]="maxDate" #dp="bsDatepicker" bsDatepicker [(bsValue)]="myDateValue" style="width: 95%" />
+                        <label for="foo" class="add-on">
+                          <i class="icon-calendar"></i>
+                        </label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Quantity Dispensed by Pharmacy</th>
+                    <td>
+                      <input type="text" class="form-control" placeholder="" aria-label="Prescriber" aria-describedby="basic-addon1">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Direction to Patient</th>
+                    <td>
+                      <input type="text" class="form-control" placeholder="" aria-label="Prescriber" aria-describedby="basic-addon1">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Billable Amount</th>
+                    <td>
+                      <input type="text" class="form-control" placeholder="" aria-label="Prescriber" aria-describedby="basic-addon1">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <style>
+                .dropdown:hover > .dropdown-menu {
+                  display: block;
+                }
+
+                .dropdown > .dropdown-toggle:active {
+                  pointer-events: none;
+                }
+
+                p {
+                  font-family: Lato;
+                }
+
+                .content {
+                  background: #fff;
+                }
+
+                body {
+                  margin-top: 20px;
+                }
+
+                .align-center, .center {
+                  text-align: center !important;
+                }
+
+                .profile-user-info {
+                  display: table;
+                  width: 98%;
+                  width: calc(100% - 24px);
+                  margin: 0 auto
+                }
+
+                .profile-info-row {
+                  display: table-row
+                }
+
+                .profile-info-name,
+                .profile-info-value {
+                  display: table-cell;
+                  border-top: 1px dotted #D5E4F1
+                }
+
+                .profile-info-name {
+                  text-align: right;
+                  padding: 6px 10px 6px 4px;
+                  font-weight: 400;
+                  color: #667E99;
+                  background-color: transparent;
+                  width: 110px;
+                  vertical-align: middle
+                }
+
+                .profile-info-value {
+                  padding: 6px 4px 6px 6px
+                }
+
+                  .profile-info-value > span + span:before {
+                    display: inline;
+                    content: ",";
+                    margin-left: 1px;
+                    margin-right: 3px;
+                    color: #666;
+                    border-bottom: 1px solid #FFF
+                  }
+
+                  .profile-info-value > span + span.editable-container:before {
+                    display: none
+                  }
+              </style>
+            </div>
+            <!--lllllllllllll-->
+          </form>
+        </tab>
+        <tab heading="Pharmacy Invoice">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search">
+            <div class="input-group-append">
+              <button class="btn btn-secondary" type="button">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <div class="tab-content no-border padding-24" style="background-color: lightblue">
+            <div id="" class="tab-pane in active">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3 center">
+                  <span class="" style="font-size: 35px; color: skyblue"> <ngx-avatar size="100" src="assets/img/brand/photo.png"></ngx-avatar></span>
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <h4 class="blue">
+                    <span class="middle">John</span>
+                  </h4>
+                  <div class="profile-user-info">
+                    <div class="profile-info-row">
+                      <div class="profile-info-name">Appt:</div>
+                      <div class="profile-info-value">
+                        <span>DOB: Jun, 1960 | 58 years old</span>
+                      </div>
+                    </div>
+                    <div class="profile-info-row">
+                      <div class="profile-info-name">Diagnosis</div>
+                      <div class="profile-info-value">
+                        <div class="profile-info-value">
+                          <span>Attending: Grumble, Beverly</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Rx Order Enter Number Invoice</p>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" value="" />12345
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" value="" />67890
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" value="" />23456
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" value="" />78901
+            </label>
+          </div>
+          <br />
+          <br />
+        </tab>
+       
+
+        <!--tabbbbbbbbbbbbbbbbbbbb   TEST -->
+        <tab heading="">
+          <form>
+            <div class="table table-responsive">
+              <table class="table table-bordered">
+                <tbody>
+                  <tr>
+                    <th>Patient</th>
+                    <td>
+                      <b>Rx Order Entry Number</b>
+                    </td>
+                    <td>
+                      <b>Data Prescribed</b>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control form-control-sm custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck12">
+                        <label class="custom-control-label" for="customCheck12">Patient A</label>
+                      </div>
+                    </th>
+                    <td class="pt-3-half" contenteditable="true"></td>
+                    <td class="pt-3-half" contenteditable="true"></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="checkbox-small" type="checkbox" />
+                        <label class="custom-control-label" for="checkbox-small">Patient A</label>
+                      </div>
+                    </th>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control form-control-sm custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck13">
+                        <label class="custom-control-label" for="customCheck13">Patient B</label>
+                      </div>
+                    </th>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control form-control-sm custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck14">
+                        <label class="custom-control-label" for="customCheck14">Patient C</label>
+                      </div>
+                    </th>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search Patients">
+                <div class="input-group-append">
+                  <button class="btn btn-secondary" type="button">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+              </div>
+              <br />
+              <div id="user-profile-2" class="user-profile">
+                <div class="tabbable">
+                  <div class="tab-content no-border padding-24" style="background-color: lightblue">
+                    <div id="home" class="tab-pane in active">
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-3 center">
+                          <span class="" style="font-size: 35px; color: skyblue"> <ngx-avatar size="100" src="assets/img/brand/photo.png"></ngx-avatar></span>
+                        </div>
+                        <div class="col-xs-12 col-sm-9">
+                          <h4 class="blue">
+                            <span class="middle">John</span>
+                          </h4>
+                          <div class="profile-user-info">
+                            <div class="profile-info-row">
+                              <div class="profile-info-name">Appt:</div>
+                              <div class="profile-info-value">
+                                <span>DOB: Jun, 1960 | 58 years old</span>
+                              </div>
+                            </div>
+                            <div class="profile-info-row">
+                              <div class="profile-info-name">Diagnosis</div>
+                              <div class="profile-info-value">
+                                <div class="profile-info-value">
+                                  <span>Attending: Grumble, Beverly</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <br />
+          <form>
+            <div class="table table-responsive">
+              <table class="table table-bordered">
+                <tbody>
+                  <tr>
+                    <th style="width: 0px;">New Prescription</th>
+                    <td style="width: 0px;">
+                      <b>Refill</b>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Patient</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>Prescriber</th>
+                    <td>
+                      <input type="text" class="form-control" id="inputEmail" placeholder="" style="width: 100%">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Medication Name</th>
+                    <td>
+                      <div class="col-sm-10"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Dose Amount</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>Days</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>Frequency</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>Refill</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>Direction to Patient</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>Note to Pharmacy</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>Medical Condition/Allergy Verified</th>
+                    <td>
+                      <!--yes-->
+                      <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="materialInline1" name="inlineMaterialRadiosExample">
+                        <label class="form-check-label" for="materialInline1">Yes</label>
+                      </div>
+                      <!-- No -->
+                      <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="materialInline2" name="inlineMaterialRadiosExample">
+                        <label class="form-check-label" for="materialInline2">No</label>
+                      </div>
+                      <br /> <b style="margin-left: -5px;">If No, Please specify</b>
+                      <input type="text" class="form-control" id="inputEmail" placeholder="" style="width: 100%">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Date Dispensed</th>
+                    <td>
+                      <div class="input-append">
+                        <input type="text" class="" [minDate]="minDate" [maxDate]="maxDate" #dp="bsDatepicker" bsDatepicker [(bsValue)]="myDateValue" style="width: 95%" />
+                        <label for="foo" class="add-on">
+                          <i class="icon-calendar"></i>
+                        </label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Quantity Dispensed by Pharmacy</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>Direction to Patient</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>Billable Amount</th>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <style>
+                .dropdown:hover > .dropdown-menu {
+                  display: block;
+                }
+
+                .dropdown > .dropdown-toggle:active {
+                  pointer-events: none;
+                }
+
+                p {
+                  font-family: Lato;
+                }
+
+                .content {
+                  background: #fff;
+                }
+
+                body {
+                  margin-top: 20px;
+                }
+
+                .align-center, .center {
+                  text-align: center !important;
+                }
+
+                .profile-user-info {
+                  display: table;
+                  width: 98%;
+                  width: calc(100% - 24px);
+                  margin: 0 auto
+                }
+
+                .profile-info-row {
+                  display: table-row
+                }
+
+                .profile-info-name,
+                .profile-info-value {
+                  display: table-cell;
+                  border-top: 1px dotted #D5E4F1
+                }
+
+                .profile-info-name {
+                  text-align: right;
+                  padding: 6px 10px 6px 4px;
+                  font-weight: 400;
+                  color: #667E99;
+                  background-color: transparent;
+                  width: 110px;
+                  vertical-align: middle
+                }
+
+                .profile-info-value {
+                  padding: 6px 4px 6px 6px
+                }
+
+                  .profile-info-value > span + span:before {
+                    display: inline;
+                    content: ",";
+                    margin-left: 1px;
+                    margin-right: 3px;
+                    color: #666;
+                    border-bottom: 1px solid #FFF
+                  }
+
+                  .profile-info-value > span + span.editable-container:before {
+                    display: none
+                  }
+              </style>
+            </div>
+          </form>
+        </tab>
+
+        <!--     TEST   -->
+      </tabset>
+    </div>
+  </div>
+</div>

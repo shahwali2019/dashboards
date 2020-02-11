@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header" style="background-color: #4175ef; color: white;"> <i class="fa fa-align-justify"></i> Countries</div>
+      <div class="card-body" >
+        <table class="users">
+         
+            <thead>
+              <tr>
+                <th *ngFor="let title of service.tableHeadersObjects" >{{title.content}}</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+              <tr  *ngFor="let row of service.tableRowsObjects" >
+                <td *ngFor="let cell of row.cells" >
+                  <span *ngIf="service.isEditing.indexOf(row) === -1 && service.checkTypeOf(cell.content) !== 'boolean'">{{cell.content}}</span>
+                  <span *ngIf="service.isEditing.indexOf(row) === -1 && service.checkTypeOf(cell.content) == 'boolean'">
+                    {{cell.content ? 'Active' : 'Inactive'}}
+                  </span>
+                  <div class="ui input" *ngIf="!(service.isEditing.indexOf(row) == -1) && service.checkTypeOf(cell.content) !== 'boolean'">
+                    <input type="text" [(ngModel)]="cell.content" [name]="cell.content">
+                  </div>
+                  <div *ngIf="!(service.isEditing.indexOf(row) == -1) && service.checkTypeOf(cell.content) === 'boolean'" class="field checkboxContainer">
+                    <div class="ui toggle checkbox">
+                      <input type="checkbox" name="public " [(ngModel)]="cell.content" dirname=" active" >
+                      <label>{{cell.content ? 'Active' : 'Inactive'}}</label>
+                    </div>
+                  </div>
+                </td>
+                <td class="col-md-1 text-right">
+                  <button type="button" class="btn btn-primary" (click)="service.editRow(row)" style="width: 100px">
+                    Edit
+                  </button>
+                  <button type="button" class="btn btn-primary" (click)="service.saveRow(row)"style="width: 100px">
+                    Save
+                  </button>
+                  <button type="button" class="btn btn-primary" (click)="service.deleteRow(row)"style="width: 100px">
+                    Delete
+                  </button>
+           
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th *ngFor="let title of service.tableHeadersObjects"></th>
+                <td class="col-md-1 text-left">
+                  <button type="button" class="btn btn-primary" (click)="service.addRow()" style="width:100px">
+                    Add
+                  </button>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+
+      </div>
+    </div>
+  </div>
+</div>
