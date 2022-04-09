@@ -42,7 +42,7 @@
     "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
     "jspdf": "^1.5.3",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "mutationobserver-shim": "^0.3.3",
     "ng-bootstrap-modal": "^1.1.19",
     "ng-editable-table": "^0.3.15",
